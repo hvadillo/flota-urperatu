@@ -20,7 +20,7 @@ public abstract class Ontzia {
 	}
 	
 	public Boolean urperatutaDago(){
-		//TODO
+		return urperatuta;
 	}
 	
 	public void kokatu(){
