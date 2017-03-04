@@ -15,7 +15,7 @@ public class FactoryOntziak {
 		return nFactoryOntziak;
 	}
 	
-	public Kolekzioa<Ontziak> flotaSortu(){
+	public Kolekzioa<Ontzia> flotaSortu(){
 		//TODO
 	}
 }
