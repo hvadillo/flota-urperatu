@@ -5,6 +5,6 @@ public class ListaOntziak {
 	private Kolekzioa<Ontziak> ontziak;
 	
 	public ListaOntziak(){
-		//TODO
+		ontziak = FactoryOntziak.getFactoryOntziak().flotaSortu;
 	}
 }
