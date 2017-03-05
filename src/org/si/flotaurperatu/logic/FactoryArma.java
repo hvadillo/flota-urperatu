@@ -22,7 +22,9 @@ public class FactoryArma {
 		denda.add(new Bonba(10));
 		denda.add(new Misil(10));
 		denda.add(new Ezkutua(10));
-		//misil gidatuak falta dira!!!!
+		denda.add(new MisilIH(10));
+		denda.add(new MisilEM(10));
+		denda.add(new MisilGurutze(10));
 		
 		return denda;
 		
@@ -36,7 +38,9 @@ public class FactoryArma {
 		biltegi.add(new Bonba(2)));
 		biltegi.add(new Misil(2));
 		biltegi.add(new Ezkutua(2));
-		//misil gidatuak falta dira!!!!
+		denda.add(new MisilIH(2));
+		denda.add(new MisilEM(2));
+		denda.add(new MisilGurutze(2));
 		
 		return biltegi;
 	}
