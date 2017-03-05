@@ -1,7 +1,7 @@
 package org.si.flotaurperatu.logic;
 
 public abstract class MisilGidatua extends Arma {
-	private Portaera portaera;
+	protected TiroPortaera portaera;
 	
 public MisilGidatua(String pIzena, int pKostua, int pKop) {
 	super(pIzena, pKostua, pKop);
