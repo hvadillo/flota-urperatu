@@ -2,8 +2,8 @@ package org.si.flotaurperatu.logic;
 
 public class Radarra extends Arma {
 	
-public Radarra(){
-	super arma();
+public Radarra(int pKop){
+	super ("Radarra",5,pKop);
 }
 
 	@Override

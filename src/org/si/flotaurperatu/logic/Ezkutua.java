@@ -2,8 +2,8 @@ package org.si.flotaurperatu.logic;
 
 public class Ezkutua extends Arma{
 
-	public Ezkutua(String pIzena, int pKostua, int pKop) {
-		super(pIzena, pKostua, pKop);
+	public Ezkutua(int pKop) {
+		super("Ezkutua",5,pKop);
 	}
 
 	@Override
