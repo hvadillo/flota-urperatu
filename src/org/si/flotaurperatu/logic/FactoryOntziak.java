@@ -37,5 +37,6 @@ public class FactoryOntziak {
 		flota.add(fragata3);
 		Fragata fragata4 = new Fragata();
 		flota.add(fragata4);
+		return flota;
 	}
 }
