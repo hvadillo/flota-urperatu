@@ -2,9 +2,12 @@ package org.si.flotaurperatu.logic;
 
 public class Radarra extends Arma {
 	
-public Radarra(int pKop){
-	super ("Radarra",5,pKop);
-}
+	private int kontsultaKop;
+	
+	public Radarra(int pKop){
+		super ("Radarra",5,pKop);
+		kontsultaKop = 4;
+	}
 
 	@Override
 	public void erabili() {

@@ -18,4 +18,9 @@ public class Erabiltzailea extends Jokalaria{
 		
 	}
 
+	@Override
+	public void ezkutuaJarri() {
+		// TODO Auto-generated method stub
+	}
+
 }

@@ -9,7 +9,7 @@ public class Ezkutua extends Arma{
 	@Override
 	public void erabili() {
 		// TODO Auto-generated method stub
-		
+		//
 	}
 
 }

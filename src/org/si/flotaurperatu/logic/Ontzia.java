@@ -26,4 +26,7 @@ public abstract class Ontzia {
 	public void kokatu(){
 		//TODO
 	}
+	public void ezkutuaJarri(Ezkutua pEzkutua){
+		this.ezkutua = pEzkutua;
+	}
 }

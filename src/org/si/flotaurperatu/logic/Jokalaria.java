@@ -2,10 +2,10 @@ package org.si.flotaurperatu.logic;
 
 public abstract class Jokalaria {
 
-	private int dirua;
-	private Biltegia armak;
-	private TableroEraso tableroEraso;
-	private TableroIkusi tableroIkusi;
+	protected int dirua;
+	protected Biltegia armak;
+	protected TableroEraso tableroEraso;
+	protected TableroIkusi tableroIkusi;
 	
 	public Jokalaria(){
 		dirua = 1000;
@@ -17,4 +17,6 @@ public abstract class Jokalaria {
 	public abstract void txandaBurutu();
 	
 	public abstract void armakErosi();
+	
+	public abstract void ezkutuaJarri();
 }
