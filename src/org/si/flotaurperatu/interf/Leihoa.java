@@ -33,5 +33,6 @@ public class Leihoa extends JFrame implements Observer{
 	@Override
 	public void update(Observable arg0, Object arg1) {
 		// TODO Auto-generated method stub 
+		//kjabfvñafjbvjfa
 	}
 }
