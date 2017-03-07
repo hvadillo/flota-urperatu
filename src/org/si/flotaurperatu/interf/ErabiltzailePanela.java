@@ -15,6 +15,8 @@ import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 
+import org.si.flotaurperatu.interf.baliabideak.Textua;
+
 public class ErabiltzailePanela extends JPanel{
 
 	private static final long serialVersionUID = 1L;
@@ -28,7 +30,7 @@ public class ErabiltzailePanela extends JPanel{
 		JPanel izenP = new JPanel();
 		JPanel okP = new JPanel();
 		
-		//izenaLabel = new JLabel(Textua.izenaSartu);
+		izenaLabel = new JLabel(Textua.izenaSartu);
 		jokIzena = new JTextField();
 		jokIzena.setPreferredSize(new Dimension(150,20));
 		jokIzena.addKeyListener(new KeyListener() {
@@ -47,7 +49,7 @@ public class ErabiltzailePanela extends JPanel{
 			private static final long serialVersionUID = 1L;
 			@Override
 		    public void actionPerformed(ActionEvent e){
-		        //okeyAkzioa();
+		        okeyAkzioa();
 		    }
 		});
 		
@@ -80,14 +82,15 @@ public class ErabiltzailePanela extends JPanel{
 		okBotoia.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				//okeyAkzioa();
+				okeyAkzioa();
 			}
 		});
 	}
 	
-	/*private void okeyAkzioa(){
+	private void okeyAkzioa(){
 		String izena = jokIzena.getText();
-		try{
+		Leihoa.getLeihoa().panelakEraiki(izena);
+		/*try{
 			if(izena.contains("---") || izena.contains("###")){
 				{throw new IzenEzEgokia(jokIzena);}
 			}
@@ -108,6 +111,6 @@ public class ErabiltzailePanela extends JPanel{
 			}
 			}catch (IzenEzEgokia e){
 				e.karaktereEzEgokiakEzabatu();
-			}	
-	}*/
+			}*/	
+	}
 }
