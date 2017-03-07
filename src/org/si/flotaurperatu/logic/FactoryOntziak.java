@@ -5,7 +5,7 @@ public class FactoryOntziak {
 	private static FactoryOntziak nFactoryOntziak = null;
 	
 	private FactoryOntziak(){
-		nFactoryOntziak = getFactoryOntziak();
+		
 	}
 	
 	public static FactoryOntziak getFactoryOntziak(){

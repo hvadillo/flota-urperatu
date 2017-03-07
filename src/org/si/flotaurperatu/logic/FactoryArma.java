@@ -5,7 +5,7 @@ public class FactoryArma {
 	private static FactoryArma nFactoryArma = null;
 	
 	private FactoryArma(){
-		//TODO
+		
 	}
 	
 	public static FactoryArma getFactoryArma(){
