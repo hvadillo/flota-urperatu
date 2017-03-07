@@ -5,7 +5,8 @@ public class Gelaxka {
 	private int x;
 	private int y;
 	
-	public Gelaxka(){
-		//TODO
+	public Gelaxka(int pX, int pY){
+		x = pX;
+		y = pY;			
 	}
 }
