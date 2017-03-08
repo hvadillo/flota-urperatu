@@ -1,10 +1,12 @@
 package org.si.flotaurperatu.logic;
 
+import java.util.ArrayList;
+
 public class ListaOntziak {
 
-	private Kolekzioa<Ontzia> ontziak;
+	private ArrayList<Ontzia> ontziak;
 	
 	public ListaOntziak(){
-		ontziak = FactoryOntziak.getFactoryOntziak().flotaSortu;
+		ontziak = FactoryOntziak.getFactoryOntziak().flotaSortu();
 	}
 }

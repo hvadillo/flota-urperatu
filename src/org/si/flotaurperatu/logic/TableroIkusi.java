@@ -5,7 +5,8 @@ public class TableroIkusi {
 	private MatrizeGelaxka matrizea;
 	
 	public TableroIkusi(){
-		//TODO
+		matrizea=new MatrizeGelaxka();
+		matrizea.matrizeaHasieratu();
 	}
 	
 	public void tiroaJaso(){

@@ -1,5 +1,7 @@
 package org.si.flotaurperatu.logic;
 
+import java.util.ArrayList;
+
 public class FactoryOntziak {
 
 	private static FactoryOntziak nFactoryOntziak = null;
@@ -15,8 +17,8 @@ public class FactoryOntziak {
 		return nFactoryOntziak;
 	}
 	
-	public Kolekzioa<Ontzia> flotaSortu(){
-		flota = new Kolekzioa<Ontzia>();
+	public ArrayList<Ontzia> flotaSortu(){
+		ArrayList<Ontzia> flota = new ArrayList<Ontzia>();
 		HegazkinOntzi hegazkinOntzi = new HegazkinOntzi();
 		flota.add(hegazkinOntzi);
 		Itsaspeko itsaspeko1 = new Itsaspeko();

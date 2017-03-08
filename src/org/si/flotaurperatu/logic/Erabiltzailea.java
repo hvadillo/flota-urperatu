@@ -23,4 +23,11 @@ public class Erabiltzailea extends Jokalaria{
 		// TODO Auto-generated method stub
 	}
 
+	@Override
+	public void ontziakIpini(String pKord ) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+
 }
