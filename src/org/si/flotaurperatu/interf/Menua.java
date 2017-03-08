@@ -19,7 +19,7 @@ public class Menua extends JMenuBar{
 	
 	public Menua(String pIzena){
 		menuaSortu(pIzena);
-		itemakGehitu();
+		//itemakGehitu();
 	}
 	
 	private void menuaSortu(String pIzena){

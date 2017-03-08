@@ -6,8 +6,16 @@ public class ListaJokalariak {
 	private ArrayList<Jokalaria> listaJok;
 	private int txanda;
 	private boolean bukatu=false;
+	private static ListaJokalariak nListaJokalariak = null;
 	
-public ListaJokalariak(){
+	public static synchronized ListaJokalariak getNireListaJokalariak(){
+		if (nListaJokalariak==null){
+			nListaJokalariak=new ListaJokalariak();
+		}
+		return nListaJokalariak;
+	}
+	
+private ListaJokalariak(){
 	listaJok=new ArrayList<Jokalaria>();
 	listaJok.add(new Erabiltzailea());
 	listaJok.add(new Ordenagailua());

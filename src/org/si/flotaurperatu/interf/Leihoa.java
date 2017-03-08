@@ -59,7 +59,8 @@ public class Leihoa extends JFrame implements Observer{
 		
 		//getContentPane().add(new JokoarenGoikoPanela(), BorderLayout.NORTH);			//Goiko panela (Smiley, kontadorea, kronometroa)
 		
-		getContentPane().add(KasilenPanela.getKasilenPanela(), BorderLayout.CENTER);	//Kasilak gehitu panelean
+		getContentPane().add(KasilenPanela.getKasilenPanela(), BorderLayout.NORTH);
+		getContentPane().add(KasilenPanela.getKasilenPanela(), BorderLayout.SOUTH);//Kasilak gehitu panelean
 		setVisible(true);
 	}
 	
@@ -67,6 +68,7 @@ public class Leihoa extends JFrame implements Observer{
 		setJMenuBar(null);
 		getContentPane().removeAll();
 		getContentPane().add(new ErabiltzailePanela(), BorderLayout.CENTER);
+		setSize(440, 130);
 		setLocationRelativeTo(null);
 		setVisible(true);
 	}

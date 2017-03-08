@@ -16,6 +16,7 @@ import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 
 import org.si.flotaurperatu.interf.baliabideak.Textua;
+import org.si.flotaurperatu.logic.ListaJokalariak;
 
 public class ErabiltzailePanela extends JPanel{
 
@@ -90,6 +91,7 @@ public class ErabiltzailePanela extends JPanel{
 	private void okeyAkzioa(){
 		String izena = jokIzena.getText();
 		Leihoa.getLeihoa().panelakEraiki(izena);
+		ListaJokalariak.getNireListaJokalariak();
 		/*try{
 			if(izena.contains("---") || izena.contains("###")){
 				{throw new IzenEzEgokia(jokIzena);}

@@ -1,8 +1,10 @@
 package org.si.flotaurperatu.logic;
 
+import java.util.ArrayList;
+
 public abstract class Ontzia {
 
-	private Kolekzioa<Gelaxka> posizioak;
+	private ArrayList<Gelaxka> posizioak;
 	private int luzeera;
 	private Ezkutua ezkutua;
 	private Boolean urperatuta = false;

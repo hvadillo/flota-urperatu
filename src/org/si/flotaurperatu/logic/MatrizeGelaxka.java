@@ -5,7 +5,7 @@ public class MatrizeGelaxka {
 	private Gelaxka[][] matrizea;
 	
 	public MatrizeGelaxka(){
-		matrizea = new Gelaxka[9][9];
+		matrizea = new Gelaxka[10][10];
 	}
 	public void matrizeaHasieratu(){
 		int kont1 = 0;

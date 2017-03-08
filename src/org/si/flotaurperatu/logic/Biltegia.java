@@ -1,8 +1,10 @@
 package org.si.flotaurperatu.logic;
 
+import java.util.ArrayList;
+
 public class Biltegia {
 
-	private Kolekzioa<Arma> armak;
+	private ArrayList<Arma> armak;
 	
 	public Biltegia(){
 		armak = FactoryArma.getFactoryArma().biltegiaSortu();
