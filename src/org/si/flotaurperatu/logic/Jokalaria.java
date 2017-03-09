@@ -23,4 +23,12 @@ public abstract class Jokalaria {
 	public abstract void ezkutuaJarri();
 	
 	public abstract void ontziakIpini();
+	
+	public TableroEraso getEraso(){
+		return tableroEraso;
+	}
+	
+	public TableroIkusi getIkusi(){
+		return tableroIkusi;
+	}
 }

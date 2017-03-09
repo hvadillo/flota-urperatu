@@ -8,6 +8,13 @@ public class ListaJokalariak {
 	private boolean bukatu=false;
 	private static ListaJokalariak nListaJokalariak = null;
 	
+	private ListaJokalariak(){
+		listaJok=new ArrayList<Jokalaria>();
+		listaJok.add(new Erabiltzailea());
+		listaJok.add(new Ordenagailua());
+		txanda =0;
+	}
+	
 	public static synchronized ListaJokalariak getNireListaJokalariak(){
 		if (nListaJokalariak==null){
 			nListaJokalariak=new ListaJokalariak();
@@ -15,27 +22,25 @@ public class ListaJokalariak {
 		return nListaJokalariak;
 	}
 	
-private ListaJokalariak(){
-	listaJok=new ArrayList<Jokalaria>();
-	listaJok.add(new Erabiltzailea());
-	listaJok.add(new Ordenagailua());
-	txanda =0;
-}
-public int txandaKalkulatu(){
-	return txanda % 2;
-}
 
-public void txandaBurutu(){
-
-	
-	while (!bukatu){
-		listaJok.get(txandaKalkulatu()).txandaBurutu();
-		//
+	public int txandaKalkulatu(){
+		return txanda % 2;
 	}
-}
-public void hasieratu(){
-	listaJok.get(0).ontziakIpini();
-	listaJok.get(1).ontziakIpini();
-}
+
+	public void txandaBurutu(){
+		while (!bukatu){
+			listaJok.get(txandaKalkulatu()).txandaBurutu();
+			//
+		}
+	}
+
+	public void hasieratu(){
+		listaJok.get(0).ontziakIpini();
+		listaJok.get(1).ontziakIpini();
+	}
+	
+	public ArrayList<Jokalaria> getJokalariak(){
+		return listaJok;
+	}
 
 }

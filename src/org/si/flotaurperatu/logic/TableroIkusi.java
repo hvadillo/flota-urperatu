@@ -1,6 +1,8 @@
 package org.si.flotaurperatu.logic;
 
-public class TableroIkusi {
+import java.util.Observable;
+
+public class TableroIkusi extends Observable{
 	
 	private MatrizeGelaxka matrizea;
 	

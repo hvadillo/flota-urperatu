@@ -18,4 +18,16 @@ public class Ordenagailua extends Jokalaria{
 		
 	}
 
+	@Override
+	public void ezkutuaJarri() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void ontziakIpini() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

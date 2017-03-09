@@ -2,6 +2,7 @@ package org.si.flotaurperatu.interf;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.GridLayout;
 import java.util.Observable;
 import java.util.Observer;
 
@@ -26,6 +27,72 @@ public class KasilenPanela extends JPanel implements Observer {
 			nKasilenPanela = new KasilenPanela();
 		}
 		return nKasilenPanela;
+	}
+	
+	public void kasilakSortu(int pZutabe, int pErrenkada){
+		removeAll();
+		setLayout(new GridLayout(pErrenkada, pZutabe, 0, 0));
+		botoiak = new Kasila[pZutabe][pErrenkada];
+		for(int j=0; j<pErrenkada; j++){
+			for(int i=0; i<pZutabe; i++){
+				botoiak[i][j] = new Kasila(i,j);
+				add(botoiak[i][j]);
+			}
+		}
+	}	
+		
+	public void kasilakHasieratu(){
+		for(int j=0; j<botoiak[0].length; j++){
+			for(int i=0; i<botoiak.length; i++){
+				botoiak[i][j].kenduMouseListener();
+				botoiak[i][j].itxi();
+			}
+		}
+	}		
+	
+	public void mouseListenerrakGuztiakKendu(){
+		for(int j=0; j<botoiak[0].length; j++){
+			for(int i=0; i<botoiak.length; i++){
+				botoiak[i][j].kenduMouseListener();
+			}
+		}
+	}		
+
+	@Override
+	public void update(Observable o, Object arg) {
+		if(arg instanceof int[]){
+			int[] pos = (int[]) arg;
+			if(o instanceof GelaMina){
+				botoiak[pos[0]][pos[1]].setIcon(Irudiak.bloke[2]);
+			}
+			else if(o instanceof GelaHutsa){
+				botoiak[pos[0]][pos[1]].setIcon(Irudiak.bloke[1]);
+			}
+			else if(o instanceof GelaZenbakia){
+				botoiak[pos[0]][pos[1]].setIcon(Irudiak.zenbakiak[pos[2]]);
+			}
+			botoiak[pos[0]][pos[1]].kenduMouseListener();
+		}
+		else if(arg instanceof Object[]){
+			Object[] obj = (Object[]) arg;
+			Egoera e = (Egoera) obj[0];
+			int x = (Integer) obj[1];
+			int y = (Integer)obj[2];
+			switch (e) {
+			case BANDERA: 	botoiak[x][y].setIcon(Irudiak.bloke[3]);
+					break;
+			case GALDERA: 	botoiak[x][y].setIcon(Irudiak.bloke[4]);
+					break;
+			case ITXITA: 	botoiak[x][y].setIcon(Irudiak.bloke[0]);
+					break;
+			case MINA: 		botoiak[x][y].setIcon(Irudiak.bloke[2]);
+					break;
+			case EZBANDERA:	botoiak[x][y].setIcon(Irudiak.bloke[5]);
+				break;
+			default:
+				break;
+			}
+		}
 	}
 
 	@Override

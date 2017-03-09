@@ -11,6 +11,7 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 import org.si.flotaurperatu.interf.baliabideak.*;
+import org.si.flotaurperatu.logic.ListaJokalariak;
 
 public class Leihoa extends JFrame implements Observer{
 
@@ -39,7 +40,10 @@ public class Leihoa extends JFrame implements Observer{
 			    }
 			}
 		});
-		//Panela.getPanela().addObserver(this);
+		ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getEraso().addObserver(this);
+		ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getIkusi().addObserver(this);
+		ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).getEraso().addObserver(this);
+		ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).getIkusi().addObserver(this);
 	}
 	
 	public static Leihoa getLeihoa(){
