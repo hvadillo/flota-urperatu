@@ -28,5 +28,7 @@ public class KasilenPanela2 extends JPanel implements Observer {
 		// TODO Auto-generated method stub
 		
 	}
+	
+	
 
 }

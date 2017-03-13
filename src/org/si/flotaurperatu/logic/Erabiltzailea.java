@@ -28,6 +28,8 @@ public class Erabiltzailea extends Jokalaria{
 		// TODO Auto-generated method stub
 		
 	}
+	
+	
 
 	@Override
 	public void ontziakIpini() {

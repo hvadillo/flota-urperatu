@@ -6,11 +6,13 @@ import java.awt.GridLayout;
 import java.util.Observable;
 import java.util.Observer;
 
+import javax.swing.BorderFactory;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import org.si.flotaurperatu.interf.baliabideak.Irudiak;
+import javax.swing.border.LineBorder;
 
 public class Leihoa2 extends JFrame implements Observer{
 	
@@ -18,17 +20,22 @@ public class Leihoa2 extends JFrame implements Observer{
 	//private static Leihoa2 nLeihoa = null;
 	private static KasilenPanela2 matrize1 = new KasilenPanela2();
 	private static KasilenPanela2 matrize2 = new KasilenPanela2();
+	private static OntzienPanela ontziak = new OntzienPanela();
 	JLabel text1 = new JLabel();
 	JLabel text2 = new JLabel();
 	JPanel panel1 = new JPanel();
 	JPanel panel2 = new JPanel();
 	JPanel panel3 = new JPanel();
+	JPanel panel4 = new JPanel();
 	
 	public Leihoa2(){
 		Irudiak.kargatu();
 		this.setTitle("Flota Urperatu");
+		panel1.setBorder(null);
 		panel1.setLayout(new GridLayout(2,1,50,0));
+		matrize1.setBorder(new LineBorder(new Color(0, 0, 0), 4));
 		panel1.add(matrize1, BorderLayout.NORTH);
+		matrize2.setBorder(new LineBorder(new Color(0, 0, 0), 4));
 		panel1.add(matrize2, BorderLayout.SOUTH);
 		this.getContentPane().add(panel1, BorderLayout.CENTER);
 		text1.setText("dtahntnaetberdtnsatnstnsrnrssntr");
@@ -37,7 +44,9 @@ public class Leihoa2 extends JFrame implements Observer{
 		this.getContentPane().add(panel2, BorderLayout.WEST);
 		panel3.add(text2, null);
 		this.getContentPane().add(panel3, BorderLayout.EAST);
-		this.setSize(300, 600);
+		this.getContentPane().add(ontziak, BorderLayout.SOUTH);
+		
+		this.setSize(1013, 600);
 	}
 	
 	/*public static Leihoa2 getLeihoa2(){

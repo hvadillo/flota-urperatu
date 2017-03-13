@@ -31,4 +31,7 @@ public abstract class Jokalaria {
 	public TableroIkusi getIkusi(){
 		return tableroIkusi;
 	}
+	public ListaOntziak getFlota(){
+		return this.flota;
+	}
 }

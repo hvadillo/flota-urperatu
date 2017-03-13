@@ -19,4 +19,8 @@ public class MatrizeGelaxka {
 			kont1++;
 		}
 	}
+	
+	public void set(int pZutabe,int pErrenkada){
+		matrizea[pZutabe][pErrenkada].eguneratu(Egoera.ONTZIA);
+	}
 }

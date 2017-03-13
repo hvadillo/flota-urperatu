@@ -15,8 +15,8 @@ public class TableroIkusi extends Observable{
 		//TODO
 	}
 	
-	public void kokatu(){
-		//TODO
+	public void kokatu(int pZutabe, int pErrenkada){
+		matrizea.set(pZutabe, pErrenkada);
 	}
 	
 	public void ezkutuaJarri(){
