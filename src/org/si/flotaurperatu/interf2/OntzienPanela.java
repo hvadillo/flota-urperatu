@@ -1,7 +1,13 @@
 package org.si.flotaurperatu.interf2;
 
-import javax.swing.JPanel; 
+import javax.swing.JPanel;
 
+import org.si.flotaurperatu.actionListener.Bertikal;
+import org.si.flotaurperatu.actionListener.FragataIpini;
+import org.si.flotaurperatu.actionListener.HegazkinOntziIpini;
+import org.si.flotaurperatu.actionListener.Horizontala;
+import org.si.flotaurperatu.actionListener.ItsaspekoIpini;
+import org.si.flotaurperatu.actionListener.SuntsitzaileIpini;
 import org.si.flotaurperatu.logic.ListaJokalariak;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
@@ -10,97 +16,147 @@ import javax.swing.LayoutStyle.ComponentPlacement;
 import java.awt.Canvas;
 import javax.swing.AbstractAction;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.Action;
 import javax.swing.ButtonGroup;
 
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.Observable;
+import java.util.Observer;
+
 import javax.swing.JRadioButton;
 import java.awt.GridLayout;
 import javax.swing.JLabel;
 
-public class OntzienPanela extends JPanel {
+public class OntzienPanela extends JPanel implements ActionListener{
+	
 	private static final long serialVersionUID = 1L;
+	private static OntzienPanela nPanela;
+	private String ontziMota = null;
+	private String norabide = null;
+	private int fragataKop = 3;
+	private int itsaspekoKop = 1;
+	private int suntsitzaileKop = 2;
+	ButtonGroup g;
+	JRadioButton bertikal;
+	JRadioButton horizontal;
+	JButton fragata1;
+	JButton itsaspeko1;
+	JButton suntsitzaile1;
+	JButton hegazkinontzi;
 	
-	
-	public OntzienPanela(){
+	private OntzienPanela(){
 		
-		JButton btnNewButton = new JButton("Fragata");
+		setLayout(new GridLayout(2, 3, 0, 0));
 		
-		JButton btnNewButton_3 = new JButton("Fragata");
-		setLayout(new GridLayout(0, 4, 0, 0));
-		add(btnNewButton);
-		add(btnNewButton_3);
+		g = new ButtonGroup();
+		bertikal = new JRadioButton("Bertikal");
+		bertikal.addActionListener(new Bertikal());
+		g.add(bertikal);
+		add(bertikal);
+		horizontal = new JRadioButton("Horizontal");
+		horizontal.addActionListener(new Horizontala());
+		g.add(horizontal);
+		add(horizontal);
 		
-		JButton btnNewButton_2 = new JButton("Fragata");
-		add(btnNewButton_2);
+		fragata1 = new JButton("Fragata");
+		add(fragata1);
+		fragata1.addActionListener(new FragataIpini());
+		/*JButton fragata2 = new JButton("Fragata");
+		add(fragata2);
+		fragata2.addActionListener(new FragataIpini());
+		JButton fragata3 = new JButton("Fragata");
+		add(fragata3);
+		fragata3.addActionListener(new FragataIpini());
+		JButton fragata4 = new JButton("Fragata");
+		add(fragata4);
+		fragata4.addActionListener(new FragataIpini());*/
 		
-		JButton btnNewButton_1 = new JButton("Fragata");
-		add(btnNewButton_1);
+		itsaspeko1 = new JButton("Itsaspeko");
+		add(itsaspeko1);
+		itsaspeko1.addActionListener(new ItsaspekoIpini());
+		/*JButton itsaspeko2 = new JButton("Itsaspeko");
+		add(itsaspeko2);
+		itsaspeko2.addActionListener(new ItsaspekoIpini());*/
 		
-		ButtonGroup g = new ButtonGroup();
+		suntsitzaile1 = new JButton("Suntsitzaile");
+		add(suntsitzaile1);
+		suntsitzaile1.addActionListener(new SuntsitzaileIpini());
+		/*JButton suntsitzaile2 = new JButton("Suntsitzaile");
+		add(suntsitzaile2);
+		suntsitzaile2.addActionListener(new SuntsitzaileIpini());
+		JButton suntsitzaile3 = new JButton("Suntsitzaile");
+		add(suntsitzaile3);
+		suntsitzaile3.addActionListener(new SuntsitzaileIpini());*/
 		
-		JRadioButton rdbtnNewRadioButton_1 = new JRadioButton("Bertikal");
-		g.add(rdbtnNewRadioButton_1);
-		add(rdbtnNewRadioButton_1);
-		
-		JRadioButton rdbtnNewRadioButton = new JRadioButton("Horizontal");
-		g.add(rdbtnNewRadioButton);
-		add(rdbtnNewRadioButton);
-	
-		
-	
-		JButton btnNewButton_5 = new JButton("Itsaspeko");
-		add(btnNewButton_5);
-		
-		JButton btnNewButton_7 = new JButton("Suntsitzaile");
-		add(btnNewButton_7);
-		
-		JButton btnNewButton_8 = new JButton("Suntsitzaile");
-		add(btnNewButton_8);
-		
-		JButton btnNewButton_9 = new JButton("Suntsitzaile");
-		add(btnNewButton_9);
-		
-		JButton btnNewButton_6 = new JButton("Itsaspeko");
-		add(btnNewButton_6);
-		
-		JButton btnNewButton_4 = new JButton("Hegazkin-Ontzi");
-		add(btnNewButton_4);
-		
-		JLabel label_2 = new JLabel("");
-		add(label_2);
-		
-		JLabel label_3 = new JLabel("");
-		add(label_3);
-		
-		JLabel label_4 = new JLabel("");
-		add(label_4);
-		
-		JLabel label_5 = new JLabel("");
-		add(label_5);
-		
-		JLabel label_6 = new JLabel("");
-		add(label_6);
-		
-		JLabel label_7 = new JLabel("");
-		add(label_7);
-		
-		JLabel label_8 = new JLabel("");
-		add(label_8);
-		
-		JLabel label_9 = new JLabel("");
-		add(label_9);
-		
-		JLabel label_10 = new JLabel("");
-		add(label_10);
-		
-		JLabel label_11 = new JLabel("");
-		add(label_11);
-		
-		JLabel label_12 = new JLabel("");
-		add(label_12);
+		hegazkinontzi = new JButton("Hegazkin-Ontzi");
+		add(hegazkinontzi);
+		hegazkinontzi.addActionListener(new HegazkinOntziIpini());
+
 		//jarri ontzi bakoitzeko botoi bat
+	}
+	
+	public static OntzienPanela getOntzienPanela(){
+		if(nPanela==null){
+			nPanela= new OntzienPanela();
+		}
+		return nPanela;
+	}
+	
+	public void setMota(String pMota){
+		ontziMota = pMota;
+	}
+	
+	public String getMota(){
+		return ontziMota;
+	}
+	
+	public void setNorabide(String pNorabide){
+		norabide = pNorabide;
+	}
+	
+	public String getNorabide(){
+		return norabide;
+	}
+	
+	public void kontagailuaEguneratu(String pMota){
+		if(pMota.equals("Fragata")){
+			if(fragataKop==0){
+				kenduBotoia("Fragata");
+			}else{
+				fragataKop--;
+				ontziMota=null;
+			}	
+		}else if(pMota.equals("Itsaspeko")){
+			if(itsaspekoKop==0){
+				kenduBotoia("Itsaspeko");
+			}else{
+				itsaspekoKop--;
+				ontziMota=null;
+			}
+		}else{
+			if(suntsitzaileKop==0){
+				kenduBotoia("Suntsitzaile");
+			}else{
+				suntsitzaileKop--;
+				ontziMota=null;
+			}
+		}
+		ontziMota=null;
+	}
+	
+	public void kenduBotoia(String pMota){
+		if(pMota.equals("Fragata")){
+			remove(fragata1);
+		}else if(pMota.equals("Itsaspeko")){
+			remove(itsaspeko1);
+		}else if(pMota.equals("Suntsitzaile")){
+			remove(suntsitzaile1);
+		}else{
+			remove(hegazkinontzi);
+		}
 	}
 	private class SwingAction extends AbstractAction {
 		public SwingAction() {
@@ -109,5 +165,15 @@ public class OntzienPanela extends JPanel {
 		}
 		public void actionPerformed(ActionEvent e) {
 		}
+	}
+	
+	public void actionListenerKendu(String pMota){
+		
+	}
+	
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
 	}
 }

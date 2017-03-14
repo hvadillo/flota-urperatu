@@ -23,6 +23,18 @@ public class KasilenPanela2 extends JPanel implements Observer {
 		}
 	}
 	
+	public void kenduListener(){
+		for(int y = 0; y < 10; y++){
+			for(int x = 0; x < 10; x++){
+				botoiak[x][y].kenduListener();
+			}
+		}
+	}
+	
+	public void iconoAldatu(int pX,int pY){
+		botoiak[pX][pY].iconoAldatu();
+	}
+	
 	@Override
 	public void update(Observable o, Object arg) {
 		// TODO Auto-generated method stub
