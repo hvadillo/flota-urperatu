@@ -12,6 +12,8 @@ public class Irudiak {
 	
 	private static void blokeakKargatu(){
 		bloke[0] = new ImageIcon(Irudiak.class.getResource("close.png"));
+		System.out.println(bloke[0].toString());
+		
 		bloke[1] = new ImageIcon(Irudiak.class.getResource("open.png"));
 	}
 

@@ -26,8 +26,9 @@ public class Kasila2 extends JButton implements MouseListener{
 		zutabe = pZut;
 		errenkada = pErr;
 		addMouseListener(this);
-		setIcon(new ImageIcon(Kasila2.class.getResource("/org/si/flotaurperatu/interf/baliabideak/close.png")));
-		//setIcon(Irudiak.bloke[0]);
+		Irudiak.kargatu();
+		//setIcon(new ImageIcon(Kasila2.class.getResource("/org/si/flotaurperatu/interf/baliabideak/close.png")));
+		setIcon(Irudiak.bloke[0]);
 	}
 	
 	public void kenduListener(){
