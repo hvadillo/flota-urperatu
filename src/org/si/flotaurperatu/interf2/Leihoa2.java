@@ -29,7 +29,6 @@ public class Leihoa2 extends JFrame implements Observer{
 	JPanel panel4 = new JPanel();
 	
 	private Leihoa2(){
-		Irudiak.kargatu();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setTitle("Flota Urperatu");
 		panel1.setBorder(null);

@@ -5,15 +5,21 @@ import javax.swing.ImageIcon;
 public class Irudiak {
 	
 	public static ImageIcon[] bloke = new ImageIcon[2];
+	private static Irudiak nIrudiak = null;
 	
-	public static void kargatu(){
+	private Irudiak(){
 		blokeakKargatu();
+	}
+	
+	public static Irudiak getNIrudiak(){
+		if(nIrudiak==null){
+			nIrudiak = new Irudiak();
+		}
+		return nIrudiak;
 	}
 	
 	private static void blokeakKargatu(){
 		bloke[0] = new ImageIcon(Irudiak.class.getResource("close.png"));
-		System.out.println(bloke[0].toString());
-		
 		bloke[1] = new ImageIcon(Irudiak.class.getResource("open.png"));
 	}
 
