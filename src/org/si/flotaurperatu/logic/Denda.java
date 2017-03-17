@@ -1,8 +1,10 @@
 package org.si.flotaurperatu.logic;
 
+import java.util.ArrayList;
+
 public class Denda {
 	
-	private Kolekzioa<Arma> armak;
+	private ArrayList<Arma> armak;
 	private static Denda nDenda = null;
 	
 	private Denda(){
