@@ -14,13 +14,14 @@ public class Ezkutua extends Arma{
 		// TODO Auto-generated method stub
 		//
 	}
-	public void kolpeaJaso(Arma pArma){
+	public int kolpeaJaso(Arma pArma){
 		if(pArma instanceof Bonba){
 			kolpeak--;
 		}
 		else{
 			kolpeak = 0;
 		}
+		return kolpeak;
 	}
 
 }

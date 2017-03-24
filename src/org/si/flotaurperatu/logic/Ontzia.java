@@ -13,12 +13,40 @@ public abstract class Ontzia {
 		luzeera = pLuzeera;
 	}
 	
-	public void tiroaJaso(){
-		//TODO
+	public void tiroaJaso(Arma pArma, Gelaxka pGelaxka){
+		if(ezkutua != null){
+			if(ezkutua.kolpeaJaso(pArma)==0){
+				ezkutua = null;
+				for(int i = 0; i < posizioak.size(); i++){
+					if(posizioak.get(i).getEgoera()!=Egoera.EMANDA){
+						posizioak.get(i).eguneratu(Egoera.ONTZIA);
+					}
+				}
+			}
+		}else{
+			if(pArma instanceof Misil){
+				for(int i = 0; i < posizioak.size(); i++){
+					posizioak.get(i).eguneratu(Egoera.EMANDA);
+				}
+				this.urperatu();
+			}else{
+				pGelaxka.eguneratu(Egoera.EMANDA);
+				boolean urperatu = true;
+				int i = 0;
+				while(i < posizioak.size() && urperatu == true){
+					if(posizioak.get(i).getEgoera()==Egoera.ONTZIA){
+						urperatu = false;
+					}
+				}
+				if(urperatu == true){
+					this.urperatu();
+				}
+			}
+		}
 	}
 	
-	private void urperatura(){
-		//TODO
+	private void urperatu(){
+		urperatuta = true;
 	}
 	
 	public Boolean urperatutaDago(){
@@ -30,5 +58,10 @@ public abstract class Ontzia {
 	}
 	public void ezkutuaJarri(Ezkutua pEzkutua){
 		this.ezkutua = pEzkutua;
+		for(int i = 0; i < posizioak.size(); i++){
+			if(posizioak.get(i).getEgoera()!=Egoera.EMANDA){
+				posizioak.get(i).eguneratu(Egoera.EZKUTUA);
+			}	
+		}
 	}
 }
