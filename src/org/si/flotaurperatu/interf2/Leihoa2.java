@@ -31,6 +31,7 @@ public class Leihoa2 extends JFrame implements Observer{
 	private Leihoa2(){
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setTitle("Flota Urperatu");
+		this.setIconImage(Irudiak.getNIrudiak().ikonoa);
 		panel1.setBorder(null);
 		panel1.setLayout(new GridLayout(2,1,50,0));
 		matrize1.setBorder(new LineBorder(new Color(0, 0, 0), 4));

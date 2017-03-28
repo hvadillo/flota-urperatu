@@ -26,7 +26,6 @@ public class Kasila2 extends JButton implements MouseListener{
 		zutabe = pZut;
 		errenkada = pErr;
 		addMouseListener(this);
-		//setIcon(new ImageIcon(Kasila2.class.getResource("/org/si/flotaurperatu/interf/baliabideak/close.png")));
 		setIcon(Irudiak.getNIrudiak().bloke[0]);
 	}
 	
@@ -36,7 +35,6 @@ public class Kasila2 extends JButton implements MouseListener{
 	
 	public void iconoAldatu(){
 		setIcon(Irudiak.getNIrudiak().bloke[1]);
-		//setIcon(new ImageIcon(Kasila2.class.getResource("/org/si/flotaurperatu/interf/baliabideak/open.png")));
 		this.removeMouseListener(this);
 	}
 	
@@ -45,7 +43,6 @@ public class Kasila2 extends JButton implements MouseListener{
 	public void mouseClicked(MouseEvent e) {
 		if(e.getButton() == MouseEvent.BUTTON1){   
 			ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getIkusi().kokatu(zutabe,errenkada);
-			//setIcon(new ImageIcon(Kasila2.class.getResource("/org/si/flotaurperatu/interf/baliabideak/open.png")));
 			if(OntzienPanela.getOntzienPanela().getMota().equals("Fragata")){
 				if(OntzienPanela.getOntzienPanela().getNorabide().equals("Horizontal")){
 					Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe, errenkada);
