@@ -44,20 +44,25 @@ public class Kasila2 extends JButton implements MouseListener{
 		if(e.getButton() == MouseEvent.BUTTON1){   
 			ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getIkusi().kokatu(zutabe,errenkada);
 			if(OntzienPanela.getOntzienPanela().getMota().equals("Fragata")){
+				
 				if(OntzienPanela.getOntzienPanela().getNorabide().equals("Horizontal")){
+					
 					Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe, errenkada);
 					OntzienPanela.getOntzienPanela().kontagailuaEguneratu("Fragata");
 				}else{
+					
 					Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe, errenkada);
 					OntzienPanela.getOntzienPanela().kontagailuaEguneratu("Fragata");
 				}
 			}else if(OntzienPanela.getOntzienPanela().getMota().equals("Itsaspeko")){
 				if(OntzienPanela.getOntzienPanela().getNorabide().equals("Horizontal")){
+					
 					Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe, errenkada);
 					Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe + 1, errenkada);
 					Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe + 2, errenkada);
 					OntzienPanela.getOntzienPanela().kontagailuaEguneratu("Itsaspeko");
 				}else{
+					
 					Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe, errenkada);
 					Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe, errenkada + 1);
 					Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe, errenkada + 2);

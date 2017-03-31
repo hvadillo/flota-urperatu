@@ -20,7 +20,11 @@ public class MatrizeGelaxka {
 		}
 	}
 	
-	public void set(int pZutabe,int pErrenkada){
+	public void set(int pZutabe,int pErrenkada){	
 		matrizea[pZutabe][pErrenkada].eguneratu(Egoera.ONTZIA);
 	}
+	public Gelaxka getGelaxka(int pZutabe,int pErrenkada){
+		return matrizea[pZutabe][pErrenkada];
+	}
+	
 }
