@@ -24,129 +24,185 @@ public class TableroIkusi extends Observable{
 	public void ezkutuaJarri(){
 		//TODO
 	}
-	public void konprobatu(int pZutabe, int pErrenkada ){
-		boolean kokatu=true;
-		if(OntzienPanela.getOntzienPanela().getNorabide().equals("Horizontal")){
-			if(OntzienPanela.getOntzienPanela().getMota().equals("Fragata")){
-				if(matrizea.getGelaxka(pZutabe-1, pErrenkada-1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe-1, pErrenkada).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe, pErrenkada-1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe+1, pErrenkada+1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe+1, pErrenkada-1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe-1, pErrenkada+1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe+1, pErrenkada).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe, pErrenkada+1).getEgoera().equals(Egoera.URA)){
-				}else{
-					kokatu=false;
-				}
-			}
-			else if(OntzienPanela.getOntzienPanela().getMota().equals("Suntsitzaile")){
-				if(matrizea.getGelaxka(pZutabe-1, pErrenkada-1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe-1, pErrenkada).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe, pErrenkada-1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe+1, pErrenkada+1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe+1, pErrenkada-1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe-1, pErrenkada+1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe+1, pErrenkada).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe, pErrenkada+1).getEgoera().equals(Egoera.URA)){
-					pZutabe++;
-					if(matrizea.getGelaxka(pZutabe-1, pErrenkada-1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe-1, pErrenkada).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe, pErrenkada-1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe+1, pErrenkada+1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe+1, pErrenkada-1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe-1, pErrenkada+1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe+1, pErrenkada).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe, pErrenkada+1).getEgoera().equals(Egoera.URA)){
-					}else{
-						kokatu=false;
-					}
-				}
-				else{
-					kokatu=false;
-				}
-			}
-			else if(OntzienPanela.getOntzienPanela().getMota().equals("Itsaspeko")){
-				if(matrizea.getGelaxka(pZutabe-1, pErrenkada-1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe-1, pErrenkada).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe, pErrenkada-1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe+1, pErrenkada+1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe+1, pErrenkada-1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe-1, pErrenkada+1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe+1, pErrenkada).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe, pErrenkada+1).getEgoera().equals(Egoera.URA)){
-					pZutabe++;
-					if(matrizea.getGelaxka(pZutabe-1, pErrenkada-1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe-1, pErrenkada).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe, pErrenkada-1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe+1, pErrenkada+1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe+1, pErrenkada-1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe-1, pErrenkada+1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe+1, pErrenkada).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe, pErrenkada+1).getEgoera().equals(Egoera.URA)){
-						pZutabe++;
-						if(matrizea.getGelaxka(pZutabe-1, pErrenkada-1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe-1, pErrenkada).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe, pErrenkada-1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe+1, pErrenkada+1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe+1, pErrenkada-1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe-1, pErrenkada+1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe+1, pErrenkada).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe, pErrenkada+1).getEgoera().equals(Egoera.URA)){
-						}else{
-							kokatu=false;
-						}
-					}else{
-						kokatu=false;
-					}
-				}else{
-					kokatu=false;
-				}
-			}else if(OntzienPanela.getOntzienPanela().getMota().equals("hegazkinontzi")){
-				if(matrizea.getGelaxka(pZutabe-1, pErrenkada-1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe-1, pErrenkada).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe, pErrenkada-1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe+1, pErrenkada+1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe+1, pErrenkada-1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe-1, pErrenkada+1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe+1, pErrenkada).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe, pErrenkada+1).getEgoera().equals(Egoera.URA)){
-					pZutabe++;
-					if(matrizea.getGelaxka(pZutabe-1, pErrenkada-1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe-1, pErrenkada).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe, pErrenkada-1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe+1, pErrenkada+1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe+1, pErrenkada-1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe-1, pErrenkada+1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe+1, pErrenkada).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe, pErrenkada+1).getEgoera().equals(Egoera.URA)){
-						pZutabe++;
-						if(matrizea.getGelaxka(pZutabe-1, pErrenkada-1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe-1, pErrenkada).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe, pErrenkada-1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe+1, pErrenkada+1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe+1, pErrenkada-1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe-1, pErrenkada+1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe+1, pErrenkada).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe, pErrenkada+1).getEgoera().equals(Egoera.URA)){
-							pZutabe++;
-							if(matrizea.getGelaxka(pZutabe-1, pErrenkada-1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe-1, pErrenkada).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe, pErrenkada-1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe+1, pErrenkada+1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe+1, pErrenkada-1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe-1, pErrenkada+1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe+1, pErrenkada).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe, pErrenkada+1).getEgoera().equals(Egoera.URA)){
-							}else{
-								kokatu=false;
+	public boolean konprobatu(int pZutabe, int pErrenkada ){
+		boolean kokatu = false;
+		boolean ontzia = false;
+		if(konprobatuBarruan(pZutabe, pErrenkada)){
+			if(OntzienPanela.getOntzienPanela().getNorabide().equals("Horizontal")){
+				if(OntzienPanela.getOntzienPanela().getMota().equals("Fragata")){
+					int i = pZutabe-1;
+					int j = pErrenkada-1;
+					while((i <= pZutabe+1) && !ontzia){
+						j = pErrenkada-1;
+						while((j <= pErrenkada+1) && !ontzia){
+							if(konprobatuKasila(i, j)){
+								if(!matrizea.getGelaxka(i, j).getEgoera().equals(Egoera.URA)){
+									ontzia = true;
+								}
 							}
-						}else{
-							kokatu=false;
+							j++;
 						}
-					}else{
-						kokatu=false;
+						i++;
+					}
+				}else if(OntzienPanela.getOntzienPanela().getMota().equals("Suntsitzaile")){
+					int i = pZutabe-1;
+					int j = pErrenkada-1;
+					while((i <= pZutabe+2) && !ontzia){
+						j = pErrenkada-1;
+						while((j <= pErrenkada+1) && !ontzia){
+							if(konprobatuKasila(i, j)){
+								if(!matrizea.getGelaxka(i, j).getEgoera().equals(Egoera.URA)){
+									ontzia = true;
+								}
+							}
+							j++;
+						}
+						i++;
+					}
+				}else if(OntzienPanela.getOntzienPanela().getMota().equals("Itsaspeko")){
+					int i = pZutabe-1;
+					int j = pErrenkada-1;
+					while((i <= pZutabe+3) && !ontzia){
+						j = pErrenkada-1;
+						while((j <= pErrenkada+1) && !ontzia){
+							if(konprobatuKasila(i, j)){
+								if(!matrizea.getGelaxka(i, j).getEgoera().equals(Egoera.URA)){
+									ontzia = true;
+								}
+							}
+							j++;
+						}
+						i++;
 					}
 				}else{
-					kokatu=false;
+					int i = pZutabe-1;
+					int j = pErrenkada-1;
+					while((i <= pZutabe+4) && !ontzia){
+						j = pErrenkada-1;
+						while((j <= pErrenkada+1) && !ontzia){
+							if(konprobatuKasila(i, j)){
+								if(!matrizea.getGelaxka(i, j).getEgoera().equals(Egoera.URA)){
+									ontzia = true;
+								}
+							}
+							j++;
+						}
+						i++;
+					}
+				}	
+			}else{
+				if(OntzienPanela.getOntzienPanela().getMota().equals("Fragata")){
+					int i = pZutabe-1;
+					int j = pErrenkada-1;
+					while((i <= pZutabe+1) && !ontzia){
+						j = pErrenkada-1;
+						while((j <= pErrenkada+1) && !ontzia){
+							if(konprobatuKasila(i, j)){
+								if(!matrizea.getGelaxka(i, j).getEgoera().equals(Egoera.URA)){
+									ontzia = true;
+								}
+							}
+							j++;
+						}
+						i++;
+					}
+				}else if(OntzienPanela.getOntzienPanela().getMota().equals("Suntsitzaile")){
+					int i = pZutabe-1;
+					int j = pErrenkada-1;
+					while((i <= pZutabe+1) && !ontzia){
+						j = pErrenkada-1;
+						while((j <= pErrenkada+2) && !ontzia){
+							if(konprobatuKasila(i, j)){
+								if(!matrizea.getGelaxka(i, j).getEgoera().equals(Egoera.URA)){
+									ontzia = true;
+								}
+							}
+							j++;
+						}
+						i++;
+					}
+				}else if(OntzienPanela.getOntzienPanela().getMota().equals("Itsaspeko")){
+					int i = pZutabe-1;
+					int j = pErrenkada-1;
+					while((i <= pZutabe+1) && !ontzia){
+						j = pErrenkada-1;
+						while((j <= pErrenkada+3) && !ontzia){
+							if(konprobatuKasila(i, j)){
+								if(!matrizea.getGelaxka(i, j).getEgoera().equals(Egoera.URA)){
+									ontzia = true;
+								}
+							}
+							j++;
+						}
+						i++;
+					}
+				}else{
+					int i = pZutabe-1;
+					int j = pErrenkada-1;
+					while((i <= pZutabe+1) && !ontzia){
+						j = pErrenkada-1;
+						while((j <= pErrenkada+4) && !ontzia){
+							if(konprobatuKasila(i, j)){
+								if(!matrizea.getGelaxka(i, j).getEgoera().equals(Egoera.URA)){
+									ontzia = true;
+								}
+							}
+							j++;
+						}
+						i++;
+					}
 				}
+			}
+			if(!ontzia){
+				kokatu = true;
 			}
 		}
-		else{
-			if(OntzienPanela.getOntzienPanela().getMota().equals("Fragata")){
-				if(matrizea.getGelaxka(pZutabe-1, pErrenkada-1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe-1, pErrenkada).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe, pErrenkada-1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe+1, pErrenkada+1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe+1, pErrenkada-1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe-1, pErrenkada+1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe+1, pErrenkada).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe, pErrenkada+1).getEgoera().equals(Egoera.URA)){
-				}else{
-					kokatu=false;
-				}
-			}
-			else if(OntzienPanela.getOntzienPanela().getMota().equals("Suntsitzaile")){
-				if(matrizea.getGelaxka(pZutabe-1, pErrenkada-1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe-1, pErrenkada).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe, pErrenkada-1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe+1, pErrenkada+1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe+1, pErrenkada-1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe-1, pErrenkada+1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe+1, pErrenkada).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe, pErrenkada+1).getEgoera().equals(Egoera.URA)){
-					pErrenkada++;
-					if(matrizea.getGelaxka(pZutabe-1, pErrenkada-1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe-1, pErrenkada).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe, pErrenkada-1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe+1, pErrenkada+1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe+1, pErrenkada-1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe-1, pErrenkada+1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe+1, pErrenkada).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe, pErrenkada+1).getEgoera().equals(Egoera.URA)){
-					}else{
-						kokatu=false;
-					}
-				}
-				else{
-					kokatu=false;
-				}
-			}
-			else if(OntzienPanela.getOntzienPanela().getMota().equals("Itsaspeko")){
-				if(matrizea.getGelaxka(pZutabe-1, pErrenkada-1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe-1, pErrenkada).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe, pErrenkada-1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe+1, pErrenkada+1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe+1, pErrenkada-1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe-1, pErrenkada+1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe+1, pErrenkada).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe, pErrenkada+1).getEgoera().equals(Egoera.URA)){
-					pErrenkada++;
-					if(matrizea.getGelaxka(pZutabe-1, pErrenkada-1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe-1, pErrenkada).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe, pErrenkada-1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe+1, pErrenkada+1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe+1, pErrenkada-1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe-1, pErrenkada+1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe+1, pErrenkada).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe, pErrenkada+1).getEgoera().equals(Egoera.URA)){
-						pErrenkada++;
-						if(matrizea.getGelaxka(pZutabe-1, pErrenkada-1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe-1, pErrenkada).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe, pErrenkada-1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe+1, pErrenkada+1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe+1, pErrenkada-1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe-1, pErrenkada+1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe+1, pErrenkada).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe, pErrenkada+1).getEgoera().equals(Egoera.URA)){
-						}else{
-							kokatu=false;
-						}
-					}else{
-						kokatu=false;
-					}
-				}else{
-					kokatu=false;
-				}
-			}else if(OntzienPanela.getOntzienPanela().getMota().equals("hegazkinontzi")){
-				if(matrizea.getGelaxka(pZutabe-1, pErrenkada-1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe-1, pErrenkada).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe, pErrenkada-1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe+1, pErrenkada+1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe+1, pErrenkada-1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe-1, pErrenkada+1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe+1, pErrenkada).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe, pErrenkada+1).getEgoera().equals(Egoera.URA)){
-					pErrenkada++;
-					if(matrizea.getGelaxka(pZutabe-1, pErrenkada-1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe-1, pErrenkada).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe, pErrenkada-1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe+1, pErrenkada+1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe+1, pErrenkada-1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe-1, pErrenkada+1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe+1, pErrenkada).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe, pErrenkada+1).getEgoera().equals(Egoera.URA)){
-						pErrenkada++;
-						if(matrizea.getGelaxka(pZutabe-1, pErrenkada-1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe-1, pErrenkada).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe, pErrenkada-1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe+1, pErrenkada+1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe+1, pErrenkada-1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe-1, pErrenkada+1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe+1, pErrenkada).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe, pErrenkada+1).getEgoera().equals(Egoera.URA)){
-							pErrenkada++;
-							if(matrizea.getGelaxka(pZutabe-1, pErrenkada-1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe-1, pErrenkada).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe, pErrenkada-1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe+1, pErrenkada+1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe+1, pErrenkada-1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe-1, pErrenkada+1).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe+1, pErrenkada).getEgoera().equals(Egoera.URA)&&matrizea.getGelaxka(pZutabe, pErrenkada+1).getEgoera().equals(Egoera.URA)){
-							}else{
-								kokatu=false;
-							}
-						}else{
-							kokatu=false;
-						}
-					}else{
-						kokatu=false;
-					}
-				}else{
-					kokatu=false;
-				}
-			}
-			
-		}
+		return kokatu;
 	}
-	public void konprobatuBarruan(int pZutabe,int pErrenkada){
-		boolean barruan;
+	
+	private boolean konprobatuKasila(int pZut, int pErr){
+		boolean barruan = false;
+		if((pZut >= 0 && pZut <= 9) && (pErr >= 0 && pErr <= 9 )){
+			barruan = true;
+		}
+		return barruan;
+	}
+		
+	private boolean konprobatuBarruan(int pZutabe,int pErrenkada){
+		boolean barruan = false;
 		if(OntzienPanela.getOntzienPanela().getNorabide().equals("Horizontal")){
 			if(OntzienPanela.getOntzienPanela().getMota().equals("Fragata")){
+				barruan = true;
+			}else if(OntzienPanela.getOntzienPanela().getMota().equals("Suntsitzaile")){
+				if(pZutabe <= 8){
+					barruan = true;
+				}
+			}else if(OntzienPanela.getOntzienPanela().getMota().equals("Itsaspeko")){
+				if(pZutabe <= 7){
+					barruan = true;
+				}
+			}else{
+				if(pZutabe <= 6){
+					barruan = true;
+				}
+			}
+		}else{
+			if(OntzienPanela.getOntzienPanela().getMota().equals("Fragata")){
+				barruan = true;
+			}else if(OntzienPanela.getOntzienPanela().getMota().equals("Suntsitzaile")){
+				if(pErrenkada <= 8){
+					barruan = true;
+				}
+			}else if(OntzienPanela.getOntzienPanela().getMota().equals("Itsaspeko")){
+				if(pErrenkada <= 7){
+					barruan = true;
+				}
+			}else{
+				if(pErrenkada <= 6){
+					barruan = true;
+				}
 			}
 		}
+		return barruan;
 	}
 }	
-
-//||(pZutabe-1<0||pErrenkada-1<0)

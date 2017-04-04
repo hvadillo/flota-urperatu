@@ -35,64 +35,66 @@ public class Kasila2 extends JButton implements MouseListener{
 	
 	public void iconoAldatu(){
 		setIcon(Irudiak.getNIrudiak().bloke[1]);
-		this.removeMouseListener(this);
+		//this.removeMouseListener(this);
 	}
 	
 
 	@Override
 	public void mouseClicked(MouseEvent e) {
-		if(e.getButton() == MouseEvent.BUTTON1){   
-			ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getIkusi().kokatu(zutabe,errenkada);
-			if(OntzienPanela.getOntzienPanela().getMota().equals("Fragata")){
+		if(e.getButton() == MouseEvent.BUTTON1){  
+			if(ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getIkusi().konprobatu(zutabe, errenkada)){
+				ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getIkusi().kokatu(zutabe,errenkada);
+				if(OntzienPanela.getOntzienPanela().getMota().equals("Fragata")){
 				
-				if(OntzienPanela.getOntzienPanela().getNorabide().equals("Horizontal")){
+					if(OntzienPanela.getOntzienPanela().getNorabide().equals("Horizontal")){
 					
-					Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe, errenkada);
-					OntzienPanela.getOntzienPanela().kontagailuaEguneratu("Fragata");
-				}else{
+						Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe, errenkada);
+						OntzienPanela.getOntzienPanela().kontagailuaEguneratu("Fragata");
+					}else{
 					
-					Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe, errenkada);
-					OntzienPanela.getOntzienPanela().kontagailuaEguneratu("Fragata");
-				}
-			}else if(OntzienPanela.getOntzienPanela().getMota().equals("Itsaspeko")){
-				if(OntzienPanela.getOntzienPanela().getNorabide().equals("Horizontal")){
+						Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe, errenkada);
+						OntzienPanela.getOntzienPanela().kontagailuaEguneratu("Fragata");
+					}
+				}else if(OntzienPanela.getOntzienPanela().getMota().equals("Itsaspeko")){
+					if(OntzienPanela.getOntzienPanela().getNorabide().equals("Horizontal")){
 					
-					Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe, errenkada);
-					Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe + 1, errenkada);
-					Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe + 2, errenkada);
-					OntzienPanela.getOntzienPanela().kontagailuaEguneratu("Itsaspeko");
-				}else{
+						Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe, errenkada);
+						Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe + 1, errenkada);
+						Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe + 2, errenkada);
+						OntzienPanela.getOntzienPanela().kontagailuaEguneratu("Itsaspeko");
+					}else{
 					
-					Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe, errenkada);
-					Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe, errenkada + 1);
-					Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe, errenkada + 2);
-					OntzienPanela.getOntzienPanela().kontagailuaEguneratu("Itsaspeko");
-				}
-			}else if(OntzienPanela.getOntzienPanela().getMota().equals("Suntsitzaile")){
-				if(OntzienPanela.getOntzienPanela().getNorabide().equals("Horizontal")){
-					Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe, errenkada);
-					Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe + 1, errenkada);
-					OntzienPanela.getOntzienPanela().kontagailuaEguneratu("Suntsitzaile");
+						Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe, errenkada);
+						Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe, errenkada + 1);
+						Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe, errenkada + 2);
+						OntzienPanela.getOntzienPanela().kontagailuaEguneratu("Itsaspeko");
+					}
+				}else if(OntzienPanela.getOntzienPanela().getMota().equals("Suntsitzaile")){
+					if(OntzienPanela.getOntzienPanela().getNorabide().equals("Horizontal")){
+						Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe, errenkada);
+						Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe + 1, errenkada);
+						OntzienPanela.getOntzienPanela().kontagailuaEguneratu("Suntsitzaile");
+					}else{
+						Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe, errenkada);
+						Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe, errenkada + 1);
+						OntzienPanela.getOntzienPanela().kontagailuaEguneratu("Suntsitzaile");
+					}
 				}else{
-					Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe, errenkada);
-					Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe, errenkada + 1);
-					OntzienPanela.getOntzienPanela().kontagailuaEguneratu("Suntsitzaile");
-				}
-			}else{
-				if(OntzienPanela.getOntzienPanela().getNorabide().equals("Horizontal")){
-					Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe, errenkada);
-					Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe + 1, errenkada);
-					Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe + 2, errenkada);
-					Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe + 3, errenkada);
-					OntzienPanela.getOntzienPanela().kenduBotoia("hegazkinontzi");
-					OntzienPanela.getOntzienPanela().setMota(null);
-				}else{
-					Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe, errenkada);
-					Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe, errenkada + 1);
-					Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe, errenkada + 2);
-					Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe, errenkada + 3);
-					OntzienPanela.getOntzienPanela().kenduBotoia("hegazkinontzi");
-					OntzienPanela.getOntzienPanela().setMota(null);
+					if(OntzienPanela.getOntzienPanela().getNorabide().equals("Horizontal")){
+						Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe, errenkada);
+						Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe + 1, errenkada);
+						Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe + 2, errenkada);
+						Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe + 3, errenkada);
+						OntzienPanela.getOntzienPanela().kenduBotoia("hegazkinontzi");
+						OntzienPanela.getOntzienPanela().setMota(null);
+					}else{
+						Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe, errenkada);
+						Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe, errenkada + 1);
+						Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe, errenkada + 2);
+						Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe, errenkada + 3);
+						OntzienPanela.getOntzienPanela().kenduBotoia("hegazkinontzi");
+						OntzienPanela.getOntzienPanela().setMota(null);
+					}
 				}
 			}
 		}

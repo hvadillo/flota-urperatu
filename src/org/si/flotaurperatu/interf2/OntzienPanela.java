@@ -3,6 +3,7 @@ package org.si.flotaurperatu.interf2;
 import javax.swing.JPanel;
 
 import org.si.flotaurperatu.actionListener.Bertikal;
+import org.si.flotaurperatu.actionListener.EzkutuaIpini;
 import org.si.flotaurperatu.actionListener.FragataIpini;
 import org.si.flotaurperatu.actionListener.HegazkinOntziIpini;
 import org.si.flotaurperatu.actionListener.Horizontala;
@@ -13,6 +14,8 @@ import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.JButton;
 import javax.swing.LayoutStyle.ComponentPlacement;
+
+import java.awt.BorderLayout;
 import java.awt.Canvas;
 import javax.swing.AbstractAction;
 import java.awt.event.ActionEvent;
@@ -37,19 +40,20 @@ public class OntzienPanela extends JPanel implements ActionListener{
 	private String ontziMota = null;
 	private String norabide = null;
 	private int fragataKop = 3;
-	private int itsaspekoKop = 1;
 	private int suntsitzaileKop = 2;
+	private int itsaspekoKop = 1;
 	ButtonGroup g;
 	JRadioButton bertikal;
 	JRadioButton horizontal;
-	JButton fragata1;
-	JButton itsaspeko1;
-	JButton suntsitzaile1;
+	JButton fragata;
+	JButton suntsitzaile;
+	JButton itsaspeko;
 	JButton hegazkinontzi;
+	JButton ezkutua;
 	
 	private OntzienPanela(){
 		
-		setLayout(new GridLayout(2, 3, 0, 0));
+		setLayout(new GridLayout(3, 3, 0, 0));
 		
 		g = new ButtonGroup();
 		bertikal = new JRadioButton("Bertikal");
@@ -61,39 +65,25 @@ public class OntzienPanela extends JPanel implements ActionListener{
 		g.add(horizontal);
 		add(horizontal);
 		
-		fragata1 = new JButton("Fragata");
-		add(fragata1);
-		fragata1.addActionListener(new FragataIpini());
-		/*JButton fragata2 = new JButton("Fragata");
-		add(fragata2);
-		fragata2.addActionListener(new FragataIpini());
-		JButton fragata3 = new JButton("Fragata");
-		add(fragata3);
-		fragata3.addActionListener(new FragataIpini());
-		JButton fragata4 = new JButton("Fragata");
-		add(fragata4);
-		fragata4.addActionListener(new FragataIpini());*/
+		fragata = new JButton("Fragata");
+		add(fragata);
+		fragata.addActionListener(new FragataIpini());
 		
-		itsaspeko1 = new JButton("Itsaspeko");
-		add(itsaspeko1);
-		itsaspeko1.addActionListener(new ItsaspekoIpini());
-		/*JButton itsaspeko2 = new JButton("Itsaspeko");
-		add(itsaspeko2);
-		itsaspeko2.addActionListener(new ItsaspekoIpini());*/
+		suntsitzaile = new JButton("Suntsitzaile");
+		add(suntsitzaile);
+		suntsitzaile.addActionListener(new SuntsitzaileIpini());
 		
-		suntsitzaile1 = new JButton("Suntsitzaile");
-		add(suntsitzaile1);
-		suntsitzaile1.addActionListener(new SuntsitzaileIpini());
-		/*JButton suntsitzaile2 = new JButton("Suntsitzaile");
-		add(suntsitzaile2);
-		suntsitzaile2.addActionListener(new SuntsitzaileIpini());
-		JButton suntsitzaile3 = new JButton("Suntsitzaile");
-		add(suntsitzaile3);
-		suntsitzaile3.addActionListener(new SuntsitzaileIpini());*/
+		itsaspeko = new JButton("Itsaspeko");
+		add(itsaspeko);
+		itsaspeko.addActionListener(new ItsaspekoIpini());
 		
 		hegazkinontzi = new JButton("Hegazkin-Ontzi");
 		add(hegazkinontzi);
 		hegazkinontzi.addActionListener(new HegazkinOntziIpini());
+		
+		ezkutua = new JButton("Ezkutua");
+		add(ezkutua);
+		ezkutua.addActionListener(new EzkutuaIpini());
 
 		//jarri ontzi bakoitzeko botoi bat
 	}
@@ -129,18 +119,18 @@ public class OntzienPanela extends JPanel implements ActionListener{
 				fragataKop--;
 				ontziMota=null;
 			}	
-		}else if(pMota.equals("Itsaspeko")){
-			if(itsaspekoKop==0){
-				kenduBotoia("Itsaspeko");
-			}else{
-				itsaspekoKop--;
-				ontziMota=null;
-			}
-		}else{
+		}else if(pMota.equals("Suntsitzaile")){
 			if(suntsitzaileKop==0){
 				kenduBotoia("Suntsitzaile");
 			}else{
 				suntsitzaileKop--;
+				ontziMota=null;
+			}
+		}else{
+			if(itsaspekoKop==0){
+				kenduBotoia("Itsaspeko");
+			}else{
+				itsaspekoKop--;
 				ontziMota=null;
 			}
 		}
@@ -149,11 +139,11 @@ public class OntzienPanela extends JPanel implements ActionListener{
 	
 	public void kenduBotoia(String pMota){
 		if(pMota.equals("Fragata")){
-			remove(fragata1);
-		}else if(pMota.equals("Itsaspeko")){
-			remove(itsaspeko1);
+			remove(fragata);
 		}else if(pMota.equals("Suntsitzaile")){
-			remove(suntsitzaile1);
+			remove(suntsitzaile);
+		}else if(pMota.equals("Itsaspeko")){
+			remove(itsaspeko);
 		}else{
 			remove(hegazkinontzi);
 		}
