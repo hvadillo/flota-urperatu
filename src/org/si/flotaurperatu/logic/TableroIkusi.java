@@ -19,6 +19,11 @@ public class TableroIkusi extends Observable{
 	
 	public void kokatu(int pZutabe, int pErrenkada){
 		matrizea.set(pZutabe, pErrenkada);
+		
+	}
+	
+	public Gelaxka getGelaxka(int pZutabe, int pErrenkada){
+		return this.matrizea.getGelaxka(pZutabe, pErrenkada);
 	}
 	
 	public void ezkutuaJarri(){

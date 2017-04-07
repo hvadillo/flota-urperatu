@@ -35,7 +35,6 @@ public class ListaJokalariak {
 	}
 
 	public void hasieratu(){
-		listaJok.get(0).ontziakIpini();
 		listaJok.get(1).ontziakIpini();
 	}
 	

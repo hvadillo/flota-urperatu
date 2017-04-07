@@ -95,6 +95,19 @@ public class OntzienPanela extends JPanel implements ActionListener{
 		return nPanela;
 	}
 	
+	public int getKont(){
+		if(ontziMota.equals("Fragata")){
+			return this.fragataKop;
+		}
+		else if(ontziMota.equals("Suntsitzaile")){
+			return this.suntsitzaileKop;
+		}
+		else{
+			return this.itsaspekoKop;
+		}
+		
+	}
+	
 	public void setMota(String pMota){
 		ontziMota = pMota;
 	}

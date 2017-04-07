@@ -11,6 +11,7 @@ public abstract class Ontzia {
 	
 	public Ontzia(int pLuzeera){
 		luzeera = pLuzeera;
+		posizioak = new ArrayList<Gelaxka>();
 	}
 	
 	public void tiroaJaso(Arma pArma, Gelaxka pGelaxka){
@@ -63,5 +64,8 @@ public abstract class Ontzia {
 				posizioak.get(i).eguneratu(Egoera.EZKUTUA);
 			}	
 		}
+	}
+	public void posizioakEguneratu(int pPos, Gelaxka pGelaxka){
+		this.posizioak.add(pPos, pGelaxka);
 	}
 }

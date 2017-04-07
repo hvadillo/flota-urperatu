@@ -9,4 +9,7 @@ public class ListaOntziak {
 	public ListaOntziak(){
 		ontziak = FactoryOntziak.getFactoryOntziak().flotaSortu();
 	}
+	public Ontzia getOntzia(int pInt){
+		return this.ontziak.get(pInt);
+	}
 }
