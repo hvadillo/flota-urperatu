@@ -165,7 +165,7 @@ public class TableroIkusi extends Observable{
 		return kokatu;
 	}
 	
-	private boolean konprobatuKasila(int pZut, int pErr){
+	public boolean konprobatuKasila(int pZut, int pErr){
 		boolean barruan = false;
 		if((pZut >= 0 && pZut <= 9) && (pErr >= 0 && pErr <= 9 )){
 			barruan = true;

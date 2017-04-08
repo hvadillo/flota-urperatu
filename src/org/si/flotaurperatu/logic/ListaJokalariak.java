@@ -41,5 +41,6 @@ public class ListaJokalariak {
 	public ArrayList<Jokalaria> getJokalariak(){
 		return listaJok;
 	}
+	
 
 }
