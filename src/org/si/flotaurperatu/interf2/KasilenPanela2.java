@@ -6,6 +6,8 @@ import java.util.Observer;
 
 import javax.swing.JPanel;
 
+import org.si.flotaurperatu.interf.baliabideak.Irudiak;
+
 public class KasilenPanela2 extends JPanel implements Observer {
 	
 	private static final long serialVersionUID = 1L;
@@ -31,8 +33,26 @@ public class KasilenPanela2 extends JPanel implements Observer {
 		}
 	}
 	
-	public void iconoAldatu(int pX,int pY){
-		botoiak[pX][pY].iconoAldatu();
+	public void ipiniListener(){
+		for(int y = 0; y < 10; y++){
+			for(int x = 0; x < 10; x++){
+				botoiak[x][y].kenduListener();
+			}
+		}
+	}
+	
+	public void iconoAldatu(String egoera, int pX,int pY){
+		if(egoera.equals("ezkutua")){
+			botoiak[pX][pY].iconoAldatu("ezkutua");
+		}else if(egoera.equals("emanda")){
+			botoiak[pX][pY].iconoAldatu("emanda");
+		}else if(egoera.equals("ontzia")){
+			botoiak[pX][pY].iconoAldatu("ontzia");
+		}else if(egoera.equals("ura")){
+			botoiak[pX][pY].iconoAldatu("ura");
+		}else{
+			botoiak[pX][pY].iconoAldatu("miss");
+		}
 	}
 	
 	@Override

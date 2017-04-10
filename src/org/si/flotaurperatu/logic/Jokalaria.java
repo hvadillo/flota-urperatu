@@ -20,7 +20,7 @@ public abstract class Jokalaria {
 	
 	public abstract void armakErosi();
 	
-	public abstract void ezkutuaJarri();
+	public abstract void ezkutuaJarri(int pZutabe,int pErrenkada);
 	
 	public abstract void ontziakIpini();
 	
@@ -34,4 +34,5 @@ public abstract class Jokalaria {
 	public ListaOntziak getFlota(){
 		return this.flota;
 	}
+	public abstract void radarraErabili(int pZutabe,int pErrenkada);
 }

@@ -6,9 +6,10 @@ public MisilIH(int pKop){
 	super("MisilIH",5,pKop);
 	portaera=new TiroBertikal();
 }
-public void erabili() {
+public void erabili(int pZutabe ,int pErrenkada) {
 	// TODO Auto-generated method stub
-	portaera.tiroEgin();
+	portaera.tiroEgin(this,pZutabe ,pErrenkada);
+	kopurua--;
 }
 
 }

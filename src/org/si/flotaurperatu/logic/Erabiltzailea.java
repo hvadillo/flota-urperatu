@@ -19,14 +19,20 @@ public class Erabiltzailea extends Jokalaria{
 	}
 
 	@Override
-	public void ezkutuaJarri() {
+	public void ezkutuaJarri(int pZutabe,int pErrenkada) {
 		// TODO Auto-generated method stub
+		armak.armaErabili("Ezkutua",pZutabe,pErrenkada);
 	}
 
 	@Override
 	public void ontziakIpini(String pKord ) {
 		// TODO Auto-generated method stub
 		
+	}
+	
+	
+	public void radarraErabili(int pZutabe, int pErrenkada) {
+		armak.armaErabili("Radarra",pZutabe,pErrenkada);
 	}
 	
 	

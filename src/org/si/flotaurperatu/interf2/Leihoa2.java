@@ -21,6 +21,7 @@ public class Leihoa2 extends JFrame implements Observer{
 	private static KasilenPanela2 matrize1 = new KasilenPanela2();
 	private static KasilenPanela2 matrize2 = new KasilenPanela2();
 	private static OntzienPanela ontziak = OntzienPanela.getOntzienPanela();
+	private static ArmenPanela armak = ArmenPanela.getArmenPanela();
 	JLabel text1 = new JLabel();
 	JLabel text2 = new JLabel();
 	JPanel panel1 = new JPanel();
@@ -36,15 +37,14 @@ public class Leihoa2 extends JFrame implements Observer{
 		panel1.setLayout(new GridLayout(2,1,50,0));
 		matrize1.setBorder(new LineBorder(new Color(0, 0, 0), 4));
 		panel1.add(matrize1, BorderLayout.NORTH);
-		matrize1.kenduListener();
+		//matrize1.kenduListener();
 		matrize2.setBorder(new LineBorder(new Color(0, 0, 0), 4));
 		panel1.add(matrize2, BorderLayout.SOUTH);
 		this.getContentPane().add(panel1, BorderLayout.CENTER);
 		text1.setText("dtahntnaetberdtnsatnstnsrnrssntr");
-		text2.setText("dtahntnaetberdtnsatnstnsrnrssntr");
 		panel2.add(text1, null);
 		this.getContentPane().add(panel2, BorderLayout.WEST);
-		panel3.add(text2, null);
+		panel3.add(armak, null);
 		this.getContentPane().add(panel3, BorderLayout.EAST);
 		this.getContentPane().add(ontziak, BorderLayout.SOUTH);
 		
@@ -61,6 +61,10 @@ public class Leihoa2 extends JFrame implements Observer{
 	
 	public KasilenPanela2 getPanela(){
 		return matrize2;
+	}
+	
+	public KasilenPanela2 getMatrize1(){
+		return matrize1;
 	}
 
 	@Override

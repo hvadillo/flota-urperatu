@@ -10,7 +10,7 @@ public MisilGidatua(String pIzena, int pKostua, int pKop) {
 }
 
 	@Override
-	public void erabili() {
+	public void erabili(int pZutabe ,int pErrenkada) {
 		// TODO Auto-generated method stub
 
 	}

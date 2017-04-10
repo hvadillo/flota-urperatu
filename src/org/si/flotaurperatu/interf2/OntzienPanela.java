@@ -40,6 +40,7 @@ public class OntzienPanela extends JPanel implements ActionListener{
 	private String ontziMota = null;
 	private String norabide = null;
 	private int fragataKop = 3;
+	private int kopOsoa=9;
 	private int suntsitzaileKop = 2;
 	private int itsaspekoKop = 1;
 	ButtonGroup g;
@@ -49,11 +50,10 @@ public class OntzienPanela extends JPanel implements ActionListener{
 	JButton suntsitzaile;
 	JButton itsaspeko;
 	JButton hegazkinontzi;
-	JButton ezkutua;
 	
 	private OntzienPanela(){
 		
-		setLayout(new GridLayout(3, 3, 0, 0));
+		setLayout(new GridLayout(2, 3, 0, 0));
 		
 		g = new ButtonGroup();
 		bertikal = new JRadioButton("Bertikal");
@@ -80,10 +80,6 @@ public class OntzienPanela extends JPanel implements ActionListener{
 		hegazkinontzi = new JButton("Hegazkin-Ontzi");
 		add(hegazkinontzi);
 		hegazkinontzi.addActionListener(new HegazkinOntziIpini());
-		
-		ezkutua = new JButton("Ezkutua");
-		add(ezkutua);
-		ezkutua.addActionListener(new EzkutuaIpini());
 
 		//jarri ontzi bakoitzeko botoi bat
 	}
@@ -125,6 +121,7 @@ public class OntzienPanela extends JPanel implements ActionListener{
 	}
 	
 	public void kontagailuaEguneratu(String pMota){
+		kopOsoa--;
 		if(pMota.equals("Fragata")){
 			if(fragataKop==0){
 				kenduBotoia("Fragata");
@@ -172,6 +169,9 @@ public class OntzienPanela extends JPanel implements ActionListener{
 	
 	public void actionListenerKendu(String pMota){
 		
+	}
+	public int getKopOsoa(){
+		return kopOsoa;
 	}
 	
 	@Override

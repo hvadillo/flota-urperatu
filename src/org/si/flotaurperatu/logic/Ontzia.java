@@ -1,6 +1,7 @@
 package org.si.flotaurperatu.logic;
 
 import java.util.ArrayList;
+import org.si.flotaurperatu.interf2.Leihoa2;
 
 public abstract class Ontzia {
 
@@ -62,6 +63,7 @@ public abstract class Ontzia {
 		for(int i = 0; i < posizioak.size(); i++){
 			if(posizioak.get(i).getEgoera()!=Egoera.EMANDA){
 				posizioak.get(i).eguneratu(Egoera.EZKUTUA);
+				Leihoa2.getLeihoa2().getPanela().iconoAldatu("ezkutua", posizioak.get(i).getX(), posizioak.get(i).getY());
 			}	
 		}
 	}

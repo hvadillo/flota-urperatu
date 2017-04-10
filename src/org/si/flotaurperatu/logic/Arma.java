@@ -4,7 +4,7 @@ public abstract class Arma {
 
 	private String izena;
 	private int kostua;
-	private int kopurua;
+	protected int kopurua;
 	
 	public Arma(String pIzena, int pKostua, int pKop){
 		izena = pIzena;
@@ -24,7 +24,7 @@ public abstract class Arma {
 		return kopurua;
 	}
 	
-	public abstract void erabili();
+	public abstract void erabili(int pZutabe, int pErrenkada);
 
 
 }

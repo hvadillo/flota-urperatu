@@ -37,7 +37,7 @@ public class FactoryArma {
 		//TODO
 		ArrayList<Arma> biltegi=new ArrayList<Arma>();
 		biltegi.add(new Radarra(2));
-		biltegi.add(new Bonba(2));
+		biltegi.add(new Bonba(100));
 		biltegi.add(new Misil(2));
 		biltegi.add(new Ezkutua(2));
 		biltegi.add(new MisilIH(2));

@@ -10,8 +10,15 @@ public class Ezkutua extends Arma{
 	}
 
 	@Override
-	public void erabili() {
+	public void erabili(int pZutabe, int pErrenkada) {
 		// TODO Auto-generated method stub
+		if(kopurua>0){
+		Jokalaria jok=ListaJokalariak.getNireListaJokalariak().getJokalariak().get(ListaJokalariak.getNireListaJokalariak().txandaKalkulatu());
+		jok.getIkusi().getGelaxka(pZutabe, pErrenkada).ezkutuaJarri(this);
+		kopurua--;}
+		else{
+			System.out.println("Ez daukazu ezkuturik");
+		}
 		//
 	}
 	public int kolpeaJaso(Arma pArma){

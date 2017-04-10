@@ -22,7 +22,7 @@ public class Ordenagailua extends Jokalaria{
 	}
 
 	@Override
-	public void ezkutuaJarri() {
+	public void ezkutuaJarri(int pZutabe,int pErrenkada) {
 		// TODO Auto-generated method stub
 		
 	}

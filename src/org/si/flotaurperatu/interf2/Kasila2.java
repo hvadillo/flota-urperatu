@@ -35,18 +35,61 @@ public class Kasila2 extends JButton implements MouseListener{
 		this.removeMouseListener(this);
 	}
 	
-	public void iconoAldatu(){
-		setIcon(Irudiak.getNIrudiak().bloke[1]);
+	public void ipiniListener(){
+		this.addMouseListener(this);
+	}
+	
+	public void iconoAldatu(String egoera){
+		if(egoera.equals("ezkutua")){
+			setIcon(Irudiak.getNIrudiak().bloke[3]);
+		}else if(egoera.equals("emanda")){
+			setIcon(Irudiak.getNIrudiak().bloke[4]);
+		}else if(egoera.equals("ontzia")){
+			setIcon(Irudiak.getNIrudiak().bloke[1]);
+		}else if(egoera.equals("ura")){
+			setIcon(Irudiak.getNIrudiak().bloke[0]);
+		}else{
+			setIcon(Irudiak.getNIrudiak().bloke[2]);
+		}
 		//this.removeMouseListener(this);
 	}
 	
 
 	@Override
 	public void mouseClicked(MouseEvent e) {
+		if(e.getButton() == MouseEvent.BUTTON1){
+			if(OntzienPanela.getOntzienPanela().getKopOsoa()!=0){
+				ontziakKokatu();	
+			}
+			else{
+				if(ArmenPanela.getArmenPanela().getArmaMota().equals("ezkutua")){
+				ezkutuaKokatu();
+				}else if(ArmenPanela.getArmenPanela().getArmaMota().equals("radarra")){
+					radarraErabili();
+				}
+			}
+		}
+			 // else{             //ESKUMAKO BOTOIA
+			   //Panela.getPanela().eskuinKlika(zutabe, errenkada);
+			  //}
+		
+	}
+	
+	private void radarraErabili(){
+		ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).radarraErabili(zutabe, errenkada);
+	}
+	
+	private void ezkutuaKokatu(){
+		ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).ezkutuaJarri(zutabe, errenkada);
+	}
+	
+	private void ontziakKokatu(){
 		Jokalaria jok=ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0);
 		Ontzia ontz;
-		if(e.getButton() == MouseEvent.BUTTON1){
+		
 			//ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getIkusi().kokatu(zutabe,errenkada);
+			
+			
 			if(jok.getIkusi().konprobatu(zutabe, errenkada)){
 				
 				
@@ -68,14 +111,14 @@ public class Kasila2 extends JButton implements MouseListener{
 					if(OntzienPanela.getOntzienPanela().getNorabide().equals("Horizontal")){
 						
 					
-						Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe, errenkada);
+						Leihoa2.getLeihoa2().getPanela().iconoAldatu("ontzia", zutabe, errenkada);
 						jok.getIkusi().kokatu(zutabe,errenkada);
 						ontz.posizioakEguneratu(0,jok.getIkusi().getGelaxka(zutabe, errenkada));
 						jok.getIkusi().getGelaxka(zutabe, errenkada).ontziaEguneratu(ontz);
 						OntzienPanela.getOntzienPanela().kontagailuaEguneratu("Fragata");
 					}else{
 					
-						Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe, errenkada);
+						Leihoa2.getLeihoa2().getPanela().iconoAldatu("ontzia", zutabe, errenkada);
 						jok.getIkusi().kokatu(zutabe,errenkada);
 						ontz.posizioakEguneratu(0,jok.getIkusi().getGelaxka(zutabe, errenkada));
 						jok.getIkusi().getGelaxka(zutabe, errenkada).ontziaEguneratu(ontz);
@@ -93,17 +136,17 @@ public class Kasila2 extends JButton implements MouseListener{
 					}
 					if(OntzienPanela.getOntzienPanela().getNorabide().equals("Horizontal")){
 					
-						Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe, errenkada);
+						Leihoa2.getLeihoa2().getPanela().iconoAldatu("ontzia", zutabe, errenkada);
 						jok.getIkusi().kokatu(zutabe,errenkada);
 						ontz.posizioakEguneratu(0, jok.getIkusi().getGelaxka(zutabe, errenkada));
 						jok.getIkusi().getGelaxka(zutabe, errenkada).ontziaEguneratu(ontz);
 						
-						Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe + 1, errenkada);
+						Leihoa2.getLeihoa2().getPanela().iconoAldatu("ontzia", zutabe + 1, errenkada);
 						jok.getIkusi().kokatu(zutabe+1,errenkada);
 						ontz.posizioakEguneratu(1,jok.getIkusi().getGelaxka(zutabe+1, errenkada));
 						jok.getIkusi().getGelaxka(zutabe+1, errenkada).ontziaEguneratu(ontz);
 						
-						Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe + 2, errenkada);
+						Leihoa2.getLeihoa2().getPanela().iconoAldatu("ontzia", zutabe + 2, errenkada);
 						jok.getIkusi().kokatu(zutabe+2,errenkada);
 						ontz.posizioakEguneratu(2,jok.getIkusi().getGelaxka(zutabe+2, errenkada));
 						jok.getIkusi().getGelaxka(zutabe+2, errenkada).ontziaEguneratu(ontz);
@@ -111,17 +154,17 @@ public class Kasila2 extends JButton implements MouseListener{
 						OntzienPanela.getOntzienPanela().kontagailuaEguneratu("Itsaspeko");
 					}
 					else{
-						Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe, errenkada);
+						Leihoa2.getLeihoa2().getPanela().iconoAldatu("ontzia", zutabe, errenkada);
 						jok.getIkusi().kokatu(zutabe,errenkada);
 						ontz.posizioakEguneratu(0,jok.getIkusi().getGelaxka(zutabe, errenkada));
 						jok.getIkusi().getGelaxka(zutabe, errenkada).ontziaEguneratu(ontz);
 						
-						Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe, errenkada + 1);
+						Leihoa2.getLeihoa2().getPanela().iconoAldatu("ontzia", zutabe, errenkada + 1);
 						jok.getIkusi().kokatu(zutabe,errenkada+1);
 						ontz.posizioakEguneratu(1,jok.getIkusi().getGelaxka(zutabe, errenkada+1));
 						jok.getIkusi().getGelaxka(zutabe, errenkada+1).ontziaEguneratu(ontz);
 						
-						Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe, errenkada + 2);
+						Leihoa2.getLeihoa2().getPanela().iconoAldatu("ontzia", zutabe, errenkada + 2);
 						jok.getIkusi().kokatu(zutabe,errenkada+2);
 						ontz.posizioakEguneratu(2,jok.getIkusi().getGelaxka(zutabe, errenkada+2));
 						jok.getIkusi().getGelaxka(zutabe, errenkada+2).ontziaEguneratu(ontz);
@@ -143,23 +186,23 @@ public class Kasila2 extends JButton implements MouseListener{
 					}
 					
 					if(OntzienPanela.getOntzienPanela().getNorabide().equals("Horizontal")){
-						Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe, errenkada);
+						Leihoa2.getLeihoa2().getPanela().iconoAldatu("ontzia", zutabe, errenkada);
 						jok.getIkusi().kokatu(zutabe,errenkada);
 						ontz.posizioakEguneratu(0,jok.getIkusi().getGelaxka(zutabe, errenkada));
 						jok.getIkusi().getGelaxka(zutabe, errenkada).ontziaEguneratu(ontz);
 						
-						Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe + 1, errenkada);
+						Leihoa2.getLeihoa2().getPanela().iconoAldatu("ontzia", zutabe + 1, errenkada);
 						jok.getIkusi().kokatu(zutabe+1,errenkada);
 						ontz.posizioakEguneratu(1,jok.getIkusi().getGelaxka(zutabe+1, errenkada));
 						jok.getIkusi().getGelaxka(zutabe+1, errenkada).ontziaEguneratu(ontz);
 						OntzienPanela.getOntzienPanela().kontagailuaEguneratu("Suntsitzaile");
 					}else{
-						Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe, errenkada);
+						Leihoa2.getLeihoa2().getPanela().iconoAldatu("ontzia", zutabe, errenkada);
 						jok.getIkusi().kokatu(zutabe,errenkada);
 						ontz.posizioakEguneratu(0,jok.getIkusi().getGelaxka(zutabe, errenkada));
 						jok.getIkusi().getGelaxka(zutabe, errenkada).ontziaEguneratu(ontz);
 						
-						Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe, errenkada + 1);
+						Leihoa2.getLeihoa2().getPanela().iconoAldatu("ontzia", zutabe, errenkada + 1);
 						jok.getIkusi().kokatu(zutabe,errenkada+1);
 						ontz.posizioakEguneratu(1,jok.getIkusi().getGelaxka(zutabe, errenkada+1));
 						jok.getIkusi().getGelaxka(zutabe, errenkada+1).ontziaEguneratu(ontz);
@@ -170,22 +213,22 @@ public class Kasila2 extends JButton implements MouseListener{
 				
 				else{
 					if(OntzienPanela.getOntzienPanela().getNorabide().equals("Horizontal")){
-						Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe, errenkada);
+						Leihoa2.getLeihoa2().getPanela().iconoAldatu("ontzia", zutabe, errenkada);
 						jok.getIkusi().kokatu(zutabe,errenkada);
 						jok.getFlota().getOntzia(0).posizioakEguneratu(0,jok.getIkusi().getGelaxka(zutabe, errenkada));
 						jok.getIkusi().getGelaxka(zutabe, errenkada).ontziaEguneratu(jok.getFlota().getOntzia(0));
 						
-						Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe + 1, errenkada);
+						Leihoa2.getLeihoa2().getPanela().iconoAldatu("ontzia", zutabe + 1, errenkada);
 						jok.getIkusi().kokatu(zutabe+1,errenkada);
 						jok.getFlota().getOntzia(0).posizioakEguneratu(1,jok.getIkusi().getGelaxka(zutabe+1, errenkada));
 						jok.getIkusi().getGelaxka(zutabe+1, errenkada).ontziaEguneratu(jok.getFlota().getOntzia(0));
 						
-						Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe + 2, errenkada);
+						Leihoa2.getLeihoa2().getPanela().iconoAldatu("ontzia", zutabe + 2, errenkada);
 						jok.getIkusi().kokatu(zutabe+2,errenkada);
 						jok.getFlota().getOntzia(0).posizioakEguneratu(2,jok.getIkusi().getGelaxka(zutabe+2, errenkada));
 						jok.getIkusi().getGelaxka(zutabe+2, errenkada).ontziaEguneratu(jok.getFlota().getOntzia(0));
 						
-						Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe + 3, errenkada);
+						Leihoa2.getLeihoa2().getPanela().iconoAldatu("ontzia", zutabe + 3, errenkada);
 						jok.getIkusi().kokatu(zutabe+3,errenkada);
 						jok.getFlota().getOntzia(0).posizioakEguneratu(3,jok.getIkusi().getGelaxka(zutabe+3, errenkada));
 						jok.getIkusi().getGelaxka(zutabe+3, errenkada).ontziaEguneratu(jok.getFlota().getOntzia(0));
@@ -193,22 +236,22 @@ public class Kasila2 extends JButton implements MouseListener{
 						OntzienPanela.getOntzienPanela().kenduBotoia("hegazkinontzi");
 						OntzienPanela.getOntzienPanela().setMota(null);
 					}else{
-						Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe, errenkada);
+						Leihoa2.getLeihoa2().getPanela().iconoAldatu("ontzia", zutabe, errenkada);
 						jok.getIkusi().kokatu(zutabe,errenkada);
 						jok.getFlota().getOntzia(0).posizioakEguneratu(0,jok.getIkusi().getGelaxka(zutabe, errenkada));
 						jok.getIkusi().getGelaxka(zutabe, errenkada).ontziaEguneratu(jok.getFlota().getOntzia(0));
 						
-						Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe, errenkada + 1);
+						Leihoa2.getLeihoa2().getPanela().iconoAldatu("ontzia", zutabe, errenkada + 1);
 						jok.getIkusi().kokatu(zutabe,errenkada+1);
 						jok.getFlota().getOntzia(0).posizioakEguneratu(1,jok.getIkusi().getGelaxka(zutabe, errenkada+1));
 						jok.getIkusi().getGelaxka(zutabe, errenkada+1).ontziaEguneratu(jok.getFlota().getOntzia(0));
 						
-						Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe, errenkada + 2);
+						Leihoa2.getLeihoa2().getPanela().iconoAldatu("ontzia", zutabe, errenkada + 2);
 						jok.getIkusi().kokatu(zutabe,errenkada+2);
 						jok.getFlota().getOntzia(0).posizioakEguneratu(2,jok.getIkusi().getGelaxka(zutabe, errenkada+2));
 						jok.getIkusi().getGelaxka(zutabe, errenkada+2).ontziaEguneratu(jok.getFlota().getOntzia(0));
 						
-						Leihoa2.getLeihoa2().getPanela().iconoAldatu(zutabe, errenkada + 3);
+						Leihoa2.getLeihoa2().getPanela().iconoAldatu("ontzia", zutabe, errenkada + 3);
 						jok.getIkusi().kokatu(zutabe,errenkada+3);
 						jok.getFlota().getOntzia(0).posizioakEguneratu(3,jok.getIkusi().getGelaxka(zutabe, errenkada+3));
 						jok.getIkusi().getGelaxka(zutabe, errenkada+3).ontziaEguneratu(jok.getFlota().getOntzia(0));
@@ -219,11 +262,8 @@ public class Kasila2 extends JButton implements MouseListener{
 				}
 			}
 		}
-			 // else{             //ESKUMAKO BOTOIA
-			   //Panela.getPanela().eskuinKlika(zutabe, errenkada);
-			  //}
-		
-	}
+	
+	
 	@Override
 	public void mouseEntered(MouseEvent e) {
 		// TODO Auto-generated method stub

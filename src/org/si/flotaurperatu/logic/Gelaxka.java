@@ -24,4 +24,26 @@ public class Gelaxka {
 	public void ontziaEguneratu(Ontzia pOntzia){
 		this.o=pOntzia;
 	}
+	public void eraso(Arma pArma){
+		if(o==null){
+			
+		}
+		else{
+			o.tiroaJaso(pArma, this);
+		}
+	}
+	public void ezkutuaJarri(Ezkutua pEzkutua){
+		if(o!=null){
+		o.ezkutuaJarri(pEzkutua);
+		}
+		else{
+			System.out.println(" Ez dago ontzirik posizio horretan. ");
+		}
+	}
+	public int getX(){
+		return x;
+	}
+	public int getY(){
+		return y;
+	}
 }
