@@ -26,5 +26,12 @@ public abstract class Arma {
 	
 	public abstract void erabili(int pZutabe, int pErrenkada);
 
+	public void kopuruaKendu(){
+		kopurua--;
+	}
+	
+	public void kopuruaGehitu(){
+		kopurua++;
+	}
 
 }

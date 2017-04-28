@@ -10,8 +10,28 @@ public class Biltegia {
 		armak = FactoryArma.getFactoryArma().biltegiaSortu();
 	}
 	
-	public void armaErosi(){
-		//TODO
+	public void armaErosi(String pMota){
+		if(pMota.equals("radarra")){
+			armak.get(0).kopuruaGehitu();
+		}
+		else if (pMota.equals("bonba")){
+			armak.get(1).kopuruaGehitu();
+		}
+		else if(pMota.equals("misil")){
+			armak.get(2).kopuruaGehitu();
+		}
+		else if(pMota.equals("ezkutua")){
+			armak.get(3).kopuruaGehitu();
+		}
+		else if(pMota.equals("misilIH")){
+			armak.get(4).kopuruaGehitu();
+		}
+		else if(pMota.equals("misilEM")){
+			armak.get(5).kopuruaGehitu();
+		}
+		else{
+			armak.get(6).kopuruaGehitu();
+		}
 	}
 	
 	public void armaErabili(String pMota,int pZutabe,int pErrenkada){

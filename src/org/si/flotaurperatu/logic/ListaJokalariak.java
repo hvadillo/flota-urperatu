@@ -26,11 +26,21 @@ public class ListaJokalariak {
 	public int txandaKalkulatu(){
 		return txanda % 2;
 	}
+	
+	public void txandaEguneratu(){
+		txanda++;
+	}
 
 	public void txandaBurutu(){
 		while (!bukatu){
 			listaJok.get(txandaKalkulatu()).txandaBurutu();
-			//
+			if(txandaKalkulatu()==1){
+				bukatu=listaJok.get(0).getFlota().denakUrperaturik();
+			}
+			else{
+				bukatu=listaJok.get(1).getFlota().denakUrperaturik();
+			}
+			txandaEguneratu();
 		}
 	}
 
