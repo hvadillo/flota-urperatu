@@ -37,7 +37,7 @@ public class Leihoa2 extends JFrame implements Observer{
 		panel1.setLayout(new GridLayout(2,1,50,0));
 		matrize1.setBorder(new LineBorder(new Color(0, 0, 0), 4));
 		panel1.add(matrize1, BorderLayout.NORTH);
-		//matrize1.kenduListener();
+		//matrize1.ipiniListener();
 		matrize2.setBorder(new LineBorder(new Color(0, 0, 0), 4));
 		panel1.add(matrize2, BorderLayout.SOUTH);
 		this.getContentPane().add(panel1, BorderLayout.CENTER);

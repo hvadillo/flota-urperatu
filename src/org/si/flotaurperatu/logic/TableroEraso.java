@@ -14,4 +14,7 @@ public class TableroEraso extends Observable{
 	public void eraso(){
 		//TODO
 	}
+	public Gelaxka getGelaxka(int pZutabe, int pErrenkada){
+		return this.matrizea.getGelaxka(pZutabe, pErrenkada);
+	}
 }

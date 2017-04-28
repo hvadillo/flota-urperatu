@@ -11,6 +11,6 @@ public class EzkutuaIpini implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		ArmenPanela.getArmenPanela().setArmaMota("ezkutua");		
-	}
+ 	}
 
 }
