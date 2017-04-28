@@ -18,9 +18,21 @@ public abstract class Jokalaria {
 	
 	public abstract void txandaBurutu();
 	
-	public abstract void armakErosi();
+	public void armakErosi(String pMota){
+		int kostua;
+		if(Denda.getNDenda().getKostua(pMota)<dirua){
+			kostua=Denda.getNDenda().getKostua(pMota);
+			diruaKendu(kostua);
+			Denda.getNDenda().armaErosi(pMota);
+			armak.armaErosi(pMota);
+		}
+	}
 	
 	public abstract void ezkutuaJarri(int pZutabe,int pErrenkada);
+	
+	public abstract void bonbaErabili(int pZutabe,int pErrenkada);
+	
+
 	
 	public abstract void ontziakIpini();
 	
@@ -33,6 +45,12 @@ public abstract class Jokalaria {
 	}
 	public ListaOntziak getFlota(){
 		return this.flota;
+	}
+	public Biltegia getArmak(){
+		return this.armak;
+	}
+	private void diruaKendu(int pKostua){
+		dirua=dirua-pKostua;
 	}
 	public abstract void radarraErabili(int pZutabe,int pErrenkada);
 }

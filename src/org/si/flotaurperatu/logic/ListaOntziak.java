@@ -12,4 +12,15 @@ public class ListaOntziak {
 	public Ontzia getOntzia(int pInt){
 		return this.ontziak.get(pInt);
 	}
+	
+	public boolean denakUrperaturik(){
+		int i=0;
+		boolean urperaturik=true;
+		while(i<ontziak.size()&& urperaturik){
+			if(!getOntzia(i).urperatutaDago()){
+				urperaturik=false;
+			}
+		}
+		return urperaturik;
+	}
 }

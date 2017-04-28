@@ -18,7 +18,7 @@ public class Radarra extends Arma {
 		int kont=0;
 		boolean aurkitua=false;
 		txanda=ListaJokalariak.getNireListaJokalariak().txandaKalkulatu();
-		if(kontsultaKop==0){
+		if(kopurua==0 && kontsultaKop==0){
 			System.out.println(" Ez daukazu kontsultarik radarra erabiltzeko. ");
 		}
 		else{
@@ -224,6 +224,12 @@ public class Radarra extends Arma {
 				System.out.println(" Ez da ontzirik aurkitu. ");
 			}
 			kontsultaKop--;
+			if(kontsultaKop==0){
+				if(kopurua>0){
+					kopuruaKendu();
+					kontsultaKop=4;
+				}
+			}
 		}
 	}
 

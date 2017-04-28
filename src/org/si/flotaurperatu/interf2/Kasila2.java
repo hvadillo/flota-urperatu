@@ -63,9 +63,11 @@ public class Kasila2 extends JButton implements MouseListener{
 			}
 			else{
 				if(ArmenPanela.getArmenPanela().getArmaMota().equals("ezkutua")){
-				ezkutuaKokatu();
+					ezkutuaKokatu();
 				}else if(ArmenPanela.getArmenPanela().getArmaMota().equals("radarra")){
 					radarraErabili();
+				}else if(ArmenPanela.getArmenPanela().getArmaMota().equals("bonba")){
+					bonbaErabili();
 				}
 			}
 		}
@@ -75,6 +77,11 @@ public class Kasila2 extends JButton implements MouseListener{
 		
 	}
 	
+	private void bonbaErabili() {
+		ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).bonbaErabili(zutabe, errenkada);
+		
+	}
+
 	private void radarraErabili(){
 		ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).radarraErabili(zutabe, errenkada);
 	}
