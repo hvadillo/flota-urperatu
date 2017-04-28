@@ -2,7 +2,9 @@ package org.si.flotaurperatu.interf2;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.GridLayout;
+import java.awt.TextArea;
 import java.util.Observable;
 import java.util.Observer;
 
@@ -12,6 +14,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import org.si.flotaurperatu.interf.baliabideak.Irudiak;
+
+import javax.swing.border.Border;
 import javax.swing.border.LineBorder;
 
 public class Leihoa2 extends JFrame implements Observer{
@@ -23,7 +27,7 @@ public class Leihoa2 extends JFrame implements Observer{
 	private static OntzienPanela ontziak = OntzienPanela.getOntzienPanela();
 	private static ArmenPanela armak = ArmenPanela.getArmenPanela();
 	JLabel text1 = new JLabel();
-	JLabel text2 = new JLabel();
+	TextArea text2 = new TextArea();
 	JPanel panel1 = new JPanel();
 	JPanel panel2 = new JPanel();
 	JPanel panel3 = new JPanel();
@@ -41,8 +45,13 @@ public class Leihoa2 extends JFrame implements Observer{
 		matrize2.setBorder(new LineBorder(new Color(0, 0, 0), 4));
 		panel1.add(matrize2, BorderLayout.SOUTH);
 		this.getContentPane().add(panel1, BorderLayout.CENTER);
-		text1.setText("dtahntnaetberdtnsatnstnsrnrssntr");
-		panel2.add(text1, null);
+		text1.setText("Informazioa:");
+		//text2.setBackground(Color.WHITE);
+		//text2.setPreferredSize(new Dimension(200,100));
+		//text2.removeTextListener(this);
+		//text2.setText("itydcktgvj");
+		panel2.add(text1, BorderLayout.NORTH);
+		panel2.add(text2, BorderLayout.SOUTH);
 		this.getContentPane().add(panel2, BorderLayout.WEST);
 		panel3.add(armak, null);
 		this.getContentPane().add(panel3, BorderLayout.EAST);

@@ -34,7 +34,9 @@ public class Erabiltzailea extends Jokalaria{
 	public void radarraErabili(int pZutabe, int pErrenkada) {
 		armak.armaErabili("Radarra",pZutabe,pErrenkada);
 	}
-	
+	public void bonbaErabili(int pZutabe, int pErrenkada){
+		armak.armaErabili("Bonba", pZutabe, pErrenkada);
+	}
 	
 
 	@Override
