@@ -32,7 +32,7 @@ public abstract class Jokalaria {
 	
 	public abstract void bonbaErabili(int pZutabe,int pErrenkada);
 	
-	public abstract void bonbaErabili(int pZutabe,int pErrenkada);
+
 	
 	public abstract void ontziakIpini();
 	
