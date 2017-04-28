@@ -1,5 +1,7 @@
 package org.si.flotaurperatu.logic;
 
+import org.si.flotaurperatu.interf2.Leihoa2;
+
 public class Gelaxka {
 
 	private int x;
@@ -25,8 +27,9 @@ public class Gelaxka {
 		this.o=pOntzia;
 	}
 	public void eraso(Arma pArma){
-		if(o==null){
-			
+		if(o==null && e.equals(Egoera.URA)){
+			Leihoa2.getLeihoa2().getMatrize1().iconoAldatu("miss", this.x, this.y);
+			this.eguneratu(Egoera.MISS);
 		}
 		else{
 			o.tiroaJaso(pArma, this);

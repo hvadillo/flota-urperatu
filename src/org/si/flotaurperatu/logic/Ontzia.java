@@ -19,23 +19,26 @@ public abstract class Ontzia {
 		if(ezkutua != null){
 			if(ezkutua.kolpeaJaso(pArma)==0){
 				ezkutua = null;
-				for(int i = 0; i < posizioak.size(); i++){
+				for(int i = 0; i < (posizioak.size()-1); i++){
 					if(posizioak.get(i).getEgoera()!=Egoera.EMANDA){
 						posizioak.get(i).eguneratu(Egoera.ONTZIA);
+						Leihoa2.getLeihoa2().getMatrize1().iconoAldatu("ontzia", posizioak.get(i).getX(), posizioak.get(i).getY());
 					}
 				}
 			}
 		}else{
 			if(pArma instanceof Misil){
-				for(int i = 0; i < posizioak.size(); i++){
+				for(int i = 0; i < (posizioak.size()-1); i++){
 					posizioak.get(i).eguneratu(Egoera.EMANDA);
+					Leihoa2.getLeihoa2().getMatrize1().iconoAldatu("emanda", posizioak.get(i).getX(), posizioak.get(i).getY());
 				}
 				this.urperatu();
 			}else{
 				pGelaxka.eguneratu(Egoera.EMANDA);
+				Leihoa2.getLeihoa2().getMatrize1().iconoAldatu("emanda", pGelaxka.getX(), pGelaxka.getY());
 				boolean urperatu = true;
 				int i = 0;
-				while(i < posizioak.size() && urperatu == true){
+				while(i < (posizioak.size()-1) && urperatu == true){
 					if(posizioak.get(i).getEgoera()==Egoera.ONTZIA){
 						urperatu = false;
 					}

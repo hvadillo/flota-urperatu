@@ -20,7 +20,7 @@ public Bonba(int pKop){
 			etsaia=ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0);
 		}
 		etsaia.getIkusi().getGelaxka(pZutabe, pErrenkada).eraso(this);
-		kopurua--;
+		this.kopurua--;
 	}
 
 }

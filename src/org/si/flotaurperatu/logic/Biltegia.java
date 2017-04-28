@@ -22,5 +22,8 @@ public class Biltegia {
 		else if(pMota.equals("Radarra")){
 			armak.get(0).erabili(pZutabe, pErrenkada);
 		}
+		else if(pMota.equals("Bonba")){
+			armak.get(1).erabili(pZutabe,pErrenkada);
+		}
 	}
 }

@@ -7,6 +7,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
+import org.si.flotaurperatu.actionListener.BonbaIpini;
 import org.si.flotaurperatu.actionListener.EzkutuaIpini;
 import org.si.flotaurperatu.actionListener.FragataIpini;
 import org.si.flotaurperatu.actionListener.RadarraIpini;
@@ -30,7 +31,7 @@ public class ArmenPanela extends JPanel implements ActionListener{
 		
 		bomba = new JButton("Bomba");
 		add(bomba);
-		//bomba.addActionListener(new FragataIpini());
+		bomba.addActionListener(new BonbaIpini());
 		
 		misil = new JButton("Misil");
 		add(misil);
