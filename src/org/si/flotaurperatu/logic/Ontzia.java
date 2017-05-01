@@ -8,18 +8,20 @@ public abstract class Ontzia {
 	private ArrayList<Gelaxka> posizioak;
 	private int luzeera;
 	private Ezkutua ezkutua;
-	private Boolean urperatuta = false;
+	private Boolean urperatuta;
 	
 	public Ontzia(int pLuzeera){
 		luzeera = pLuzeera;
 		posizioak = new ArrayList<Gelaxka>();
+		ezkutua = null;
+		urperatuta = false;
 	}
 	
 	public void tiroaJaso(Arma pArma, Gelaxka pGelaxka){
 		if(ezkutua != null){
 			if(ezkutua.kolpeaJaso(pArma)==0){
 				ezkutua = null;
-				for(int i = 0; i < (posizioak.size()-1); i++){
+				for(int i = 0; i <= (posizioak.size()-1); i++){
 					if(posizioak.get(i).getEgoera()!=Egoera.EMANDA){
 						posizioak.get(i).eguneratu(Egoera.ONTZIA);
 						Leihoa2.getLeihoa2().getMatrize1().iconoAldatu("ontzia", posizioak.get(i).getX(), posizioak.get(i).getY());
@@ -28,7 +30,7 @@ public abstract class Ontzia {
 			}
 		}else{
 			if(pArma instanceof Misil){
-				for(int i = 0; i < (posizioak.size()-1); i++){
+				for(int i = 0; i <= (posizioak.size()-1); i++){
 					posizioak.get(i).eguneratu(Egoera.EMANDA);
 					Leihoa2.getLeihoa2().getMatrize1().iconoAldatu("emanda", posizioak.get(i).getX(), posizioak.get(i).getY());
 				}
@@ -38,13 +40,72 @@ public abstract class Ontzia {
 				Leihoa2.getLeihoa2().getMatrize1().iconoAldatu("emanda", pGelaxka.getX(), pGelaxka.getY());
 				boolean urperatu = true;
 				int i = 0;
-				while(i < (posizioak.size()-1) && urperatu == true){
+				while(i <= (posizioak.size()-1) && urperatu == true){
 					if(posizioak.get(i).getEgoera()==Egoera.ONTZIA){
 						urperatu = false;
 					}
+					i++;
 				}
 				if(urperatu == true){
 					this.urperatu();
+					int txanda;
+					Jokalaria etsaia;
+					
+					txanda=ListaJokalariak.getNireListaJokalariak().txandaKalkulatu();
+					if(txanda==0){
+						etsaia=ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1);
+					}
+					else{
+						etsaia=ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0);
+					}
+					for(int j = 0; j <= (posizioak.size()-1); j++){
+						int x;
+						int y;
+						int x1;
+						int y1;
+						x=posizioak.get(j).getX();
+						y=posizioak.get(j).getY();
+						for( int k = 0; k < 8; k++){
+							if (k==0){
+								x1=x;
+								y1=y-1;
+							}
+							else if(k==1){
+								x1=x+1;
+								y1=y-1;
+							}
+							else if(k==2){
+								x1=x+1;
+								y1=y;
+							}
+							else if(k==3){
+								x1=x+1;
+								y1=y+1;
+							}
+							else if(k==4){
+								x1=x;
+								y1=y+1;
+							}
+							else if(k==5){
+								x1=x-1;
+								y1=y+1;
+							}
+							else if(k==6){
+								x1=x-1;
+								y1=y;
+							}
+							else {
+								x1=x-1;
+								y1=y-1;
+							}
+							if (etsaia.getIkusi().konprobatuKasila(x1, y1)){
+								if(etsaia.getIkusi().getGelaxka(x1, y1).getEgoera().equals(Egoera.URA)){
+									etsaia.getIkusi().getGelaxka(x1, y1).eguneratu(Egoera.MISS);
+									Leihoa2.getLeihoa2().getMatrize1().iconoAldatu("miss", x1, y1);
+								}	
+							}
+						}
+					}
 				}
 			}
 		}

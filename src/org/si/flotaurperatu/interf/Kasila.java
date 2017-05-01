@@ -6,6 +6,8 @@ import java.awt.event.MouseListener;
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 
+import org.si.flotaurperatu.interf.baliabideak.Irudiak;
+
 public class Kasila extends JButton implements MouseListener{
 	
 	private static final long serialVersionUID = 1L;
