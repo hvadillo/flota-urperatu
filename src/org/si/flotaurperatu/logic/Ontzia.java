@@ -127,11 +127,18 @@ public abstract class Ontzia {
 		for(int i = 0; i < posizioak.size(); i++){
 			if(posizioak.get(i).getEgoera()!=Egoera.EMANDA){
 				posizioak.get(i).eguneratu(Egoera.EZKUTUA);
-				Leihoa2.getLeihoa2().getPanela().iconoAldatu("ezkutua", posizioak.get(i).getX(), posizioak.get(i).getY());
+				int txanda=ListaJokalariak.getNireListaJokalariak().txandaKalkulatu();
+				if(txanda==0){
+					Leihoa2.getLeihoa2().getPanela().iconoAldatu("ezkutua", posizioak.get(i).getX(), posizioak.get(i).getY());
+				}
 			}	
 		}
 	}
 	public void posizioakEguneratu(int pPos, Gelaxka pGelaxka){
 		this.posizioak.add(pPos, pGelaxka);
+	}
+	
+	public ArrayList<Gelaxka> getPosizioak(){
+		return posizioak;
 	}
 }

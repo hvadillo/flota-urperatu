@@ -1,5 +1,7 @@
 package org.si.flotaurperatu.logic;
 
+import org.si.flotaurperatu.interf2.Leihoa2;
+
 public class Radarra extends Arma {
 	
 	private int kontsultaKop;
@@ -20,6 +22,7 @@ public class Radarra extends Arma {
 		txanda=ListaJokalariak.getNireListaJokalariak().txandaKalkulatu();
 		if(kopurua==0 && kontsultaKop==0){
 			System.out.println(" Ez daukazu kontsultarik radarra erabiltzeko. ");
+			Leihoa2.getLeihoa2().idatzi().setText(" Ez daukazu kontsultarik radarra erabiltzeko. ");
 		}
 		else{
 			if(txanda==0){
@@ -34,6 +37,7 @@ public class Radarra extends Arma {
 					if(g.getEgoera().equals(Egoera.ONTZIA)){//0
 						aurkitua=true;
 						System.out.println("Ontzi bat dago "+(pZutabe+1)+" zutabean eta "+(pErrenkada+1)+" errenkadan." );
+						Leihoa2.getLeihoa2().idatzi().setText("Ontzi bat dago "+(pZutabe+1)+" zutabean eta "+(pErrenkada+1)+" errenkadan." );
 					}
 					else{
 						kont++;

@@ -1,22 +1,61 @@
 package org.si.flotaurperatu.logic;
 
-import org.si.flotaurperatu.interf2.Leihoa2;
+import java.util.ArrayList;
+
 import org.si.flotaurperatu.interf2.OntzienPanela;
 
 public class Ordenagailua extends Jokalaria{
 	
+	int txanda;
+	
 	public Ordenagailua(){
 		super();
+		txanda = 0;
 	}
 
 	@Override
 	public void txandaBurutu() {
-		// TODO Auto-generated method stub
-		
+		int zut = (int) (Math.random() * 9);
+		int err = (int) (Math.random() * 9);
+		int tiro = (int) (Math.random() * 3);
+		String arma = "Bonba";
+		/*if(tiro == 0){
+			arma = "Bonba";
+		}else if(tiro == 1){
+			arma = "MisilIH";
+		}else if(tiro == 2){
+			arma = "MisilEM";
+		}else{
+			arma = "MisilGurutze";
+		}*/
+		if(txanda==0){
+			int ont = (int) (Math.random() * 9);
+			Ontzia ontzia = flota.getOntzia(ont);
+			ArrayList<Gelaxka> posizioak = ontzia.getPosizioak();
+			armak.armaErabili("Ezkutua",posizioak.get(0).getX(),posizioak.get(0).getY());
+			armak.armaErabili(arma, zut, err);
+		}else{
+			int zeregin = (int) (Math.random() * 4);
+			if(zeregin == 0){
+				//erosi
+			}else if(zeregin == 1){
+				//konpondu
+			}else if(zeregin == 2){
+				//radarra
+			}else if(zeregin == 3){
+				//ezkutua
+			}else{
+				armak.armaErabili(arma, zut, err);
+			}
+			if((zeregin == 0)||(zeregin == 1)||(zeregin == 2)||(zeregin == 3)){
+				armak.armaErabili(arma, zut, err);
+			}
+		}
+		txanda++;
 	}
 
 	@Override
-	public void armakErosi() {
+	public void armakErosi(String pMota) {
 		// TODO Auto-generated method stub
 		
 	}
@@ -232,5 +271,17 @@ public class Ordenagailua extends Jokalaria{
 			}
 		}
 		OntzienPanela.getOntzienPanela().setMota(null);
+	}
+
+	@Override
+	public void bonbaErabili(int pZutabe, int pErrenkada) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void radarraErabili(int pZutabe, int pErrenkada) {
+		// TODO Auto-generated method stub
+		
 	}
 }

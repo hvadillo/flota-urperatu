@@ -38,18 +38,17 @@ public class Leihoa2 extends JFrame implements Observer{
 		this.setTitle("Flota Urperatu");
 		this.setIconImage(Irudiak.getNIrudiak().ikonoa);
 		panel1.setBorder(null);
-		panel1.setLayout(new GridLayout(2,1,50,0));
-		matrize1.setBorder(new LineBorder(new Color(0, 0, 0), 4));
+		panel1.setLayout(new GridLayout(2,1,0,1));
+		matrize1.setBorder(new LineBorder(new Color(0, 0, 0), 3));
 		panel1.add(matrize1, BorderLayout.NORTH);
 		//matrize1.ipiniListener();
-		matrize2.setBorder(new LineBorder(new Color(0, 0, 0), 4));
+		matrize2.setBorder(new LineBorder(new Color(0, 0, 0), 3));
 		panel1.add(matrize2, BorderLayout.SOUTH);
 		this.getContentPane().add(panel1, BorderLayout.CENTER);
 		text1.setText("Informazioa:");
-		//text2.setBackground(Color.WHITE);
-		//text2.setPreferredSize(new Dimension(200,100));
-		//text2.removeTextListener(this);
-		//text2.setText("itydcktgvj");
+		text2.setBackground(Color.WHITE);
+		text2.setPreferredSize(new Dimension(200,50));
+		text2.setEditable(false);
 		panel2.add(text1, BorderLayout.NORTH);
 		panel2.add(text2, BorderLayout.SOUTH);
 		this.getContentPane().add(panel2, BorderLayout.WEST);
@@ -66,6 +65,10 @@ public class Leihoa2 extends JFrame implements Observer{
 			nLeihoa = new Leihoa2();
 		}
 		return nLeihoa;
+	}
+	
+	public TextArea idatzi(){
+		return text2;
 	}
 	
 	public KasilenPanela2 getPanela(){
