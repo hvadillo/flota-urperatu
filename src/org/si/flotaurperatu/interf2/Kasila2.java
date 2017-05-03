@@ -68,6 +68,14 @@ public class Kasila2 extends JButton implements MouseListener{
 					radarraErabili();
 				}else if(ArmenPanela.getArmenPanela().getArmaMota().equals("bonba")){
 					bonbaErabili();
+				}else if(ArmenPanela.getArmenPanela().getArmaMota().equals("misil")){
+					misilErabili();
+				}else if(ArmenPanela.getArmenPanela().getArmaMota().equals("misilIH")){
+					misilIHErabili();
+				}else if(ArmenPanela.getArmenPanela().getArmaMota().equals("misilEM")){
+					misilEMErabili();
+				}else{
+					misilGurutzeErabili();
 				}
 			}
 		}
@@ -88,6 +96,22 @@ public class Kasila2 extends JButton implements MouseListener{
 	
 	private void ezkutuaKokatu(){
 		ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).ezkutuaJarri(zutabe, errenkada);
+	}
+	
+	private void misilErabili(){
+		ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).misilErabili(zutabe, errenkada);
+	}
+	
+	private void misilIHErabili(){
+		ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).misilIHErabili(zutabe,errenkada);
+	}
+	
+	private void misilEMErabili(){
+		ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).misilEMErabili(zutabe,errenkada);
+	}
+	
+	private void misilGurutzeErabili(){
+		ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).misilGurutzeErabili(zutabe,errenkada);
 	}
 	
 	private void ontziakKokatu(){

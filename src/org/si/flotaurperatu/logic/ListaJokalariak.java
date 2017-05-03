@@ -45,7 +45,7 @@ public class ListaJokalariak {
 	}
 
 	public void hasieratu(){
-		listaJok.get(1).ontziakIpini();
+		((Ordenagailua) listaJok.get(1)).ontziakIpini();
 	}
 	
 	public ArrayList<Jokalaria> getJokalariak(){

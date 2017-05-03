@@ -32,8 +32,16 @@ public class Ordenagailua extends Jokalaria{
 			int ont = (int) (Math.random() * 9);
 			Ontzia ontzia = flota.getOntzia(ont);
 			ArrayList<Gelaxka> posizioak = ontzia.getPosizioak();
-			armak.armaErabili("Ezkutua",posizioak.get(0).getX(),posizioak.get(0).getY());
-			armak.armaErabili(arma, zut, err);
+			this.ezkutuaJarri(posizioak.get(0).getX(),posizioak.get(0).getY());
+			if(arma.equals("Bonba")){
+				this.bonbaErabili(zut, err);
+			}else if(arma.equals("MisilIH")){
+				this.misilIHErabili(zut, err);
+			}else if(arma.equals("MisilEM")){
+				this.misilEMErabili(zut, err);
+			}else{
+				this.misilGurutzeErabili(zut, err);
+			}
 		}else{
 			int zeregin = (int) (Math.random() * 4);
 			if(zeregin == 0){
@@ -59,14 +67,7 @@ public class Ordenagailua extends Jokalaria{
 		// TODO Auto-generated method stub
 		
 	}
-
-	@Override
-	public void ezkutuaJarri(int pZutabe,int pErrenkada) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
+	
 	public void ontziakIpini() {
 		int zutabe;
 		int errenkada;
@@ -274,14 +275,9 @@ public class Ordenagailua extends Jokalaria{
 	}
 
 	@Override
-	public void bonbaErabili(int pZutabe, int pErrenkada) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
 	public void radarraErabili(int pZutabe, int pErrenkada) {
 		// TODO Auto-generated method stub
 		
 	}
+
 }

@@ -45,5 +45,17 @@ public class Biltegia {
 		else if(pMota.equals("Bonba")){
 			armak.get(1).erabili(pZutabe,pErrenkada);
 		}
+		else if(pMota.equals("Misil")){
+			armak.get(2).erabili(pZutabe,pErrenkada);
+		}
+		else if(pMota.equals("MisilIH")){
+			armak.get(4).erabili(pZutabe,pErrenkada);
+		}
+		else if(pMota.equals("MisilEM")){
+			armak.get(5).erabili(pZutabe,pErrenkada);
+		}
+		else if(pMota.equals("MisilGurutze")){
+			armak.get(6).erabili(pZutabe,pErrenkada);
+		}
 	}
 }

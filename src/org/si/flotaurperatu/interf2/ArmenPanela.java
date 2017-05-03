@@ -35,19 +35,19 @@ public class ArmenPanela extends JPanel implements ActionListener{
 		
 		misil = new JButton("Misil");
 		add(misil);
-		//misil.addActionListener(new FragataIpini());
+		misil.addActionListener(new MisilIpini());
 		
 		misilIH = new JButton("MisilIH");
 		add(misilIH);
-		//misilIH.addActionListener(new FragataIpini());
+		misilIH.addActionListener(new MisilIHIpini());
 		
 		misilEM = new JButton("MisilEM");
 		add(misilEM);
-		//misilEM.addActionListener(new FragataIpini());
+		misilEM.addActionListener(new MisilEMIpini());
 		
 		misilGurutzatu = new JButton("MisilGurutzatu");
 		add(misilGurutzatu);
-		//misilGurutzatu.addActionListener(new FragataIpini());
+		misilGurutzatu.addActionListener(new MisilGurutzeIpini());
 		
 		radarra = new JButton("Radarra");
 		add(radarra);

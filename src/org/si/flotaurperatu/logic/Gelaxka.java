@@ -31,6 +31,9 @@ public class Gelaxka {
 			Leihoa2.getLeihoa2().getMatrize1().iconoAldatu("miss", this.x, this.y);
 			this.eguneratu(Egoera.MISS);
 		}
+		else if(e.equals(Egoera.EMANDA) || e.equals(Egoera.MISS)){
+		
+		}
 		else{
 			o.tiroaJaso(pArma, this);
 		}

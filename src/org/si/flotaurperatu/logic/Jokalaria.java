@@ -27,15 +27,7 @@ public abstract class Jokalaria {
 			armak.armaErosi(pMota);
 		}
 	}
-	
-	public abstract void ezkutuaJarri(int pZutabe,int pErrenkada);
-	
-	public abstract void bonbaErabili(int pZutabe,int pErrenkada);
-	
 
-	
-	public abstract void ontziakIpini();
-	
 	public TableroEraso getEraso(){
 		return tableroEraso;
 	}
@@ -53,4 +45,28 @@ public abstract class Jokalaria {
 		dirua=dirua-pKostua;
 	}
 	public abstract void radarraErabili(int pZutabe,int pErrenkada);
+	
+	public void misilErabili(int zutabe, int errenkada) {
+		armak.armaErabili("Misil", zutabe, errenkada);
+	}
+
+	public void misilIHErabili(int zutabe, int errenkada) {
+		armak.armaErabili("MisilIH", zutabe, errenkada);
+	}
+
+	public void misilEMErabili(int zutabe, int errenkada) {
+		armak.armaErabili("MisilEM", zutabe, errenkada);
+	}
+
+	public void misilGurutzeErabili(int zutabe, int errenkada) {
+		armak.armaErabili("MisilGurutze", zutabe, errenkada);
+	}
+
+	public void bonbaErabili(int zutabe, int errenkada){
+		armak.armaErabili("Bonba", zutabe, errenkada);
+	}
+	
+	public void ezkutuaJarri(int zutabe, int errenkada){
+		armak.armaErabili("Ezkutua",zutabe,errenkada);
+	}
 }
