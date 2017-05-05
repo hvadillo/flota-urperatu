@@ -21,8 +21,9 @@ public class Radarra extends Arma {
 		boolean aurkitua=false;
 		txanda=ListaJokalariak.getNireListaJokalariak().txandaKalkulatu();
 		if(kopurua==0 && kontsultaKop==0){
-			System.out.println(" Ez daukazu kontsultarik radarra erabiltzeko. ");
-			Leihoa2.getLeihoa2().idatzi().setText(" Ez daukazu kontsultarik radarra erabiltzeko. ");
+			if(ListaJokalariak.getNireListaJokalariak().txandaKalkulatu()==0){
+				Leihoa2.getLeihoa2().idatzi().setText(" Ez daukazu kontsultarik radarra erabiltzeko. ");
+			}
 		}
 		else{
 			if(txanda==0){
@@ -36,7 +37,6 @@ public class Radarra extends Arma {
 					g=etsaia.getIkusi().getGelaxka(pZutabe, pErrenkada);
 					if(g.getEgoera().equals(Egoera.ONTZIA)){//0
 						aurkitua=true;
-						System.out.println("Ontzi bat dago "+(pZutabe+1)+" zutabean eta "+(pErrenkada+1)+" errenkadan." );
 						Leihoa2.getLeihoa2().idatzi().setText("Ontzi bat dago "+(pZutabe+1)+" zutabean eta "+(pErrenkada+1)+" errenkadan." );
 					}
 					else{
@@ -48,7 +48,7 @@ public class Radarra extends Arma {
 						g=etsaia.getIkusi().getGelaxka(pZutabe, pErrenkada-1);
 						if(g.getEgoera().equals(Egoera.ONTZIA)){
 							aurkitua=true;
-							System.out.println("Ontzi bat dago "+(pZutabe+1)+" zutabean eta "+pErrenkada+" errenkadan." );
+							Leihoa2.getLeihoa2().idatzi().setText("Ontzi bat dago "+(pZutabe+1)+" zutabean eta "+pErrenkada+" errenkadan.");
 						}
 						else{
 							kont++;
@@ -63,7 +63,7 @@ public class Radarra extends Arma {
 						g=etsaia.getIkusi().getGelaxka(pZutabe, pErrenkada-2);
 						if(g.getEgoera().equals(Egoera.ONTZIA)){
 							aurkitua=true;
-							System.out.println("Ontzi bat dago "+(pZutabe+1)+" zutabean eta "+ (pErrenkada-1) +" errenkadan." );
+							Leihoa2.getLeihoa2().idatzi().setText("Ontzi bat dago "+(pZutabe+1)+" zutabean eta "+ (pErrenkada-1) +" errenkadan.");
 						}
 						else{
 							kont++;
@@ -78,7 +78,7 @@ public class Radarra extends Arma {
 						g=etsaia.getIkusi().getGelaxka((pZutabe+1), pErrenkada-1);
 						if(g.getEgoera().equals(Egoera.ONTZIA)){
 							aurkitua=true;
-							System.out.println("Ontzi bat dago "+(pZutabe+2)+" zutabean eta "+ pErrenkada +" errenkadan." );
+							Leihoa2.getLeihoa2().idatzi().setText("Ontzi bat dago "+(pZutabe+2)+" zutabean eta "+ pErrenkada +" errenkadan." );
 						}
 						else{
 							kont++;
@@ -93,7 +93,7 @@ public class Radarra extends Arma {
 						g=etsaia.getIkusi().getGelaxka((pZutabe+1), pErrenkada);
 						if(g.getEgoera().equals(Egoera.ONTZIA)){
 							aurkitua=true;
-							System.out.println("Ontzi bat dago "+(pZutabe+2)+" zutabean eta "+ (pErrenkada+1) +" errenkadan." );
+							Leihoa2.getLeihoa2().idatzi().setText("Ontzi bat dago "+(pZutabe+2)+" zutabean eta "+ (pErrenkada+1) +" errenkadan." );
 						}
 						else{
 							kont++;
@@ -108,7 +108,7 @@ public class Radarra extends Arma {
 						g=etsaia.getIkusi().getGelaxka(pZutabe+2, pErrenkada);
 						if(g.getEgoera().equals(Egoera.ONTZIA)){
 							aurkitua=true;
-							System.out.println("Ontzi bat dago "+(pZutabe+3)+" zutabean eta "+ (pErrenkada+1) +" errenkadan." );
+							Leihoa2.getLeihoa2().idatzi().setText("Ontzi bat dago "+(pZutabe+3)+" zutabean eta "+ (pErrenkada+1) +" errenkadan." );
 						}
 						else{
 							kont++;
@@ -123,7 +123,7 @@ public class Radarra extends Arma {
 						g=etsaia.getIkusi().getGelaxka((pZutabe+1), pErrenkada+1);
 						if(g.getEgoera().equals(Egoera.ONTZIA)){
 							aurkitua=true;
-							System.out.println("Ontzi bat dago "+(pZutabe+2)+" zutabean eta "+ (pErrenkada+2) +" errenkadan." );
+							Leihoa2.getLeihoa2().idatzi().setText("Ontzi bat dago "+(pZutabe+2)+" zutabean eta "+ (pErrenkada+2) +" errenkadan." );
 						}
 						else{
 							kont++;
@@ -138,7 +138,7 @@ public class Radarra extends Arma {
 						g=etsaia.getIkusi().getGelaxka(pZutabe, pErrenkada+1);
 						if(g.getEgoera().equals(Egoera.ONTZIA)){
 							aurkitua=true;
-							System.out.println("Ontzi bat dago "+(pZutabe+1)+" zutabean eta "+ (pErrenkada+2) +" errenkadan." );
+							Leihoa2.getLeihoa2().idatzi().setText("Ontzi bat dago "+(pZutabe+1)+" zutabean eta "+ (pErrenkada+2) +" errenkadan." );
 						}
 						else{
 							kont++;
@@ -153,7 +153,7 @@ public class Radarra extends Arma {
 						g=etsaia.getIkusi().getGelaxka(pZutabe, pErrenkada+2);
 						if(g.getEgoera().equals(Egoera.ONTZIA)){
 							aurkitua=true;
-							System.out.println("Ontzi bat dago "+(pZutabe+1)+" zutabean eta "+ (pErrenkada+3) +" errenkadan." );
+							Leihoa2.getLeihoa2().idatzi().setText("Ontzi bat dago "+(pZutabe+1)+" zutabean eta "+ (pErrenkada+3) +" errenkadan." );
 						}
 						else{
 							kont++;
@@ -168,7 +168,7 @@ public class Radarra extends Arma {
 						g=etsaia.getIkusi().getGelaxka(pZutabe-1, pErrenkada+1);
 						if(g.getEgoera().equals(Egoera.ONTZIA)){
 							aurkitua=true;
-							System.out.println("Ontzi bat dago "+pZutabe+" zutabean eta "+ (pErrenkada+2) +" errenkadan." );
+							Leihoa2.getLeihoa2().idatzi().setText("Ontzi bat dago "+pZutabe+" zutabean eta "+ (pErrenkada+2) +" errenkadan." );
 						}
 						else{
 							kont++;
@@ -183,7 +183,7 @@ public class Radarra extends Arma {
 						g=etsaia.getIkusi().getGelaxka(pZutabe-1, pErrenkada);
 						if(g.getEgoera().equals(Egoera.ONTZIA)){
 							aurkitua=true;
-							System.out.println("Ontzi bat dago "+pZutabe+" zutabean eta "+ (pErrenkada+1) +" errenkadan." );
+							Leihoa2.getLeihoa2().idatzi().setText("Ontzi bat dago "+pZutabe+" zutabean eta "+ (pErrenkada+1) +" errenkadan." );
 						}
 						else{
 							kont++;
@@ -198,7 +198,7 @@ public class Radarra extends Arma {
 						g=etsaia.getIkusi().getGelaxka(pZutabe-2, pErrenkada-1);
 						if(g.getEgoera().equals(Egoera.ONTZIA)){
 							aurkitua=true;
-							System.out.println("Ontzi bat dago "+(pZutabe-1)+" zutabean eta "+ (pErrenkada+1) +" errenkadan." );
+							Leihoa2.getLeihoa2().idatzi().setText("Ontzi bat dago "+(pZutabe-1)+" zutabean eta "+ (pErrenkada+1) +" errenkadan.");
 						}
 						else{
 							kont++;
@@ -213,7 +213,7 @@ public class Radarra extends Arma {
 						g=etsaia.getIkusi().getGelaxka(pZutabe-1, pErrenkada-1);
 						if(g.getEgoera().equals(Egoera.ONTZIA)){
 							aurkitua=true;
-							System.out.println("Ontzi bat dago "+pZutabe+" zutabean eta "+ pErrenkada +" errenkadan." );
+							Leihoa2.getLeihoa2().idatzi().setText("Ontzi bat dago "+pZutabe+" zutabean eta "+ pErrenkada +" errenkadan.");
 						}
 						else{
 							kont++;
@@ -225,7 +225,7 @@ public class Radarra extends Arma {
 				}
 			}
 			if(!aurkitua){
-				System.out.println(" Ez da ontzirik aurkitu. ");
+				Leihoa2.getLeihoa2().idatzi().setText(" Ez da ontzirik aurkitu. ");
 			}
 			kontsultaKop--;
 			if(kontsultaKop==0){

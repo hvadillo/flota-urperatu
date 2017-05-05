@@ -24,7 +24,12 @@ public abstract class Ontzia {
 				for(int i = 0; i <= (posizioak.size()-1); i++){
 					if(posizioak.get(i).getEgoera()!=Egoera.EMANDA){
 						posizioak.get(i).eguneratu(Egoera.ONTZIA);
-						Leihoa2.getLeihoa2().getMatrize1().iconoAldatu("ontzia", posizioak.get(i).getX(), posizioak.get(i).getY());
+						if(ListaJokalariak.getNireListaJokalariak().txandaKalkulatu()==0){
+							Leihoa2.getLeihoa2().getMatrize1().iconoAldatu("ontzia", posizioak.get(i).getX(), posizioak.get(i).getY());
+						}
+						else{
+							Leihoa2.getLeihoa2().getMatrize2().iconoAldatu("ontzia", posizioak.get(i).getX(), posizioak.get(i).getY());
+						}
 					}
 				}
 			}
@@ -33,12 +38,22 @@ public abstract class Ontzia {
 			if(pArma instanceof Misil){
 				for(int i = 0; i <= (posizioak.size()-1); i++){
 					posizioak.get(i).eguneratu(Egoera.EMANDA);
-					Leihoa2.getLeihoa2().getMatrize1().iconoAldatu("emanda", posizioak.get(i).getX(), posizioak.get(i).getY());
-				}
+					if(ListaJokalariak.getNireListaJokalariak().txandaKalkulatu()==0){
+						Leihoa2.getLeihoa2().getMatrize1().iconoAldatu("emanda", posizioak.get(i).getX(), posizioak.get(i).getY());
+					}
+					else{
+						Leihoa2.getLeihoa2().getMatrize2().iconoAldatu("emanda", posizioak.get(i).getX(), posizioak.get(i).getY());
+					}
+					}
 				this.urperatu();
 			}else{
 				pGelaxka.eguneratu(Egoera.EMANDA);
-				Leihoa2.getLeihoa2().getMatrize1().iconoAldatu("emanda", pGelaxka.getX(), pGelaxka.getY());
+				if(ListaJokalariak.getNireListaJokalariak().txandaKalkulatu()==0){
+					Leihoa2.getLeihoa2().getMatrize1().iconoAldatu("emanda", pGelaxka.getX(), pGelaxka.getY());
+				}
+				else{
+					Leihoa2.getLeihoa2().getMatrize2().iconoAldatu("emanda", pGelaxka.getX(), pGelaxka.getY());
+				}
 				int i = 0;
 				while(i <= (posizioak.size()-1) && urperatu == true){
 					if(posizioak.get(i).getEgoera()==Egoera.ONTZIA){
@@ -102,7 +117,12 @@ public abstract class Ontzia {
 						if (etsaia.getIkusi().konprobatuKasila(x1, y1)){
 							if(etsaia.getIkusi().getGelaxka(x1, y1).getEgoera().equals(Egoera.URA)){
 								etsaia.getIkusi().getGelaxka(x1, y1).eguneratu(Egoera.MISS);
-								Leihoa2.getLeihoa2().getMatrize1().iconoAldatu("miss", x1, y1);
+								if(ListaJokalariak.getNireListaJokalariak().txandaKalkulatu()==0){
+									Leihoa2.getLeihoa2().getMatrize1().iconoAldatu("miss", x1, y1);
+								}
+								else{
+									Leihoa2.getLeihoa2().getMatrize2().iconoAldatu("miss", x1, y1);
+								}
 							}	
 						}
 					}
@@ -129,7 +149,7 @@ public abstract class Ontzia {
 				posizioak.get(i).eguneratu(Egoera.EZKUTUA);
 				int txanda=ListaJokalariak.getNireListaJokalariak().txandaKalkulatu();
 				if(txanda==0){
-					Leihoa2.getLeihoa2().getPanela().iconoAldatu("ezkutua", posizioak.get(i).getX(), posizioak.get(i).getY());
+					Leihoa2.getLeihoa2().getMatrize2().iconoAldatu("ezkutua", posizioak.get(i).getX(), posizioak.get(i).getY());
 				}
 			}	
 		}

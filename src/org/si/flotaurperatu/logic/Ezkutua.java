@@ -1,5 +1,7 @@
 package org.si.flotaurperatu.logic;
 
+import org.si.flotaurperatu.interf2.Leihoa2;
+
 public class Ezkutua extends Arma{
 
 	private int kolpeak;
@@ -17,9 +19,10 @@ public class Ezkutua extends Arma{
 		jok.getIkusi().getGelaxka(pZutabe, pErrenkada).ezkutuaJarri(this);
 		kopurua--;}
 		else{
-			System.out.println("Ez daukazu ezkuturik");
+			if(ListaJokalariak.getNireListaJokalariak().txandaKalkulatu()==0){
+				Leihoa2.getLeihoa2().idatzi().setText("Ez daukazu ezkuturik");
+			}
 		}
-		//
 	}
 	public int kolpeaJaso(Arma pArma){
 		if(pArma instanceof Bonba){

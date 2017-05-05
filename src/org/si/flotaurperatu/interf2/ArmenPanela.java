@@ -9,7 +9,10 @@ import javax.swing.JPanel;
 
 import org.si.flotaurperatu.actionListener.BonbaIpini;
 import org.si.flotaurperatu.actionListener.EzkutuaIpini;
-import org.si.flotaurperatu.actionListener.FragataIpini;
+import org.si.flotaurperatu.actionListener.MisilEMIpini;
+import org.si.flotaurperatu.actionListener.MisilGurutzeIpini;
+import org.si.flotaurperatu.actionListener.MisilIHIpini;
+import org.si.flotaurperatu.actionListener.MisilIpini;
 import org.si.flotaurperatu.actionListener.RadarraIpini;
 
 public class ArmenPanela extends JPanel implements ActionListener{

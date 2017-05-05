@@ -1,7 +1,9 @@
-package org.si.flotaurperatu.interf2;
+package org.si.flotaurperatu.actionListener;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
+import org.si.flotaurperatu.interf2.ArmenPanela;
 
 public class MisilGurutzeIpini implements ActionListener {
 

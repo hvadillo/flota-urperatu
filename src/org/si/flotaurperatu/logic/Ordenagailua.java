@@ -2,6 +2,7 @@ package org.si.flotaurperatu.logic;
 
 import java.util.ArrayList;
 
+import org.si.flotaurperatu.interf2.Leihoa2;
 import org.si.flotaurperatu.interf2.OntzienPanela;
 
 public class Ordenagailua extends Jokalaria{
@@ -19,7 +20,7 @@ public class Ordenagailua extends Jokalaria{
 		int err = (int) (Math.random() * 9);
 		int tiro = (int) (Math.random() * 3);
 		String arma = "Bonba";
-		/*if(tiro == 0){
+		if(tiro == 0){
 			arma = "Bonba";
 		}else if(tiro == 1){
 			arma = "MisilIH";
@@ -27,7 +28,7 @@ public class Ordenagailua extends Jokalaria{
 			arma = "MisilEM";
 		}else{
 			arma = "MisilGurutze";
-		}*/
+		}
 		if(txanda==0){
 			int ont = (int) (Math.random() * 9);
 			Ontzia ontzia = flota.getOntzia(ont);
@@ -60,6 +61,8 @@ public class Ordenagailua extends Jokalaria{
 			}
 		}
 		txanda++;
+		ListaJokalariak.getNireListaJokalariak().bukatu();
+		Leihoa2.getLeihoa2().idatzi().setText("ue");
 	}
 
 	@Override

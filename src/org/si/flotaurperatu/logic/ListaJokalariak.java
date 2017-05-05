@@ -2,6 +2,8 @@ package org.si.flotaurperatu.logic;
 
 import java.util.ArrayList;
 
+import org.si.flotaurperatu.interf2.Leihoa2;
+
 public class ListaJokalariak {
 	private ArrayList<Jokalaria> listaJok;
 	private int txanda;
@@ -31,17 +33,18 @@ public class ListaJokalariak {
 		txanda++;
 	}
 
-	public void txandaBurutu(){
-		while (!bukatu){
-			listaJok.get(txandaKalkulatu()).txandaBurutu();
-			if(txandaKalkulatu()==1){
-				bukatu=listaJok.get(0).getFlota().denakUrperaturik();
-			}
-			else{
-				bukatu=listaJok.get(1).getFlota().denakUrperaturik();
-			}
-			txandaEguneratu();
+	public void bukatu(){
+		if(txandaKalkulatu()==1){
+			bukatu=listaJok.get(0).getFlota().denakUrperaturik();
+		}else{
+			bukatu=listaJok.get(1).getFlota().denakUrperaturik();
 		}
+		if(bukatu){
+			Leihoa2.getLeihoa2().getMatrize1().kenduListener();
+			Leihoa2.getLeihoa2().getMatrize2().kenduListener();
+			Leihoa2.getLeihoa2().amaiera(txandaKalkulatu());
+		}
+		txandaEguneratu();
 	}
 
 	public void hasieratu(){

@@ -28,7 +28,12 @@ public class Gelaxka {
 	}
 	public void eraso(Arma pArma){
 		if(o==null && e.equals(Egoera.URA)){
-			Leihoa2.getLeihoa2().getMatrize1().iconoAldatu("miss", this.x, this.y);
+			if(ListaJokalariak.getNireListaJokalariak().txandaKalkulatu()==0){
+				Leihoa2.getLeihoa2().getMatrize1().iconoAldatu("miss", this.x, this.y);
+			}
+			else{
+				Leihoa2.getLeihoa2().getMatrize2().iconoAldatu("miss", this.x, this.y);
+			}
 			this.eguneratu(Egoera.MISS);
 		}
 		else if(e.equals(Egoera.EMANDA) || e.equals(Egoera.MISS)){
