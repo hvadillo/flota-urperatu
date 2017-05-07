@@ -2,7 +2,6 @@ package org.si.flotaurperatu.logic;
 
 import java.util.ArrayList;
 
-import org.si.flotaurperatu.interf2.Leihoa2;
 import org.si.flotaurperatu.interf2.OntzienPanela;
 
 public class Ordenagailua extends Jokalaria{

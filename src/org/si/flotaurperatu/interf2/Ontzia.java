@@ -17,18 +17,9 @@ import javax.swing.JLabel;
 import javax.swing.TransferHandler;
 
 
-/**
- * Este TransferHandler va a ser capaz de tratar Transferables que
- * contengan Color, String o Image. De esta forma si se arrastra una imagen se
- * pondrá como icono del JLabel, un texto como etiqueta y un color como fondo
- */
-public class Ontzia
-        extends TransferHandler
-{
-   //~ Variables/Inicializadores estaticos -------------------------------------
-
-   /**  */
-   protected static DataFlavor dataFlavorColor;
+public class Ontzia extends TransferHandler{
+   
+	protected static DataFlavor dataFlavorColor;
 
    static
    {

@@ -4,7 +4,6 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
 import javax.swing.BorderFactory;
-import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
 import org.si.flotaurperatu.interf.baliabideak.Irudiak;
@@ -29,7 +28,8 @@ public class Kasila2 extends JButton implements MouseListener{
 		zutabe = pZut;
 		errenkada = pErr;
 		addMouseListener(this);
-		setIcon(Irudiak.getNIrudiak().bloke[0]);
+		Irudiak.getNIrudiak();
+		setIcon(Irudiak.bloke[0]);
 	}
 	
 	public void kenduListener(){
@@ -42,15 +42,15 @@ public class Kasila2 extends JButton implements MouseListener{
 	
 	public void iconoAldatu(String egoera){
 		if(egoera.equals("ezkutua")){
-			setIcon(Irudiak.getNIrudiak().bloke[3]);
+			setIcon(Irudiak.bloke[3]);
 		}else if(egoera.equals("emanda")){
-			setIcon(Irudiak.getNIrudiak().bloke[4]);
+			setIcon(Irudiak.bloke[4]);
 		}else if(egoera.equals("ontzia")){
-			setIcon(Irudiak.getNIrudiak().bloke[1]);
+			setIcon(Irudiak.bloke[1]);
 		}else if(egoera.equals("ura")){
-			setIcon(Irudiak.getNIrudiak().bloke[0]);
+			setIcon(Irudiak.bloke[0]);
 		}else{
-			setIcon(Irudiak.getNIrudiak().bloke[2]);
+			setIcon(Irudiak.bloke[2]);
 		}
 		//this.removeMouseListener(this);
 	}
@@ -77,7 +77,7 @@ public class Kasila2 extends JButton implements MouseListener{
 						ListaJokalariak.getNireListaJokalariak().bukatu();
 					}
 					else{
-						Leihoa2.getLeihoa2().idatzi().append("Ez daukazu bonbarik");
+						Leihoa2.getLeihoa2().idatzi("Ez daukazu bonbarik");
 					}
 				}else if(ArmenPanela.getArmenPanela().getArmaMota().equals("misil")){
 					if(ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getArmak().getArmak().get(2).getKopurua()>0){
@@ -87,7 +87,7 @@ public class Kasila2 extends JButton implements MouseListener{
 						ListaJokalariak.getNireListaJokalariak().bukatu();
 					}
 					else{
-						Leihoa2.getLeihoa2().idatzi().append("Ez daukazu misilik");
+						Leihoa2.getLeihoa2().idatzi("Ez daukazu misilik");
 					}
 				}else if(ArmenPanela.getArmenPanela().getArmaMota().equals("misilIH")){
 					if(ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getArmak().getArmak().get(4).getKopurua()>0){
@@ -97,7 +97,7 @@ public class Kasila2 extends JButton implements MouseListener{
 						ListaJokalariak.getNireListaJokalariak().bukatu();
 					}
 					else{
-						Leihoa2.getLeihoa2().idatzi().append("Ez daukazu misilIH-rik");
+						Leihoa2.getLeihoa2().idatzi("Ez daukazu misilIH-rik");
 					}
 				}else if(ArmenPanela.getArmenPanela().getArmaMota().equals("misilEM")){
 					if(ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getArmak().getArmak().get(5).getKopurua()>0){
@@ -107,7 +107,7 @@ public class Kasila2 extends JButton implements MouseListener{
 						ListaJokalariak.getNireListaJokalariak().bukatu();
 					}
 					else{
-						Leihoa2.getLeihoa2().idatzi().append("Ez daukazu misilEM-rik");
+						Leihoa2.getLeihoa2().idatzi("Ez daukazu misilEM-rik");
 					}
 				}else{
 					if(ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getArmak().getArmak().get(6).getKopurua()>0){
@@ -117,7 +117,7 @@ public class Kasila2 extends JButton implements MouseListener{
 						ListaJokalariak.getNireListaJokalariak().bukatu();
 					}
 					else{
-						Leihoa2.getLeihoa2().idatzi().append("Ez daukazu misil gurutzaturik-rik");
+						Leihoa2.getLeihoa2().idatzi("Ez daukazu misil gurutzaturik-rik");
 					}
 				}
 			}

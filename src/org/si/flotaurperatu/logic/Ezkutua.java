@@ -20,7 +20,7 @@ public class Ezkutua extends Arma{
 		kopurua--;}
 		else{
 			if(ListaJokalariak.getNireListaJokalariak().txandaKalkulatu()==0){
-				Leihoa2.getLeihoa2().idatzi().setText("Ez daukazu ezkuturik");
+				Leihoa2.getLeihoa2().idatzi("Ez daukazu ezkuturik");
 			}
 		}
 	}

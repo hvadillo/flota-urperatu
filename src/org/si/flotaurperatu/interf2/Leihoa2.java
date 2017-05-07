@@ -4,14 +4,12 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.GridLayout;
-import java.awt.Image;
 import java.awt.TextArea;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.util.Observable;
 import java.util.Observer;
 
-import javax.swing.BorderFactory;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -20,7 +18,6 @@ import javax.swing.JPanel;
 import org.si.flotaurperatu.interf.baliabideak.Irudiak;
 import org.si.flotaurperatu.interf.baliabideak.Textua;
 
-import javax.swing.border.Border;
 import javax.swing.border.LineBorder;
 
 public class Leihoa2 extends JFrame implements Observer{
@@ -40,29 +37,35 @@ public class Leihoa2 extends JFrame implements Observer{
 	JPanel panel4 = new JPanel();
 	
 	private Leihoa2(){
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 		this.setTitle("Flota Urperatu");
 		Textua.kargatu();
-		this.setIconImage(Irudiak.getNIrudiak().ikonoa);
+		Irudiak.getNIrudiak();
+		this.setIconImage(Irudiak.ikonoa);
+		
+		matrize1.setBorder(new LineBorder(new Color(0, 0, 0), 3));
+		matrize2.setBorder(new LineBorder(new Color(0, 0, 0), 3));
+		
 		panel1.setBorder(null);
 		panel1.setLayout(new GridLayout(2,1,0,1));
-		matrize1.setBorder(new LineBorder(new Color(0, 0, 0), 3));
 		panel1.add(matrize1, BorderLayout.NORTH);
-		//matrize1.ipiniListener();
-		matrize2.setBorder(new LineBorder(new Color(0, 0, 0), 3));
 		panel1.add(matrize2, BorderLayout.SOUTH);
-		this.getContentPane().add(panel1, BorderLayout.CENTER);
-		panel2.setBorder(null);
-		panel2.setLayout(new GridLayout(3,1,0,0));
+		
 		text1.setText("Informazioa:");
 		text2.setBackground(Color.WHITE);
-		text2.setPreferredSize(new Dimension(200,50));
+		text2.setPreferredSize(new Dimension(300,25));
 		text2.setEditable(false);
+		
+		panel2.setBorder(null);
+		panel2.setLayout(new GridLayout(3,1,0,0));
 		panel2.add(text1, BorderLayout.NORTH);
 		panel2.add(text2, BorderLayout.CENTER);
 		panel2.add(denda, BorderLayout.SOUTH);
-		this.getContentPane().add(panel2, BorderLayout.WEST);
+		
 		panel3.add(armak, null);
+		
+		this.getContentPane().add(panel1, BorderLayout.CENTER);
+		this.getContentPane().add(panel2, BorderLayout.WEST);
 		this.getContentPane().add(panel3, BorderLayout.EAST);
 		this.getContentPane().add(ontziak, BorderLayout.SOUTH);
 		
@@ -71,11 +74,14 @@ public class Leihoa2 extends JFrame implements Observer{
 		
 		this.addWindowListener(new WindowAdapter() {					
 			public void windowClosing(WindowEvent e) {
-			    int confirmed = JOptionPane.showConfirmDialog(null, 
-			        Textua.itxiText, Textua.itxiTextIzenburu,
-			        JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null);
+				Object[] options = { "BAI", "EZ" };
+				int confirmed = JOptionPane.showOptionDialog(null, Textua.itxiText, Textua.itxiTextIzenburu,
+				             JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE,
+				             null, options, options[1]);
 			    if (confirmed == JOptionPane.YES_OPTION) {
 			    	System.exit(0);
+			    }else{
+			    	
 			    }
 			}
 		});
@@ -88,8 +94,8 @@ public class Leihoa2 extends JFrame implements Observer{
 		return nLeihoa;
 	}
 	
-	public TextArea idatzi(){
-		return text2;
+	public void idatzi(String pTextua){
+		text2.append(pTextua + "\n");
 	}
 	
 	public KasilenPanela2 getMatrize2(){
@@ -101,17 +107,20 @@ public class Leihoa2 extends JFrame implements Observer{
 	}
 	
 	public void amaiera(int pTxanda) {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		if(pTxanda==0){
-			int confirmed = JOptionPane.showConfirmDialog(null, 
-			        Textua.irabazi, Textua.amaitu,
-			        JOptionPane.OK_OPTION, JOptionPane.QUESTION_MESSAGE, null);
+			Object[] options = { "OK",};
+			int confirmed = JOptionPane.showOptionDialog(null, Textua.irabazi, Textua.amaitu,
+			             JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE,
+			             null, options, options[0]);
 			    if (confirmed == JOptionPane.OK_OPTION) {
 			    	System.exit(0);
 			    }
 		}else{
-			int confirmed = JOptionPane.showConfirmDialog(null, 
-			        Textua.galdu, Textua.amaitu,
-			        JOptionPane.OK_OPTION, JOptionPane.QUESTION_MESSAGE, null);
+			Object[] options = { "OK",};
+			int confirmed = JOptionPane.showOptionDialog(null, Textua.galdu, Textua.amaitu,
+			             JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE,
+			             null, options, options[0]);
 			    if (confirmed == JOptionPane.OK_OPTION) {
 			    	System.exit(0);
 			    }

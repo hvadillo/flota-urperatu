@@ -1,7 +1,5 @@
 package org.si.flotaurperatu.logic;
 
-import org.si.flotaurperatu.interf2.Leihoa2;
-
 public class Misil extends Arma {
 	
 public Misil(int pKop){

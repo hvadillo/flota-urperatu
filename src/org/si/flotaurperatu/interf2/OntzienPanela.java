@@ -3,35 +3,20 @@ package org.si.flotaurperatu.interf2;
 import javax.swing.JPanel;
 
 import org.si.flotaurperatu.actionListener.Bertikal;
-import org.si.flotaurperatu.actionListener.EzkutuaIpini;
 import org.si.flotaurperatu.actionListener.FragataIpini;
 import org.si.flotaurperatu.actionListener.HegazkinOntziIpini;
 import org.si.flotaurperatu.actionListener.Horizontala;
 import org.si.flotaurperatu.actionListener.ItsaspekoIpini;
 import org.si.flotaurperatu.actionListener.SuntsitzaileIpini;
-import org.si.flotaurperatu.logic.ListaJokalariak;
-import javax.swing.GroupLayout;
-import javax.swing.GroupLayout.Alignment;
 import javax.swing.JButton;
-import javax.swing.LayoutStyle.ComponentPlacement;
-
-import java.awt.BorderLayout;
-import java.awt.Canvas;
 import javax.swing.AbstractAction;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import javax.swing.Action;
 import javax.swing.ButtonGroup;
-
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-import java.util.Observable;
-import java.util.Observer;
 
 import javax.swing.JRadioButton;
 import java.awt.GridLayout;
-import javax.swing.JLabel;
 
 public class OntzienPanela extends JPanel implements ActionListener{
 	

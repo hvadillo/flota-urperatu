@@ -6,8 +6,6 @@ import java.util.Observer;
 
 import javax.swing.JPanel;
 
-import org.si.flotaurperatu.interf.baliabideak.Irudiak;
-
 public class KasilenPanela2 extends JPanel implements Observer {
 	
 	private static final long serialVersionUID = 1L;
