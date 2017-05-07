@@ -10,6 +10,10 @@ public class Biltegia {
 		armak = FactoryArma.getFactoryArma().biltegiaSortu();
 	}
 	
+	public ArrayList<Arma> getArmak(){
+		return armak;
+	}
+	
 	public void armaErosi(String pMota){
 		if(pMota.equals("radarra")){
 			armak.get(0).kopuruaGehitu();

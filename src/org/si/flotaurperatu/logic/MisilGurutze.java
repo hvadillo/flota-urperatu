@@ -19,8 +19,8 @@ public class MisilGurutze extends MisilGidatua {
 			kopurua--;
 		}
 		else{
-			if(ListaJokalariak.getNireListaJokalariak().txandaKalkulatu()==0){
-				Leihoa2.getLeihoa2().idatzi().setText("Ez daukazu Misil Gurutzaturik");
+			if(ListaJokalariak.getNireListaJokalariak().txandaKalkulatu()==1){
+				ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).txandaBurutu();
 			}
 		}
 	}

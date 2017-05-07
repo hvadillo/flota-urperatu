@@ -16,10 +16,11 @@ public class ListaOntziak {
 	public boolean denakUrperaturik(){
 		int i=0;
 		boolean urperaturik=true;
-		while(i<ontziak.size()&& urperaturik){
+		while(i<=(ontziak.size()-1) && urperaturik){
 			if(!getOntzia(i).urperatutaDago()){
 				urperaturik=false;
 			}
+			i++;
 		}
 		return urperaturik;
 	}

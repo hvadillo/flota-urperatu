@@ -40,7 +40,7 @@ public class Gelaxka {
 		
 		}
 		else{
-			o.tiroaJaso(pArma, this);
+				o.tiroaJaso(pArma, this);
 		}
 	}
 	public void ezkutuaJarri(Ezkutua pEzkutua){

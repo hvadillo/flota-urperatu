@@ -18,9 +18,11 @@ public abstract class Ontzia {
 	}
 	
 	public void tiroaJaso(Arma pArma, Gelaxka pGelaxka){
+		
 		if(ezkutua != null){
 			if(ezkutua.kolpeaJaso(pArma)==0){
 				ezkutua = null;
+				
 				for(int i = 0; i <= (posizioak.size()-1); i++){
 					if(posizioak.get(i).getEgoera()!=Egoera.EMANDA){
 						posizioak.get(i).eguneratu(Egoera.ONTZIA);

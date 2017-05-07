@@ -70,25 +70,55 @@ public class Kasila2 extends JButton implements MouseListener{
 				}else if(ArmenPanela.getArmenPanela().getArmaMota().equals("radarra")){
 					radarraErabili();
 				}else if(ArmenPanela.getArmenPanela().getArmaMota().equals("bonba")){
-					bonbaErabili();
-					ListaJokalariak.getNireListaJokalariak().bukatu();
-					ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).txandaBurutu();
+					if(ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getArmak().getArmak().get(1).getKopurua()>0){
+						bonbaErabili();
+						ListaJokalariak.getNireListaJokalariak().bukatu();
+						ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).txandaBurutu();
+						ListaJokalariak.getNireListaJokalariak().bukatu();
+					}
+					else{
+						Leihoa2.getLeihoa2().idatzi().append("Ez daukazu bonbarik");
+					}
 				}else if(ArmenPanela.getArmenPanela().getArmaMota().equals("misil")){
-					misilErabili();
-					ListaJokalariak.getNireListaJokalariak().bukatu();
-					ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).txandaBurutu();
+					if(ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getArmak().getArmak().get(2).getKopurua()>0){
+						misilErabili();
+						ListaJokalariak.getNireListaJokalariak().bukatu();
+						ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).txandaBurutu();
+						ListaJokalariak.getNireListaJokalariak().bukatu();
+					}
+					else{
+						Leihoa2.getLeihoa2().idatzi().append("Ez daukazu misilik");
+					}
 				}else if(ArmenPanela.getArmenPanela().getArmaMota().equals("misilIH")){
-					misilIHErabili();
-					ListaJokalariak.getNireListaJokalariak().bukatu();
-					ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).txandaBurutu();
+					if(ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getArmak().getArmak().get(4).getKopurua()>0){
+						misilIHErabili();
+						ListaJokalariak.getNireListaJokalariak().bukatu();
+						ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).txandaBurutu();
+						ListaJokalariak.getNireListaJokalariak().bukatu();
+					}
+					else{
+						Leihoa2.getLeihoa2().idatzi().append("Ez daukazu misilIH-rik");
+					}
 				}else if(ArmenPanela.getArmenPanela().getArmaMota().equals("misilEM")){
-					misilEMErabili();
-					ListaJokalariak.getNireListaJokalariak().bukatu();
-					ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).txandaBurutu();
+					if(ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getArmak().getArmak().get(5).getKopurua()>0){
+						misilEMErabili();
+						ListaJokalariak.getNireListaJokalariak().bukatu();
+						ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).txandaBurutu();
+						ListaJokalariak.getNireListaJokalariak().bukatu();
+					}
+					else{
+						Leihoa2.getLeihoa2().idatzi().append("Ez daukazu misilEM-rik");
+					}
 				}else{
-					misilGurutzeErabili();
-					ListaJokalariak.getNireListaJokalariak().bukatu();
-					ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).txandaBurutu();
+					if(ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getArmak().getArmak().get(6).getKopurua()>0){
+						misilGurutzeErabili();
+						ListaJokalariak.getNireListaJokalariak().bukatu();
+						ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).txandaBurutu();
+						ListaJokalariak.getNireListaJokalariak().bukatu();
+					}
+					else{
+						Leihoa2.getLeihoa2().idatzi().append("Ez daukazu misil gurutzaturik-rik");
+					}
 				}
 			}
 		}

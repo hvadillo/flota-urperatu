@@ -16,8 +16,17 @@ public class Ordenagailua extends Jokalaria{
 
 	@Override
 	public void txandaBurutu() {
-		int zut = (int) (Math.random() * 9);
-		int err = (int) (Math.random() * 9);
+		int zut=0;
+		int err=0;
+		boolean lekuona = false;
+		while(!lekuona){
+			zut = (int) (Math.random() * 9);
+			err = (int) (Math.random() * 9);
+			Egoera ego = ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getIkusi().getGelaxka(zut, err).getEgoera();
+			if(ego.equals(Egoera.EZKUTUA)||ego.equals(Egoera.ONTZIA)||ego.equals(Egoera.URA)){
+				lekuona=true;
+			}
+		}
 		int tiro = (int) (Math.random() * 3);
 		String arma = "Bonba";
 		if(tiro == 0){
@@ -61,8 +70,6 @@ public class Ordenagailua extends Jokalaria{
 			}
 		}
 		txanda++;
-		ListaJokalariak.getNireListaJokalariak().bukatu();
-		Leihoa2.getLeihoa2().idatzi().setText("ue");
 	}
 
 	@Override

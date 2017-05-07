@@ -21,15 +21,14 @@ public Bonba(int pKop){
 				etsaia.getIkusi().getGelaxka(pZutabe, pErrenkada).eraso(this);
 				kopurua--;
 			}
-			else{
-				Leihoa2.getLeihoa2().idatzi().setText("Ez daukazu bonbarik");
-			}
 		}
 		else{
 			etsaia=ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0);
 			if(this.kopurua>0){
 				etsaia.getIkusi().getGelaxka(pZutabe, pErrenkada).eraso(this);
 				kopurua--;
+			}else{
+				ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).txandaBurutu();
 			}
 		}
 	}

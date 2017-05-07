@@ -16,8 +16,8 @@ public void erabili(int pZutabe ,int pErrenkada) {
 		kopurua--;
 	}
 	else{
-		if(ListaJokalariak.getNireListaJokalariak().txandaKalkulatu()==0){
-			Leihoa2.getLeihoa2().idatzi().setText("Ez daukazu MisilEM-rik");
+		if(ListaJokalariak.getNireListaJokalariak().txandaKalkulatu()==1){
+			ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).txandaBurutu();
 		}
 	}
 }
