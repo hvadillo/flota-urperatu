@@ -14,6 +14,7 @@ import org.si.flotaurperatu.actionListener.MisilGurutzeIpini;
 import org.si.flotaurperatu.actionListener.MisilIHIpini;
 import org.si.flotaurperatu.actionListener.MisilIpini;
 import org.si.flotaurperatu.actionListener.RadarraIpini;
+import org.si.flotaurperatu.logic.ListaJokalariak;
 
 public class ArmenPanela extends JPanel implements ActionListener{
 	

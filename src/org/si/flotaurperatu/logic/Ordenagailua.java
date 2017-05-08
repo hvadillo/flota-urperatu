@@ -80,7 +80,7 @@ public class Ordenagailua extends Jokalaria{
 	public void ontziakIpini() {
 		int zutabe;
 		int errenkada;
-		int norabidea;
+		double norabidea;
 		Ontzia ontz;
 		boolean barruan;
 		OntzienPanela.getOntzienPanela().setMota("Fragata");
@@ -121,8 +121,8 @@ public class Ordenagailua extends Jokalaria{
 			else{ontz=flota.getOntzia(5);}
 			
 			while(!barruan){
-				norabidea = (int) (Math.random() * 1);
-				if(norabidea==0){
+				norabidea = Math.random()*1;
+				if(norabidea<=0.5){
 					OntzienPanela.getOntzienPanela().setNorabide("Horizontal");
 				}else{
 					OntzienPanela.getOntzienPanela().setNorabide("Bertikal");
@@ -167,8 +167,8 @@ public class Ordenagailua extends Jokalaria{
 			else{ontz=flota.getOntzia(2);}
 			
 			while(!barruan){
-				norabidea = (int) (Math.random() * 1);
-				if(norabidea==0){
+				norabidea =Math.random() * 1;
+				if(norabidea<=0.5){
 					OntzienPanela.getOntzienPanela().setNorabide("Horizontal");
 				}else{
 					OntzienPanela.getOntzienPanela().setNorabide("Bertikal");
@@ -223,8 +223,8 @@ public class Ordenagailua extends Jokalaria{
 		ontz=flota.getOntzia(0);
 		barruan=false;
 		while(!barruan){
-			norabidea = (int) (Math.random() * 1);
-			if(norabidea==0){
+			norabidea =Math.random() * 1;
+			if(norabidea<=0.5){
 				OntzienPanela.getOntzienPanela().setNorabide("Horizontal");
 			}else{
 				OntzienPanela.getOntzienPanela().setNorabide("Bertikal");

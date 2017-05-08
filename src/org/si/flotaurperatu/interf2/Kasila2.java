@@ -43,12 +43,18 @@ public class Kasila2 extends JButton implements MouseListener{
 	public void iconoAldatu(String egoera){
 		if(egoera.equals("ezkutua")){
 			setIcon(Irudiak.bloke[3]);
-		}else if(egoera.equals("emanda")){
-			setIcon(Irudiak.bloke[4]);
-		}else if(egoera.equals("ontzia")){
-			setIcon(Irudiak.bloke[1]);
 		}else if(egoera.equals("ura")){
 			setIcon(Irudiak.bloke[0]);
+		}else if(egoera.equals("ontzia")){
+			setIcon(Irudiak.bloke[1]);
+		}else if(egoera.equals("emanda")){
+			setIcon(Irudiak.bloke[4]);
+		}else if(egoera.equals("ezkutuaErdiEmanda")){
+			setIcon(Irudiak.bloke[5]);
+		}else if(egoera.equals("ezkutuaEmanda")){
+			setIcon(Irudiak.bloke[6]);
+		}else if(egoera.equals("berreskuratuta")){
+			setIcon(Irudiak.bloke[7]);
 		}else{
 			setIcon(Irudiak.bloke[2]);
 		}

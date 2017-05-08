@@ -48,6 +48,12 @@ public class KasilenPanela2 extends JPanel implements Observer {
 			botoiak[pX][pY].iconoAldatu("ontzia");
 		}else if(egoera.equals("ura")){
 			botoiak[pX][pY].iconoAldatu("ura");
+		}else if(egoera.equals("ezkutuaEmanda")){
+			botoiak[pX][pY].iconoAldatu("ezkutuaEmanda");
+		}else if(egoera.equals("ezkutuaErdiEmanda")){
+			botoiak[pX][pY].iconoAldatu("ezkutuaErdiEmanda");
+		}else if(egoera.equals("berreskuratuta")){
+			botoiak[pX][pY].iconoAldatu("berreskuratuta");
 		}else{
 			botoiak[pX][pY].iconoAldatu("miss");
 		}

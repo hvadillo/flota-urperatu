@@ -18,21 +18,31 @@ public abstract class Ontzia {
 	}
 	
 	public void tiroaJaso(Arma pArma, Gelaxka pGelaxka){
-		
 		if(ezkutua != null){
 			if(ezkutua.kolpeaJaso(pArma)==0){
 				ezkutua = null;
-				
-				for(int i = 0; i <= (posizioak.size()-1); i++){
-					if(posizioak.get(i).getEgoera()!=Egoera.EMANDA){
-						posizioak.get(i).eguneratu(Egoera.ONTZIA);
-						if(ListaJokalariak.getNireListaJokalariak().txandaKalkulatu()==0){
-							Leihoa2.getLeihoa2().getMatrize1().iconoAldatu("ontzia", posizioak.get(i).getX(), posizioak.get(i).getY());
+				if(ListaJokalariak.getNireListaJokalariak().txandaKalkulatu()==1){
+					for(int i = 0; i <= (posizioak.size()-1); i++){
+						if(posizioak.get(i).getEgoera()!=Egoera.EMANDA){
+							posizioak.get(i).eguneratu(Egoera.ONTZIA);
+							Leihoa2.getLeihoa2().getMatrize2().iconoAldatu("ezkutuaEmanda", posizioak.get(i).getX(), posizioak.get(i).getY());
 						}
-						else{
-							Leihoa2.getLeihoa2().getMatrize2().iconoAldatu("ontzia", posizioak.get(i).getX(), posizioak.get(i).getY());
+					}				
+				}else{
+					Leihoa2.getLeihoa2().getMatrize2().iconoAldatu("ezkutuaEmanda", pGelaxka.getX(), pGelaxka.getY());
+					for(int j = 0; j <= (posizioak.size()-1); j++){
+						if(posizioak.get(j).getEgoera()!=Egoera.EMANDA){
+							posizioak.get(j).eguneratu(Egoera.ONTZIA);
 						}
 					}
+				}
+			}else{
+				if(ListaJokalariak.getNireListaJokalariak().txandaKalkulatu()==1){
+					for(int j = 0; j <= (posizioak.size()-1); j++){
+						Leihoa2.getLeihoa2().getMatrize2().iconoAldatu("ezkutuaErdiEmanda", posizioak.get(j).getX(), posizioak.get(j).getY());
+					}
+				}else{
+					Leihoa2.getLeihoa2().getMatrize1().iconoAldatu("ezkutuaErdiEmanda", pGelaxka.getX(), pGelaxka.getY());
 				}
 			}
 		}else{
