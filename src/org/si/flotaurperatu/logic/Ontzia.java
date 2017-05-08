@@ -151,6 +151,7 @@ public abstract class Ontzia {
 		return urperatuta;
 	}
 	
+	
 	public void kokatu(){
 		//TODO
 	}

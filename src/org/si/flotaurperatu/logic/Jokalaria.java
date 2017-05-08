@@ -41,8 +41,11 @@ public abstract class Jokalaria {
 	public Biltegia getArmak(){
 		return this.armak;
 	}
-	private void diruaKendu(int pKostua){
+	public void diruaKendu(int pKostua){
 		dirua=dirua-pKostua;
+	}
+	public int getDirua(){
+		return dirua;
 	}
 	public abstract void radarraErabili(int pZutabe,int pErrenkada);
 	

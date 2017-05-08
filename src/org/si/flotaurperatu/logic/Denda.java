@@ -2,6 +2,8 @@ package org.si.flotaurperatu.logic;
 
 import java.util.ArrayList;
 
+import org.si.flotaurperatu.interf2.Leihoa2;
+
 public class Denda {
 	
 	private ArrayList<Arma> armak;
@@ -99,8 +101,26 @@ public class Denda {
 		}
 	}
 	
-	public void ontziakKonpondu(){
-		//TODO
+	public void ontziakKonpondu(int x , int y){
+		if (ListaJokalariak.getNireListaJokalariak().txandaKalkulatu() == 0){
+			int dirua = ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getDirua();
+			if(dirua > 350){
+				Gelaxka gelaxka = ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getIkusi().getGelaxka(x, y);
+				if(gelaxka.getEgoera().equals(Egoera.ONTZIA)){
+					gelaxka.
+				}
+				ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).diruaKendu(350);
+			}else{
+				Leihoa2.getLeihoa2().idatzi("Ez duzu diru nahikorik ontzia konpontzeko");
+			}
+		}else{
+			int dirua1 = ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).getDirua();
+			if(dirua1 > 350){
+				ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).diruaKendu(350);
+			}else{
+				Leihoa2.getLeihoa2().idatzi("Ez duzu diru nahikorik ontzia konpontzeko");
+			}
+		}
 	}
 	
 	public int getKostua(String pMota){

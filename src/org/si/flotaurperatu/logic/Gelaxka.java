@@ -51,6 +51,29 @@ public class Gelaxka {
 			System.out.println(" Ez dago ontzirik posizio horretan. ");
 		}
 	}
+	public boolean ontziaKonpondu(int x, int y){
+		boolean konpondu = false;
+		if(ListaJokalariak.getNireListaJokalariak().txandaKalkulatu()==0){
+			if(!o.urperatutaDago()){
+				if(e.equals(Egoera.EMANDA)){
+					eguneratu(Egoera.ONTZIA);
+					konpondu = true;
+				}
+			}else{
+				Leihoa2.getLeihoa2().idatzi("Ontzia urperatuta dago jada");
+			}
+		}else{
+			if(!o.urperatutaDago()){
+				if(e.equals(Egoera.EMANDA)){
+					eguneratu(Egoera.ONTZIA);
+					konpondu = true;
+				}
+			}else{
+				Leihoa2.getLeihoa2().idatzi("Ontzia urperatuta dago jada");
+			}
+		}
+		return konpondu;
+	}
 	public int getX(){
 		return x;
 	}
