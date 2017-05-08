@@ -13,7 +13,7 @@ public class DendaPanela extends JPanel implements ActionListener{
 	
 	private static final long serialVersionUID = 1L;
 	private static DendaPanela nDenda;
-	private boolean konponketa = false;;
+	private boolean konponketa = false;
 	JButton bomba;
 	JButton misil;
 	JButton misilIH;
