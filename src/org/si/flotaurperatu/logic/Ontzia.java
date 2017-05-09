@@ -29,7 +29,7 @@ public abstract class Ontzia {
 						}
 					}				
 				}else{
-					Leihoa2.getLeihoa2().getMatrize2().iconoAldatu("ezkutuaEmanda", pGelaxka.getX(), pGelaxka.getY());
+					Leihoa2.getLeihoa2().getMatrize1().iconoAldatu("ezkutuaEmanda", pGelaxka.getX(), pGelaxka.getY());
 					for(int j = 0; j <= (posizioak.size()-1); j++){
 						if(posizioak.get(j).getEgoera()!=Egoera.EMANDA){
 							posizioak.get(j).eguneratu(Egoera.ONTZIA);

@@ -3,6 +3,7 @@ package org.si.flotaurperatu.interf2;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.TextArea;
 import java.awt.event.WindowAdapter;
@@ -55,6 +56,7 @@ public class Leihoa2 extends JFrame implements Observer{
 		text2.setBackground(Color.WHITE);
 		text2.setPreferredSize(new Dimension(300,25));
 		text2.setEditable(false);
+		text2.setFont(new Font("Serif",Font.PLAIN,16));
 		
 		panel2.setBorder(null);
 		panel2.setLayout(new GridLayout(3,1,0,0));

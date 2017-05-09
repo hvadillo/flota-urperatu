@@ -6,11 +6,13 @@ import org.si.flotaurperatu.interf2.OntzienPanela;
 
 public class Ordenagailua extends Jokalaria{
 	
-	int txanda;
+	int txanda, radarX, radarY;
 	
 	public Ordenagailua(){
 		super();
 		txanda = 0;
+		radarX = 5;
+		radarY = 5;
 	}
 
 	@Override
@@ -56,9 +58,9 @@ public class Ordenagailua extends Jokalaria{
 			if(zeregin == 0){
 				//erosi
 			}else if(zeregin == 1){
-				//konpondu
+				//Denda.getNDenda().ontziakKonpondu(zut, err);
 			}else if(zeregin == 2){
-				//radarra
+				//radarraErabili(zut, err);
 			}else if(zeregin == 3){
 				//ezkutua
 			}else{
@@ -282,11 +284,15 @@ public class Ordenagailua extends Jokalaria{
 		}
 		OntzienPanela.getOntzienPanela().setMota(null);
 	}
-
+	
+	public void setRadarXY(int x, int y){
+		radarX = x;
+		radarY = y;
+	}
+	
 	@Override
 	public void radarraErabili(int pZutabe, int pErrenkada) {
-		// TODO Auto-generated method stub
-		
+		armak.armaErabili("Radarra", pZutabe, pErrenkada);
 	}
 
 }

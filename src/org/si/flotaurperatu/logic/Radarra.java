@@ -38,12 +38,10 @@ public class Radarra extends Arma {
 					if(g.getEgoera().equals(Egoera.ONTZIA)){//0
 						aurkitua=true;
 						Leihoa2.getLeihoa2().idatzi("Ontzi bat dago "+(pZutabe+1)+" zutabean eta "+(pErrenkada+1)+" errenkadan.");
-					}
-					else{
+					}else{
 						kont++;
 					}
-				}
-				else if(kont==1){//1
+				}else if(kont==1){//1
 					if(etsaia.getIkusi().konprobatuKasila(pZutabe, pErrenkada-1)){
 						g=etsaia.getIkusi().getGelaxka(pZutabe, pErrenkada-1);
 						if(g.getEgoera().equals(Egoera.ONTZIA)){
@@ -236,5 +234,4 @@ public class Radarra extends Arma {
 			}
 		}
 	}
-
 }

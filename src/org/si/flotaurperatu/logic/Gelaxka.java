@@ -54,24 +54,30 @@ public class Gelaxka {
 	public boolean ontziaKonpondu(){
 		boolean konpondu = false;
 		if(ListaJokalariak.getNireListaJokalariak().txandaKalkulatu()==0){
-			if(!o.urperatutaDago()){
+			if(o!=null && !o.urperatutaDago()){
 				if(e.equals(Egoera.EMANDA)){
 					eguneratu(Egoera.ONTZIA);
 					Leihoa2.getLeihoa2().getMatrize2().iconoAldatu("ontzia", this.x, this.y);
 					konpondu = true;
+				}else{
+					Leihoa2.getLeihoa2().idatzi("Posizio hori ez dago emanda.");
 				}
 			}else{
 				Leihoa2.getLeihoa2().idatzi("Ontzia urperatuta dago jada");
+				Leihoa2.getLeihoa2().idatzi("edo ez dago ontzirik.");
 			}
 		}else{
-			if(!o.urperatutaDago()){
+			if(o!=null && !o.urperatutaDago()){
 				if(e.equals(Egoera.EMANDA)){
 					eguneratu(Egoera.ONTZIA);
 					Leihoa2.getLeihoa2().getMatrize1().iconoAldatu("ontzia", this.x, this.y);
 					konpondu = true;
+				}else{
+					Leihoa2.getLeihoa2().idatzi("Posizio hori ez dago emanda.");
 				}
 			}else{
 				Leihoa2.getLeihoa2().idatzi("Ontzia urperatuta dago jada");
+				Leihoa2.getLeihoa2().idatzi("edo ez dago ontzirik.");
 			}
 		}
 		return konpondu;

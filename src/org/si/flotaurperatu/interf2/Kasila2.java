@@ -71,13 +71,17 @@ public class Kasila2 extends JButton implements MouseListener{
 			else{
 				if(ArmenPanela.getArmenPanela().getArmaMota().equals("ezkutua")){
 					ezkutuaKokatu();
+					ArmenPanela.getArmenPanela().armenKopurua("Ezkutua");
 				}else if(DendaPanela.getDendaPanela().konponketa()){
 					Denda.getNDenda().ontziakKonpondu(zutabe,errenkada);
+					DendaPanela.getDendaPanela().setKonponketa();
 				}else if(ArmenPanela.getArmenPanela().getArmaMota().equals("radarra")){
 					radarraErabili();
+					ArmenPanela.getArmenPanela().armenKopurua("Radarra");
 				}else if(ArmenPanela.getArmenPanela().getArmaMota().equals("bonba")){
 					if(ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getArmak().getArmak().get(1).getKopurua()>0){
 						bonbaErabili();
+						ArmenPanela.getArmenPanela().armenKopurua("Bonba");
 						ListaJokalariak.getNireListaJokalariak().bukatu();
 						ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).txandaBurutu();
 						ListaJokalariak.getNireListaJokalariak().bukatu();
@@ -88,6 +92,7 @@ public class Kasila2 extends JButton implements MouseListener{
 				}else if(ArmenPanela.getArmenPanela().getArmaMota().equals("misil")){
 					if(ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getArmak().getArmak().get(2).getKopurua()>0){
 						misilErabili();
+						ArmenPanela.getArmenPanela().armenKopurua("Misil");
 						ListaJokalariak.getNireListaJokalariak().bukatu();
 						ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).txandaBurutu();
 						ListaJokalariak.getNireListaJokalariak().bukatu();
@@ -98,6 +103,7 @@ public class Kasila2 extends JButton implements MouseListener{
 				}else if(ArmenPanela.getArmenPanela().getArmaMota().equals("misilIH")){
 					if(ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getArmak().getArmak().get(4).getKopurua()>0){
 						misilIHErabili();
+						ArmenPanela.getArmenPanela().armenKopurua("MisilIH");
 						ListaJokalariak.getNireListaJokalariak().bukatu();
 						ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).txandaBurutu();
 						ListaJokalariak.getNireListaJokalariak().bukatu();
@@ -108,6 +114,7 @@ public class Kasila2 extends JButton implements MouseListener{
 				}else if(ArmenPanela.getArmenPanela().getArmaMota().equals("misilEM")){
 					if(ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getArmak().getArmak().get(5).getKopurua()>0){
 						misilEMErabili();
+						ArmenPanela.getArmenPanela().armenKopurua("MisilEM");
 						ListaJokalariak.getNireListaJokalariak().bukatu();
 						ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).txandaBurutu();
 						ListaJokalariak.getNireListaJokalariak().bukatu();
@@ -118,6 +125,7 @@ public class Kasila2 extends JButton implements MouseListener{
 				}else{
 					if(ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getArmak().getArmak().get(6).getKopurua()>0){
 						misilGurutzeErabili();
+						ArmenPanela.getArmenPanela().armenKopurua("MisilGurutzatu");
 						ListaJokalariak.getNireListaJokalariak().bukatu();
 						ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).txandaBurutu();
 						ListaJokalariak.getNireListaJokalariak().bukatu();

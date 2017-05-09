@@ -122,6 +122,10 @@ public class DendaPanela extends JPanel implements ActionListener{
 		return nDenda;
 	}
 	
+	public void setKonponketa(){
+		konponketa = false;
+	}
+	
 	public boolean konponketa(){
 		return konponketa;
 	}
