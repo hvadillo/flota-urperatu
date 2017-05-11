@@ -9,10 +9,6 @@ public MisilGidatua(String pIzena, int pKostua, int pKop) {
 	// TODO Auto-generated constructor stub
 }
 
-	@Override
-	public void erabili(int pZutabe ,int pErrenkada) {
-		// TODO Auto-generated method stub
-
-	}
+	public abstract void erabili(int pZutabe ,int pErrenkada);
 
 }

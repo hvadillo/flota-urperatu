@@ -15,7 +15,6 @@ public class Ordenagailua extends Jokalaria{
 		radarY = 5;
 	}
 
-	@Override
 	public void txandaBurutu() {
 		int zut=0;
 		int err=0;
@@ -71,12 +70,6 @@ public class Ordenagailua extends Jokalaria{
 			}
 		}
 		txanda++;
-	}
-
-	@Override
-	public void armakErosi(String pMota) {
-		// TODO Auto-generated method stub
-		
 	}
 	
 	public void ontziakIpini() {

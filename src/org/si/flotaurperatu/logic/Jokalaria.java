@@ -16,8 +16,6 @@ public abstract class Jokalaria {
 		flota = new ListaOntziak();
 	}
 	
-	public abstract void txandaBurutu();
-	
 	public void armakErosi(String pMota){
 		int kostua;
 		if(Denda.getNDenda().getKostua(pMota)<dirua){
@@ -28,9 +26,9 @@ public abstract class Jokalaria {
 		}
 	}
 
-	public TableroEraso getEraso(){
-		return tableroEraso;
-	}
+	//public TableroEraso getEraso(){
+		//return tableroEraso;
+	//}
 	
 	public TableroIkusi getIkusi(){
 		return tableroIkusi;
@@ -72,4 +70,6 @@ public abstract class Jokalaria {
 	public void ezkutuaJarri(int zutabe, int errenkada){
 		armak.armaErabili("Ezkutua",zutabe,errenkada);
 	}
+
+	public abstract void txandaBurutu();
 }
