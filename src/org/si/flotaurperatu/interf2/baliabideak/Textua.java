@@ -1,4 +1,4 @@
-package org.si.flotaurperatu.interf.baliabideak;
+package org.si.flotaurperatu.interf2.baliabideak;
 
 public class Textua {
 	

@@ -16,8 +16,8 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
-import org.si.flotaurperatu.interf.baliabideak.Irudiak;
-import org.si.flotaurperatu.interf.baliabideak.Textua;
+import org.si.flotaurperatu.interf2.baliabideak.Irudiak;
+import org.si.flotaurperatu.interf2.baliabideak.Textua;
 
 import javax.swing.border.LineBorder;
 

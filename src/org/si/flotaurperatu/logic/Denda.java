@@ -2,6 +2,7 @@ package org.si.flotaurperatu.logic;
 
 import java.util.ArrayList;
 
+import org.si.flotaurperatu.interf2.ArmenPanela;
 import org.si.flotaurperatu.interf2.Leihoa2;
 
 public class Denda {
@@ -21,84 +22,134 @@ public class Denda {
 	}
 	
 	public void armaErosi(String pMota){
-		//TODO
+		int dirua=0;
 		if(pMota.equals("radarra")){
 			if(armak.get(0).getKopurua()>0){
-				armak.get(0).kopuruaKendu();
 				if(ListaJokalariak.getNireListaJokalariak().txandaKalkulatu()==0){
-					ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getArmak().armaErosi(pMota);
+					dirua = ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getDirua();
+					if(dirua > armak.get(0).getKostua()){
+						ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getArmak().armaErosi(pMota);
+						armak.get(0).kopuruaKendu();
+					}
 				}
 				else{
-					ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).getArmak().armaErosi(pMota);
+					dirua = ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).getDirua();
+					if(dirua > armak.get(0).getKostua()){
+						ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).getArmak().armaErosi(pMota);
+						armak.get(0).kopuruaKendu();
+					}
 				}
 			}
 		}
 		else if (pMota.equals("bonba")){
 			if(armak.get(1).getKopurua()>0){
-				armak.get(1).kopuruaKendu();
 				if(ListaJokalariak.getNireListaJokalariak().txandaKalkulatu()==0){
-					ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getArmak().armaErosi(pMota);
+					dirua = ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getDirua();
+					if(dirua > armak.get(1).getKostua()){
+						ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getArmak().armaErosi(pMota);
+						armak.get(1).kopuruaKendu();
+					}
 				}
 				else{
-					ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).getArmak().armaErosi(pMota);
+					dirua = ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).getDirua();
+					if(dirua > armak.get(1).getKostua()){
+						ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).getArmak().armaErosi(pMota);
+						armak.get(1).kopuruaKendu();
+					}
 				}
 			}
 		}
 		else if(pMota.equals("misil")){
 			if(armak.get(2).getKopurua()>0){
-				armak.get(2).kopuruaKendu();
 				if(ListaJokalariak.getNireListaJokalariak().txandaKalkulatu()==0){
-					ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getArmak().armaErosi(pMota);
+					dirua = ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getDirua();
+					if(dirua > armak.get(2).getKostua()){
+						ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getArmak().armaErosi(pMota);
+						armak.get(2).kopuruaKendu();
+					}
 				}
 				else{
-					ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).getArmak().armaErosi(pMota);
+					dirua = ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).getDirua();
+					if(dirua > armak.get(2).getKostua()){
+						ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).getArmak().armaErosi(pMota);
+						armak.get(2).kopuruaKendu();
+					}
 				}
 			}
 		}
 		else if(pMota.equals("ezkutua")){
 			if(armak.get(3).getKopurua()>0){
-				armak.get(3).kopuruaKendu();
 				if(ListaJokalariak.getNireListaJokalariak().txandaKalkulatu()==0){
-					ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getArmak().armaErosi(pMota);
+					dirua = ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getDirua();
+					if(dirua > armak.get(3).getKostua()){
+						ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getArmak().armaErosi(pMota);
+						armak.get(3).kopuruaKendu();
+					}
 				}
 				else{
-					ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).getArmak().armaErosi(pMota);
+					dirua = ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).getDirua();
+					if(dirua > armak.get(3).getKostua()){
+						ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).getArmak().armaErosi(pMota);
+						armak.get(3).kopuruaKendu();
+					}
 				}
 			}
 		}
 		else if(pMota.equals("misilIH")){
 			if(armak.get(4).getKopurua()>0){
-				armak.get(4).kopuruaKendu();
 				if(ListaJokalariak.getNireListaJokalariak().txandaKalkulatu()==0){
-					ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getArmak().armaErosi(pMota);
+					dirua = ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getDirua();
+					if(dirua > armak.get(4).getKostua()){
+						ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getArmak().armaErosi(pMota);
+						armak.get(4).kopuruaKendu();
+					}
 				}
 				else{
-					ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).getArmak().armaErosi(pMota);
+					dirua = ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).getDirua();
+					if(dirua > armak.get(4).getKostua()){
+						ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).getArmak().armaErosi(pMota);
+						armak.get(4).kopuruaKendu();
+					}
 				}
 			}
 		}
 		else if(pMota.equals("misilEM")){
 			if(armak.get(5).getKopurua()>0){
-				armak.get(5).kopuruaKendu();
 				if(ListaJokalariak.getNireListaJokalariak().txandaKalkulatu()==0){
-					ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getArmak().armaErosi(pMota);
+					dirua = ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getDirua();
+					if(dirua > armak.get(5).getKostua()){
+						ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getArmak().armaErosi(pMota);
+						armak.get(5).kopuruaKendu();
+					}
 				}
 				else{
-					ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).getArmak().armaErosi(pMota);
+					dirua = ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).getDirua();
+					if(dirua > armak.get(5).getKostua()){
+						ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).getArmak().armaErosi(pMota);
+						armak.get(5).kopuruaKendu();
+					}
 				}
 			}
 		}
 		else{
 			if(armak.get(6).getKopurua()>0){
-				armak.get(6).kopuruaKendu();
 				if(ListaJokalariak.getNireListaJokalariak().txandaKalkulatu()==0){
-					ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getArmak().armaErosi(pMota);
+					dirua = ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getDirua();
+					if(dirua > armak.get(6).getKostua()){
+						ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getArmak().armaErosi(pMota);
+						armak.get(6).kopuruaKendu();
+					}
 				}
 				else{
-					ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).armak.armaErosi(pMota);
+					dirua = ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).getDirua();
+					if(dirua > armak.get(6).getKostua()){
+						ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).getArmak().armaErosi(pMota);
+						armak.get(6).kopuruaKendu();
+					}
 				}
 			}
 		}
+		ArmenPanela.getArmenPanela().ipiniDirua();
 	}
 	
 	public void ontziakKonpondu(int x , int y){

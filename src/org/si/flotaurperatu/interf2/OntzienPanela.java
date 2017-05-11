@@ -142,6 +142,9 @@ public class OntzienPanela extends JPanel implements ActionListener{
 		}else{
 			remove(hegazkinontzi);
 		}
+		if(kopOsoa==0){
+			this.removeAll();
+		}
 	}
 	private class SwingAction extends AbstractAction {
 		public SwingAction() {

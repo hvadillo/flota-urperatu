@@ -36,42 +36,42 @@ public class ArmenPanela extends JPanel implements ActionListener{
 		setLayout(new GridLayout(8, 1, 0, 0));
 		
 		bomba = new JButton("Bomba");
-		armenKopurua("Bonba");
+		armenKopurua("bonba");
 		add(bomba);
 		bomba.addActionListener(new BonbaIpini());
 		
 		misil = new JButton("Misil");
-		armenKopurua("Misil");
+		armenKopurua("misil");
 		add(misil);
 		misil.addActionListener(new MisilIpini());
 		
 		misilIH = new JButton("MisilIH");
-		armenKopurua("MisilIH");
+		armenKopurua("misilIH");
 		add(misilIH);
 		misilIH.addActionListener(new MisilIHIpini());
 		
 		misilEM = new JButton("MisilEM");
-		armenKopurua("MisilEM");
+		armenKopurua("misilEM");
 		add(misilEM);
 		misilEM.addActionListener(new MisilEMIpini());
 		
 		misilGurutzatu = new JButton("MisilGurutzatu");
-		armenKopurua("MisilGurutzatu");
+		armenKopurua("misilGurutzatu");
 		add(misilGurutzatu);
 		misilGurutzatu.addActionListener(new MisilGurutzeIpini());
 		
 		radarra = new JButton("Radarra");
-		armenKopurua("Radarra");
+		armenKopurua("radarra");
 		add(radarra);
 		radarra.addActionListener(new RadarraIpini());
 		
 		ezkutua = new JButton("Ezkutua");
-		armenKopurua("Ezkutua");
+		armenKopurua("ezkutua");
 		add(ezkutua);
 		ezkutua.addActionListener(new EzkutuaIpini());
 		
 		dirua = new JLabel("Dirua");
-		ipiniDirua(ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getDirua());
+		ipiniDirua();
 		add(dirua);
 	}
 	
@@ -82,22 +82,22 @@ public class ArmenPanela extends JPanel implements ActionListener{
 		return nPanela;
 	}
 	
-	public void ipiniDirua(int pDirua){
-		dirua.setText(pDirua+"€ dituzu");
+	public void ipiniDirua(){
+		dirua.setText(ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getDirua() + "€ dituzu");
 	}
 	
 	public void armenKopurua(String pArma){
-		if(pArma.equals("Bonba")){
+		if(pArma.equals("bonba")){
 			bomba.setText(ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getArmak().getArmak().get(1).getKopurua()+" Bonba");
-		}else if(pArma.equals("Misil")){
+		}else if(pArma.equals("misil")){
 			misil.setText(ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getArmak().getArmak().get(2).getKopurua()+" Misil");
-		}else if(pArma.equals("MisilEM")){
+		}else if(pArma.equals("misilEM")){
 			misilEM.setText(ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getArmak().getArmak().get(5).getKopurua()+" MisilEM");
-		}else if(pArma.equals("MisilIH")){
+		}else if(pArma.equals("misilIH")){
 			misilIH.setText(ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getArmak().getArmak().get(4).getKopurua()+" MisilIH");
-		}else if(pArma.equals("MisilGurutzatu")){
+		}else if(pArma.equals("misilGurutzatu")){
 			misilGurutzatu.setText(ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getArmak().getArmak().get(6).getKopurua()+" MisilGurutze");
-		}else if(pArma.equals("Radarra")){
+		}else if(pArma.equals("radarra")){
 			radarra.setText(ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getArmak().getArmak().get(0).getKopurua()+" Radar");
 		}else{
 			ezkutua.setText(ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getArmak().getArmak().get(3).getKopurua()+" Ezkutu");
