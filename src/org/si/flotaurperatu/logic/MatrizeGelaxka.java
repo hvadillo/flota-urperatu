@@ -24,7 +24,11 @@ public class MatrizeGelaxka {
 		matrizea[pZutabe][pErrenkada].eguneratu(Egoera.ONTZIA);
 	}
 	public Gelaxka getGelaxka(int pZutabe,int pErrenkada){
-		return matrizea[pZutabe][pErrenkada];
+		Gelaxka gelaxka1 = null;
+		if((pZutabe >= 0 && pZutabe <= 9) && (pErrenkada >= 0 && pErrenkada <= 9 )){
+			gelaxka1 = matrizea[pZutabe][pErrenkada];
+		}
+		return gelaxka1;
 	}
 	
 }

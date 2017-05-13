@@ -19,6 +19,9 @@ public class Gelaxka {
 	public void eguneratu(Egoera pEgo){
 		e=pEgo;
 	}
+	public Ontzia getOntzia(){
+		return o;
+	}
 	
 	public Egoera getEgoera(){
 		return e;
@@ -45,7 +48,7 @@ public class Gelaxka {
 	}
 	public void ezkutuaJarri(Ezkutua pEzkutua){
 		if(o!=null){
-		o.ezkutuaJarri(pEzkutua);
+			o.ezkutuaJarri(pEzkutua);
 		}
 		else{
 			System.out.println(" Ez dago ontzirik posizio horretan. ");

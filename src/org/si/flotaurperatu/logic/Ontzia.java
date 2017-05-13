@@ -143,7 +143,7 @@ public abstract class Ontzia {
 		}
 	}
 	
-	private void urperatu(){
+	public void urperatu(){
 		urperatuta = true;
 	}
 	
@@ -173,5 +173,12 @@ public abstract class Ontzia {
 	
 	public ArrayList<Gelaxka> getPosizioak(){
 		return posizioak;
+	}
+	public boolean ezkutuaDauka(){
+		boolean dauka = false;
+		if(ezkutua!=null){
+			dauka = true;
+		}
+		return dauka;
 	}
 }

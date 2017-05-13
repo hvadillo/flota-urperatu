@@ -55,7 +55,7 @@ public class Ordenagailua extends Jokalaria{
 		}else{
 			int zeregin = (int) (Math.random() * 4);
 			if(zeregin == 0){
-				//erosi
+				
 			}else if(zeregin == 1){
 				//Denda.getNDenda().ontziakKonpondu(zut, err);
 			}else if(zeregin == 2){

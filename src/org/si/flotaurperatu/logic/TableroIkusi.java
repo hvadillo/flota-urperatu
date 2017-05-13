@@ -18,8 +18,9 @@ public class TableroIkusi extends Observable{
 	}
 	
 	public void kokatu(int pZutabe, int pErrenkada){
-		matrizea.set(pZutabe, pErrenkada);
-		
+		if(konprobatuKasila(pZutabe,pErrenkada)){
+			matrizea.set(pZutabe, pErrenkada);
+		}
 	}
 	
 	public Gelaxka getGelaxka(int pZutabe, int pErrenkada){
@@ -167,7 +168,7 @@ public class TableroIkusi extends Observable{
 	
 	public boolean konprobatuKasila(int pZut, int pErr){
 		boolean barruan = false;
-		if((pZut >= 0 && pZut <= 9) && (pErr >= 0 && pErr <= 9 )){
+		if((pZut >= 0 && pZut <= 9) && (pErr >= 0 && pErr <= 9 )){ 
 			barruan = true;
 		}
 		return barruan;

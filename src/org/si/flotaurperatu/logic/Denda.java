@@ -199,5 +199,8 @@ public class Denda {
 			return armak.get(6).getKostua();
 		}
 	}
+	public ArrayList<Arma> getArmak(){
+		return armak;
+	}
 
 }

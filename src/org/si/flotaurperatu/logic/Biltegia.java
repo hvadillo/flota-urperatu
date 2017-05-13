@@ -25,6 +25,9 @@ public class Biltegia {
 				Leihoa2.getLeihoa2().idatzi("Radar bat erosi duzu.");
 				ArmenPanela.getArmenPanela().armenKopurua(pMota);
 			}
+			else{
+				ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).diruaKendu(armak.get(0).getKostua());
+			}
 		}
 		else if (pMota.equals("bonba")){
 			armak.get(1).kopuruaGehitu();
@@ -32,6 +35,9 @@ public class Biltegia {
 				ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).diruaKendu(armak.get(1).getKostua());
 				Leihoa2.getLeihoa2().idatzi("Bonba bat erosi duzu.");
 				ArmenPanela.getArmenPanela().armenKopurua(pMota);
+			}
+			else{
+				ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).diruaKendu(armak.get(1).getKostua());
 			}
 		}
 		else if(pMota.equals("misil")){
@@ -41,6 +47,9 @@ public class Biltegia {
 				Leihoa2.getLeihoa2().idatzi("Misil bat erosi duzu.");
 				ArmenPanela.getArmenPanela().armenKopurua(pMota);
 			}
+			else{
+				ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).diruaKendu(armak.get(2).getKostua());
+			}
 		}
 		else if(pMota.equals("ezkutua")){
 			armak.get(3).kopuruaGehitu();
@@ -48,6 +57,9 @@ public class Biltegia {
 				ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).diruaKendu(armak.get(3).getKostua());
 				Leihoa2.getLeihoa2().idatzi("Ezkutu bat erosi duzu.");
 				ArmenPanela.getArmenPanela().armenKopurua(pMota);
+			}
+			else{
+				ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).diruaKendu(armak.get(3).getKostua());
 			}
 		}
 		else if(pMota.equals("misilIH")){
@@ -57,6 +69,9 @@ public class Biltegia {
 				Leihoa2.getLeihoa2().idatzi("MisilIH bat erosi duzu.");
 				ArmenPanela.getArmenPanela().armenKopurua(pMota);
 			}
+			else{
+				ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).diruaKendu(armak.get(4).getKostua());
+			}
 		}
 		else if(pMota.equals("misilEM")){
 			armak.get(5).kopuruaGehitu();
@@ -65,6 +80,9 @@ public class Biltegia {
 				Leihoa2.getLeihoa2().idatzi("MisilEM bat erosi duzu.");
 				ArmenPanela.getArmenPanela().armenKopurua(pMota);
 			}
+			else{
+				ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).diruaKendu(armak.get(5).getKostua());
+			}
 		}
 		else{
 			armak.get(6).kopuruaGehitu();
@@ -72,6 +90,9 @@ public class Biltegia {
 				ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).diruaKendu(armak.get(6).getKostua());
 				Leihoa2.getLeihoa2().idatzi("Misil gurutzatu bat erosi duzu.");
 				ArmenPanela.getArmenPanela().armenKopurua(pMota);
+			}
+			else{
+				ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).diruaKendu(armak.get(6).getKostua());
 			}
 		}
 	}
