@@ -27,14 +27,14 @@ public class Denda {
 			if(armak.get(0).getKopurua()>0){
 				if(ListaJokalariak.getNireListaJokalariak().txandaKalkulatu()==0){
 					dirua = ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getDirua();
-					if(dirua > armak.get(0).getKostua()){
+					if(dirua >= armak.get(0).getKostua()){
 						ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getArmak().armaErosi(pMota);
 						armak.get(0).kopuruaKendu();
 					}
 				}
 				else{
 					dirua = ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).getDirua();
-					if(dirua > armak.get(0).getKostua()){
+					if(dirua >= armak.get(0).getKostua()){
 						ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).getArmak().armaErosi(pMota);
 						armak.get(0).kopuruaKendu();
 					}
@@ -45,14 +45,14 @@ public class Denda {
 			if(armak.get(1).getKopurua()>0){
 				if(ListaJokalariak.getNireListaJokalariak().txandaKalkulatu()==0){
 					dirua = ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getDirua();
-					if(dirua > armak.get(1).getKostua()){
+					if(dirua >= armak.get(1).getKostua()){
 						ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getArmak().armaErosi(pMota);
 						armak.get(1).kopuruaKendu();
 					}
 				}
 				else{
 					dirua = ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).getDirua();
-					if(dirua > armak.get(1).getKostua()){
+					if(dirua >= armak.get(1).getKostua()){
 						ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).getArmak().armaErosi(pMota);
 						armak.get(1).kopuruaKendu();
 					}
@@ -63,14 +63,14 @@ public class Denda {
 			if(armak.get(2).getKopurua()>0){
 				if(ListaJokalariak.getNireListaJokalariak().txandaKalkulatu()==0){
 					dirua = ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getDirua();
-					if(dirua > armak.get(2).getKostua()){
+					if(dirua >= armak.get(2).getKostua()){
 						ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getArmak().armaErosi(pMota);
 						armak.get(2).kopuruaKendu();
 					}
 				}
 				else{
 					dirua = ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).getDirua();
-					if(dirua > armak.get(2).getKostua()){
+					if(dirua >= armak.get(2).getKostua()){
 						ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).getArmak().armaErosi(pMota);
 						armak.get(2).kopuruaKendu();
 					}
@@ -81,14 +81,14 @@ public class Denda {
 			if(armak.get(3).getKopurua()>0){
 				if(ListaJokalariak.getNireListaJokalariak().txandaKalkulatu()==0){
 					dirua = ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getDirua();
-					if(dirua > armak.get(3).getKostua()){
+					if(dirua >= armak.get(3).getKostua()){
 						ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getArmak().armaErosi(pMota);
 						armak.get(3).kopuruaKendu();
 					}
 				}
 				else{
 					dirua = ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).getDirua();
-					if(dirua > armak.get(3).getKostua()){
+					if(dirua >= armak.get(3).getKostua()){
 						ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).getArmak().armaErosi(pMota);
 						armak.get(3).kopuruaKendu();
 					}
@@ -99,14 +99,14 @@ public class Denda {
 			if(armak.get(4).getKopurua()>0){
 				if(ListaJokalariak.getNireListaJokalariak().txandaKalkulatu()==0){
 					dirua = ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getDirua();
-					if(dirua > armak.get(4).getKostua()){
+					if(dirua >= armak.get(4).getKostua()){
 						ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getArmak().armaErosi(pMota);
 						armak.get(4).kopuruaKendu();
 					}
 				}
 				else{
 					dirua = ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).getDirua();
-					if(dirua > armak.get(4).getKostua()){
+					if(dirua >= armak.get(4).getKostua()){
 						ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).getArmak().armaErosi(pMota);
 						armak.get(4).kopuruaKendu();
 					}
@@ -117,14 +117,14 @@ public class Denda {
 			if(armak.get(5).getKopurua()>0){
 				if(ListaJokalariak.getNireListaJokalariak().txandaKalkulatu()==0){
 					dirua = ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getDirua();
-					if(dirua > armak.get(5).getKostua()){
+					if(dirua >= armak.get(5).getKostua()){
 						ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getArmak().armaErosi(pMota);
 						armak.get(5).kopuruaKendu();
 					}
 				}
 				else{
 					dirua = ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).getDirua();
-					if(dirua > armak.get(5).getKostua()){
+					if(dirua >= armak.get(5).getKostua()){
 						ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).getArmak().armaErosi(pMota);
 						armak.get(5).kopuruaKendu();
 					}
@@ -135,14 +135,14 @@ public class Denda {
 			if(armak.get(6).getKopurua()>0){
 				if(ListaJokalariak.getNireListaJokalariak().txandaKalkulatu()==0){
 					dirua = ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getDirua();
-					if(dirua > armak.get(6).getKostua()){
+					if(dirua >= armak.get(6).getKostua()){
 						ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0).getArmak().armaErosi(pMota);
 						armak.get(6).kopuruaKendu();
 					}
 				}
 				else{
 					dirua = ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).getDirua();
-					if(dirua > armak.get(6).getKostua()){
+					if(dirua >= armak.get(6).getKostua()){
 						ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).getArmak().armaErosi(pMota);
 						armak.get(6).kopuruaKendu();
 					}

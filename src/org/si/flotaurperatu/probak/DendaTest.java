@@ -30,166 +30,101 @@ public class DendaTest {
 		denda1.armaErosi("radarra");
 		assertEquals(denda1.getArmak().get(0).getKopurua(),9);
 		assertEquals(listaJok1.getJokalariak().get(0).getArmak().getArmak().get(0).getKopurua(),3);
-		assertEquals(listaJok1.getJokalariak().get(0).getDirua(),995);
-		denda1.armaErosi("radarra");
-		assertEquals(denda1.getArmak().get(0).getKopurua(),8);
-		assertEquals(listaJok1.getJokalariak().get(0).getArmak().getArmak().get(0).getKopurua(),4);
-		assertEquals(listaJok1.getJokalariak().get(0).getDirua(),990);
-		denda1.armaErosi("radarra");
-		assertEquals(denda1.getArmak().get(0).getKopurua(),7);
-		assertEquals(listaJok1.getJokalariak().get(0).getArmak().getArmak().get(0).getKopurua(),5);
-		assertEquals(listaJok1.getJokalariak().get(0).getDirua(),985);
-		denda1.armaErosi("radarra");
-		assertEquals(denda1.getArmak().get(0).getKopurua(),6);
-		assertEquals(listaJok1.getJokalariak().get(0).getArmak().getArmak().get(0).getKopurua(),6);
-		assertEquals(listaJok1.getJokalariak().get(0).getDirua(),980);
-		denda1.armaErosi("radarra");
-		assertEquals(denda1.getArmak().get(0).getKopurua(),5);
-		assertEquals(listaJok1.getJokalariak().get(0).getArmak().getArmak().get(0).getKopurua(),7);
-		assertEquals(listaJok1.getJokalariak().get(0).getDirua(),975);
+		assertEquals(listaJok1.getJokalariak().get(0).getDirua(),700);
 		
 		listaJok1.txandaEguneratu();
 		
 		denda1.armaErosi("radarra");
-		assertEquals(denda1.getArmak().get(0).getKopurua(),4);
+		assertEquals(denda1.getArmak().get(0).getKopurua(),8);
 		assertEquals(listaJok1.getJokalariak().get(1).getArmak().getArmak().get(0).getKopurua(),3);
-		System.out.println(listaJok1.getJokalariak().get(1).getDirua());
-		assertEquals(listaJok1.getJokalariak().get(1).getDirua(),995);
-		denda1.armaErosi("radarra");
-		assertEquals(denda1.getArmak().get(0).getKopurua(),3);
-		assertEquals(listaJok1.getJokalariak().get(1).getArmak().getArmak().get(0).getKopurua(),4);
-		assertEquals(listaJok1.getJokalariak().get(1).getDirua(),990);
-		denda1.armaErosi("radarra");
-		assertEquals(denda1.getArmak().get(0).getKopurua(),2);
-		assertEquals(listaJok1.getJokalariak().get(1).getArmak().getArmak().get(0).getKopurua(),5);
-		assertEquals(listaJok1.getJokalariak().get(1).getDirua(),985);
-		denda1.armaErosi("radarra");
-		assertEquals(denda1.getArmak().get(0).getKopurua(),1);
-		assertEquals(listaJok1.getJokalariak().get(1).getArmak().getArmak().get(0).getKopurua(),6);
-		assertEquals(listaJok1.getJokalariak().get(1).getDirua(),980);
-		denda1.armaErosi("radarra");
-		assertEquals(denda1.getArmak().get(0).getKopurua(),0);
-		assertEquals(listaJok1.getJokalariak().get(1).getArmak().getArmak().get(0).getKopurua(),7);
-		assertEquals(listaJok1.getJokalariak().get(1).getDirua(),975);
-		denda1.armaErosi("radarra");
-		assertEquals(denda1.getArmak().get(0).getKopurua(),0);
+		assertEquals(listaJok1.getJokalariak().get(1).getDirua(),700);
 		
 		listaJok1.txandaEguneratu();
 		
 		denda1.armaErosi("bonba");
 		assertEquals(denda1.getArmak().get(1).getKopurua(),9);
 		assertEquals(listaJok1.getJokalariak().get(0).getArmak().getArmak().get(1).getKopurua(),101);
-		assertEquals(listaJok1.getJokalariak().get(0).getDirua(),970);
+		assertEquals(listaJok1.getJokalariak().get(0).getDirua(),650);
+		
+		
 		denda1.armaErosi("bonba");
 		assertEquals(denda1.getArmak().get(1).getKopurua(),8);
 		assertEquals(listaJok1.getJokalariak().get(0).getArmak().getArmak().get(1).getKopurua(),102);
-		assertEquals(listaJok1.getJokalariak().get(0).getDirua(),965);
-		denda1.armaErosi("bonba");
-		assertEquals(denda1.getArmak().get(1).getKopurua(),7);
-		assertEquals(listaJok1.getJokalariak().get(0).getArmak().getArmak().get(1).getKopurua(),103);
-		assertEquals(listaJok1.getJokalariak().get(0).getDirua(),960);
-		denda1.armaErosi("bonba");
-		assertEquals(denda1.getArmak().get(1).getKopurua(),6);
-		assertEquals(listaJok1.getJokalariak().get(0).getArmak().getArmak().get(1).getKopurua(),104);
-		assertEquals(listaJok1.getJokalariak().get(0).getDirua(),955);
-		denda1.armaErosi("bonba");
-		assertEquals(denda1.getArmak().get(1).getKopurua(),5);
-		assertEquals(listaJok1.getJokalariak().get(0).getArmak().getArmak().get(1).getKopurua(),105);
-		assertEquals(listaJok1.getJokalariak().get(0).getDirua(),950);
+		assertEquals(listaJok1.getJokalariak().get(0).getDirua(),600);
 		
 		listaJok1.txandaEguneratu();
 		
 		denda1.armaErosi("bonba");
-		assertEquals(denda1.getArmak().get(1).getKopurua(),4);
+		assertEquals(denda1.getArmak().get(1).getKopurua(),7);
 		assertEquals(listaJok1.getJokalariak().get(1).getArmak().getArmak().get(1).getKopurua(),101);
-		assertEquals(listaJok1.getJokalariak().get(1).getDirua(),970);
+		assertEquals(listaJok1.getJokalariak().get(1).getDirua(),650);
+		
 		denda1.armaErosi("bonba");
-		assertEquals(denda1.getArmak().get(1).getKopurua(),3);
+		assertEquals(denda1.getArmak().get(1).getKopurua(),6);
 		assertEquals(listaJok1.getJokalariak().get(1).getArmak().getArmak().get(1).getKopurua(),102);
-		assertEquals(listaJok1.getJokalariak().get(1).getDirua(),965);
-		denda1.armaErosi("bonba");
-		assertEquals(denda1.getArmak().get(1).getKopurua(),2);
-		assertEquals(listaJok1.getJokalariak().get(1).getArmak().getArmak().get(1).getKopurua(),103);
-		assertEquals(listaJok1.getJokalariak().get(1).getDirua(),960);
-		denda1.armaErosi("bonba");
-		assertEquals(denda1.getArmak().get(1).getKopurua(),1);
-		assertEquals(listaJok1.getJokalariak().get(1).getArmak().getArmak().get(1).getKopurua(),104);
-		assertEquals(listaJok1.getJokalariak().get(1).getDirua(),955);
-		denda1.armaErosi("bonba");
-		assertEquals(denda1.getArmak().get(1).getKopurua(),0);
-		assertEquals(listaJok1.getJokalariak().get(1).getArmak().getArmak().get(1).getKopurua(),105);
-		assertEquals(listaJok1.getJokalariak().get(1).getDirua(),950);
-		denda1.armaErosi("bonba");
-		assertEquals(denda1.getArmak().get(1).getKopurua(),0);
+		assertEquals(listaJok1.getJokalariak().get(1).getDirua(),600);
 		
 		listaJok1.txandaEguneratu();
 		
 		denda1.armaErosi("misil");
 		assertEquals(denda1.getArmak().get(2).getKopurua(),9);
 		assertEquals(listaJok1.getJokalariak().get(0).getArmak().getArmak().get(2).getKopurua(),3);
-		assertEquals(listaJok1.getJokalariak().get(0).getDirua(),945);
-		denda1.armaErosi("misil");
-		assertEquals(denda1.getArmak().get(2).getKopurua(),8);
-		assertEquals(listaJok1.getJokalariak().get(0).getArmak().getArmak().get(2).getKopurua(),4);
-		assertEquals(listaJok1.getJokalariak().get(0).getDirua(),940);
-		denda1.armaErosi("misil");
-		assertEquals(denda1.getArmak().get(2).getKopurua(),7);
-		assertEquals(listaJok1.getJokalariak().get(0).getArmak().getArmak().get(2).getKopurua(),5);
-		assertEquals(listaJok1.getJokalariak().get(0).getDirua(),935);
-		denda1.armaErosi("misil");
-		assertEquals(denda1.getArmak().get(2).getKopurua(),6);
-		assertEquals(listaJok1.getJokalariak().get(0).getArmak().getArmak().get(2).getKopurua(),6);
-		assertEquals(listaJok1.getJokalariak().get(0).getDirua(),930);
-		denda1.armaErosi("misil");
-		assertEquals(denda1.getArmak().get(2).getKopurua(),5);
-		assertEquals(listaJok1.getJokalariak().get(0).getArmak().getArmak().get(2).getKopurua(),7);
-		assertEquals(listaJok1.getJokalariak().get(0).getDirua(),925);
+		assertEquals(listaJok1.getJokalariak().get(0).getDirua(),500);
 		
 		listaJok1.txandaEguneratu();
 		
 		denda1.armaErosi("misil");
-		assertEquals(denda1.getArmak().get(2).getKopurua(),4);
+		assertEquals(denda1.getArmak().get(2).getKopurua(),8);
 		assertEquals(listaJok1.getJokalariak().get(1).getArmak().getArmak().get(2).getKopurua(),3);
-		assertEquals(listaJok1.getJokalariak().get(1).getDirua(),945);
-		denda1.armaErosi("misil");
-		assertEquals(denda1.getArmak().get(2).getKopurua(),3);
-		assertEquals(listaJok1.getJokalariak().get(1).getArmak().getArmak().get(2).getKopurua(),4);
-		assertEquals(listaJok1.getJokalariak().get(1).getDirua(),940);
-		denda1.armaErosi("misil");
-		assertEquals(denda1.getArmak().get(2).getKopurua(),2);
-		assertEquals(listaJok1.getJokalariak().get(1).getArmak().getArmak().get(2).getKopurua(),5);
-		assertEquals(listaJok1.getJokalariak().get(1).getDirua(),935);
-		denda1.armaErosi("misil");
-		assertEquals(denda1.getArmak().get(2).getKopurua(),1);
-		assertEquals(listaJok1.getJokalariak().get(1).getArmak().getArmak().get(2).getKopurua(),6);
-		assertEquals(listaJok1.getJokalariak().get(1).getDirua(),930);
-		denda1.armaErosi("misil");
-		assertEquals(denda1.getArmak().get(2).getKopurua(),0);
-		assertEquals(listaJok1.getJokalariak().get(1).getArmak().getArmak().get(2).getKopurua(),7);
-		assertEquals(listaJok1.getJokalariak().get(1).getDirua(),925);
+		assertEquals(listaJok1.getJokalariak().get(1).getDirua(),500);
 		
 		listaJok1.txandaEguneratu();
 		
 		denda1.armaErosi("ezkutua");
 		assertEquals(denda1.getArmak().get(3).getKopurua(),9);
 		assertEquals(listaJok1.getJokalariak().get(0).getArmak().getArmak().get(3).getKopurua(),3);
-		assertEquals(listaJok1.getJokalariak().get(0).getDirua(),920);
-		denda1.armaErosi("ezkutua");
-		assertEquals(denda1.getArmak().get(3).getKopurua(),8);
-		assertEquals(listaJok1.getJokalariak().get(0).getArmak().getArmak().get(3).getKopurua(),4);
-		assertEquals(listaJok1.getJokalariak().get(0).getDirua(),915);
-		denda1.armaErosi("ezkutua");
-		assertEquals(denda1.getArmak().get(3).getKopurua(),7);
-		assertEquals(listaJok1.getJokalariak().get(0).getArmak().getArmak().get(3).getKopurua(),5);
-		assertEquals(listaJok1.getJokalariak().get(0).getDirua(),910);
-		denda1.armaErosi("ezkutua");
-		assertEquals(denda1.getArmak().get(3).getKopurua(),6);
-		assertEquals(listaJok1.getJokalariak().get(0).getArmak().getArmak().get(3).getKopurua(),6);
-		assertEquals(listaJok1.getJokalariak().get(0).getDirua(),905);
-		denda1.armaErosi("ezkutua");
-		assertEquals(denda1.getArmak().get(3).getKopurua(),5);
-		assertEquals(listaJok1.getJokalariak().get(0).getArmak().getArmak().get(3).getKopurua(),7);
-		assertEquals(listaJok1.getJokalariak().get(0).getDirua(),900);
+		assertEquals(listaJok1.getJokalariak().get(0).getDirua(),200);
+		
+		listaJok1.txandaEguneratu();
+		
+		denda1.armaErosi("misilIH");
+		assertEquals(denda1.getArmak().get(4).getKopurua(),9);
+		assertEquals(listaJok1.getJokalariak().get(1).getArmak().getArmak().get(4).getKopurua(),3);
+		assertEquals(listaJok1.getJokalariak().get(1).getDirua(),350);
+		
+		listaJok1.txandaEguneratu();
+		
+		denda1.armaErosi("misilEM");
+		assertEquals(denda1.getArmak().get(5).getKopurua(),9);
+		assertEquals(listaJok1.getJokalariak().get(0).getArmak().getArmak().get(5).getKopurua(),3);
+		assertEquals(listaJok1.getJokalariak().get(0).getDirua(),50);
+		
+		listaJok1.txandaEguneratu();
+		
+		denda1.armaErosi("misilGurutze");
+		assertEquals(denda1.getArmak().get(6).getKopurua(),9);
+		assertEquals(listaJok1.getJokalariak().get(1).getArmak().getArmak().get(6).getKopurua(),3);
+		assertEquals(listaJok1.getJokalariak().get(1).getDirua(),175);
+		
+		listaJok1.txandaEguneratu();
+		
+		denda1.armaErosi("radarra");
+		assertEquals(denda1.getArmak().get(3).getKopurua(),9);
+		assertEquals(listaJok1.getJokalariak().get(0).getArmak().getArmak().get(3).getKopurua(),3);
+		assertEquals(listaJok1.getJokalariak().get(0).getDirua(),50);
+		
+		listaJok1.txandaEguneratu();
+		
+		denda1.armaErosi("misilGurutze");
+		assertEquals(denda1.getArmak().get(6).getKopurua(),8);
+		assertEquals(listaJok1.getJokalariak().get(1).getArmak().getArmak().get(6).getKopurua(),4);
+		assertEquals(listaJok1.getJokalariak().get(1).getDirua(),0);
+		
+		denda1.armaErosi("misilGurutze");
+		assertEquals(denda1.getArmak().get(6).getKopurua(),8);
+		assertEquals(listaJok1.getJokalariak().get(1).getArmak().getArmak().get(6).getKopurua(),4);
+		assertEquals(listaJok1.getJokalariak().get(1).getDirua(),0);
+		
 		
 	}
 }
