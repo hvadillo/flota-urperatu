@@ -170,8 +170,6 @@ public class Denda {
 				if(gelaxka1.ontziaKonpondu()){
 					ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).diruaKendu(350);
 				}
-			}else{
-				Leihoa2.getLeihoa2().idatzi("Ez duzu diru nahikorik ontzia konpontzeko");
 			}
 		}
 	}

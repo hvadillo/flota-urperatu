@@ -76,7 +76,7 @@ public class TableroIkusiTest {
 		assertTrue(gelaxka11.getEgoera().equals(Egoera.ONTZIA));
 		tablero1.kokatu(1,1);
 		Gelaxka gelaxka12 = tablero1.getGelaxka(1,1);
-		assertNotNull(gelaxka2);
+		assertNotNull(gelaxka12);
 		assertTrue(gelaxka2.getEgoera().equals(Egoera.ONTZIA));
 		tablero1.kokatu(1,2);
 		Gelaxka gelaxka13 = tablero1.getGelaxka(1,2);

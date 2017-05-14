@@ -1,6 +1,7 @@
 package org.si.flotaurperatu.logic;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 import org.si.flotaurperatu.interf2.OntzienPanela;
 
@@ -55,13 +56,26 @@ public class Ordenagailua extends Jokalaria{
 		}else{
 			int zeregin = (int) (Math.random() * 4);
 			if(zeregin == 0){
-				
+				erosi();
 			}else if(zeregin == 1){
-				//Denda.getNDenda().ontziakKonpondu(zut, err);
+				konpondu();
 			}else if(zeregin == 2){
-				//radarraErabili(zut, err);
+				this.radarraErabili(zut, err);
+				zut = radarX;
+				err = radarY;
 			}else if(zeregin == 3){
-				//ezkutua
+				int i=0;
+				boolean aurkitua = false;
+				Ontzia ontzi = flota.getOntzia(i);
+				while(!aurkitua){
+					if(!ontzi.urperatutaDago()&&!ontzi.ezkutuaDauka()){
+						aurkitua=true;
+						armak.armaErabili("Ezkutua", ontzi.getPosizioak().get(0).getX(), ontzi.getPosizioak().get(0).getY());
+					}else{
+						i++;
+						ontzi = flota.getOntzia(i);
+					}
+				}
 			}else{
 				armak.armaErabili(arma, zut, err);
 			}
@@ -286,6 +300,55 @@ public class Ordenagailua extends Jokalaria{
 	@Override
 	public void radarraErabili(int pZutabe, int pErrenkada) {
 		armak.armaErabili("Radarra", pZutabe, pErrenkada);
+	}
+	
+	private void erosi(){
+	int	arma =(int) (Math.random() * 6);
+	if (arma==0){
+		Denda.getNDenda().armaErosi("radarra");
+	}
+	else if(arma==1){
+		Denda.getNDenda().armaErosi("bonba");
+	}
+	else if(arma==2){
+		Denda.getNDenda().armaErosi("misil");
+		}
+	else if(arma==3){
+		Denda.getNDenda().armaErosi("ezkutua");
+	}
+	else if(arma==4){
+		Denda.getNDenda().armaErosi("misilIH");
+	}
+	else if(arma==5){
+		Denda.getNDenda().armaErosi("misilEM");
+	}
+	else{
+		Denda.getNDenda().armaErosi("misilGurutze");
+	}
+	}
+	
+	private void konpondu(){
+		int i=0;
+		boolean aurkitua = false;
+		Ontzia ontzi;
+		Gelaxka g;
+		while(i<10&&!aurkitua){
+			ontzi = flota.getOntzia(i);
+			if(!ontzi.urperatutaDago()){
+				int j=0;
+				while(j<ontzi.getPosizioak().size()&&!aurkitua){
+					g=ontzi.getPosizioak().get(j);
+					if(g.getEgoera().equals(Egoera.EMANDA)){
+						Denda.getNDenda().ontziakKonpondu(g.getX(), g.getY());
+						aurkitua=true;
+					}
+					else{
+						j++;
+					}
+				}
+			}
+			i++;
+		}
 	}
 
 }

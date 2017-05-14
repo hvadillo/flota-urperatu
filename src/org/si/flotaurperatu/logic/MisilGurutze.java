@@ -4,7 +4,7 @@ public class MisilGurutze extends MisilGidatua {
 	private TiroPortaera portaera2;
 
 	public MisilGurutze(int pKop){
-		super("MisilGurutze", 5, pKop);
+		super("MisilGurutze", 175, pKop);
 		portaera=new TiroBertikal();
 		portaera2=new TiroHorizontal();
 	}

@@ -3,7 +3,7 @@ package org.si.flotaurperatu.logic;
 public class MisilEM extends MisilGidatua {
 	
 public MisilEM(int pKop){
-	super("MisilEm",5,pKop);
+	super("MisilEM",150,pKop);
 	portaera=new TiroHorizontal();
 }
 

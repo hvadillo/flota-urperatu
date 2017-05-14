@@ -73,14 +73,9 @@ public class Gelaxka {
 			if(o!=null && !o.urperatutaDago()){
 				if(e.equals(Egoera.EMANDA)){
 					eguneratu(Egoera.ONTZIA);
-					Leihoa2.getLeihoa2().getMatrize1().iconoAldatu("ontzia", this.x, this.y);
+					Leihoa2.getLeihoa2().getMatrize1().iconoAldatu("ura", this.x, this.y);
 					konpondu = true;
-				}else{
-					Leihoa2.getLeihoa2().idatzi("Posizio hori ez dago emanda.");
 				}
-			}else{
-				Leihoa2.getLeihoa2().idatzi("Ontzia urperatuta dago jada");
-				Leihoa2.getLeihoa2().idatzi("edo ez dago ontzirik.");
 			}
 		}
 		return konpondu;

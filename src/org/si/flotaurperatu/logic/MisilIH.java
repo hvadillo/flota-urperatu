@@ -3,7 +3,7 @@ package org.si.flotaurperatu.logic;
 public class MisilIH extends MisilGidatua {
 	
 	public MisilIH(int pKop){
-		super("MisilIH",5,pKop);
+		super("MisilIH",150,pKop);
 		portaera=new TiroBertikal();
 	}
 	public void erabili(int pZutabe ,int pErrenkada) {	

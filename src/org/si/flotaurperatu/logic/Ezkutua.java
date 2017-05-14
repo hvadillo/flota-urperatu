@@ -7,7 +7,7 @@ public class Ezkutua extends Arma{
 	private int kolpeak;
 	
 	public Ezkutua(int pKop) {
-		super("Ezkutua",5,pKop);
+		super("Ezkutua",300,pKop);
 		kolpeak = 2;
 	}
 
@@ -16,7 +16,7 @@ public class Ezkutua extends Arma{
 		// TODO Auto-generated method stub
 		if(kopurua>0){
 		Jokalaria jok=ListaJokalariak.getNireListaJokalariak().getJokalariak().get(ListaJokalariak.getNireListaJokalariak().txandaKalkulatu());
-		jok.getIkusi().getGelaxka(pZutabe, pErrenkada).ezkutuaJarri(this);
+		jok.getIkusi().getGelaxka(pZutabe, pErrenkada).ezkutuaJarri(new Ezkutua(1));
 		kopurua--;}
 		else{
 			if(ListaJokalariak.getNireListaJokalariak().txandaKalkulatu()==0){
