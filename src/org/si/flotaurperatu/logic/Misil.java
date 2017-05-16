@@ -2,9 +2,9 @@ package org.si.flotaurperatu.logic;
 
 public class Misil extends Arma {
 	
-public Misil(int pKop){
-	super("Misil",100,pKop);
-}
+	public Misil(int pKop){
+		super("Misil",100,pKop);
+	}
 
 	@Override
 	public void erabili(int pZutabe, int pErrenkada) {
@@ -19,8 +19,7 @@ public Misil(int pKop){
 				etsaia.getIkusi().getGelaxka(pZutabe, pErrenkada).eraso(this);
 				kopurua--;
 			}
-		}
-		else{
+		}else{
 			etsaia=ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0);
 			if(this.kopurua>0){
 				etsaia.getIkusi().getGelaxka(pZutabe, pErrenkada).eraso(this);

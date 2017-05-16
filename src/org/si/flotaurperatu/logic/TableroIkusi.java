@@ -30,12 +30,12 @@ public class TableroIkusi extends Observable{
 	public void ezkutuaJarri(){
 		//TODO
 	}
-	public boolean konprobatu(int pZutabe, int pErrenkada ){
+	public boolean konprobatu(int pZutabe, int pErrenkada, String pMota, String pNorabidea ){
 		boolean kokatu = false;
 		boolean ontzia = false;
-		if(konprobatuBarruan(pZutabe, pErrenkada)){
-			if(OntzienPanela.getOntzienPanela().getNorabide().equals("Horizontal")){
-				if(OntzienPanela.getOntzienPanela().getMota().equals("Fragata")){
+		if(konprobatuBarruan(pZutabe, pErrenkada, pMota, pNorabidea)){
+			if(pNorabidea.equals("Horizontal")){
+				if(pMota.equals("Fragata")){
 					int i = pZutabe-1;
 					int j = pErrenkada-1;
 					while((i <= pZutabe+1) && !ontzia){
@@ -50,7 +50,7 @@ public class TableroIkusi extends Observable{
 						}
 						i++;
 					}
-				}else if(OntzienPanela.getOntzienPanela().getMota().equals("Suntsitzaile")){
+				}else if(pMota.equals("Suntsitzaile")){
 					int i = pZutabe-1;
 					int j = pErrenkada-1;
 					while((i <= pZutabe+2) && !ontzia){
@@ -65,7 +65,7 @@ public class TableroIkusi extends Observable{
 						}
 						i++;
 					}
-				}else if(OntzienPanela.getOntzienPanela().getMota().equals("Itsaspeko")){
+				}else if(pMota.equals("Itsaspeko")){
 					int i = pZutabe-1;
 					int j = pErrenkada-1;
 					while((i <= pZutabe+3) && !ontzia){
@@ -97,7 +97,7 @@ public class TableroIkusi extends Observable{
 					}
 				}	
 			}else{
-				if(OntzienPanela.getOntzienPanela().getMota().equals("Fragata")){
+				if(pMota.equals("Fragata")){
 					int i = pZutabe-1;
 					int j = pErrenkada-1;
 					while((i <= pZutabe+1) && !ontzia){
@@ -112,7 +112,7 @@ public class TableroIkusi extends Observable{
 						}
 						i++;
 					}
-				}else if(OntzienPanela.getOntzienPanela().getMota().equals("Suntsitzaile")){
+				}else if(pMota.equals("Suntsitzaile")){
 					int i = pZutabe-1;
 					int j = pErrenkada-1;
 					while((i <= pZutabe+1) && !ontzia){
@@ -127,7 +127,7 @@ public class TableroIkusi extends Observable{
 						}
 						i++;
 					}
-				}else if(OntzienPanela.getOntzienPanela().getMota().equals("Itsaspeko")){
+				}else if(pMota.equals("Itsaspeko")){
 					int i = pZutabe-1;
 					int j = pErrenkada-1;
 					while((i <= pZutabe+1) && !ontzia){
@@ -174,16 +174,16 @@ public class TableroIkusi extends Observable{
 		return barruan;
 	}
 		
-	private boolean konprobatuBarruan(int pZutabe,int pErrenkada){
+	private boolean konprobatuBarruan(int pZutabe,int pErrenkada, String pMota, String pNorabidea){
 		boolean barruan = false;
-		if(OntzienPanela.getOntzienPanela().getNorabide().equals("Horizontal")){
-			if(OntzienPanela.getOntzienPanela().getMota().equals("Fragata")){
+		if(pNorabidea.equals("Horizontal")){
+			if(pMota.equals("Fragata")){
 				barruan = true;
-			}else if(OntzienPanela.getOntzienPanela().getMota().equals("Suntsitzaile")){
+			}else if(pMota.equals("Suntsitzaile")){
 				if(pZutabe <= 8){
 					barruan = true;
 				}
-			}else if(OntzienPanela.getOntzienPanela().getMota().equals("Itsaspeko")){
+			}else if(pMota.equals("Itsaspeko")){
 				if(pZutabe <= 7){
 					barruan = true;
 				}
@@ -193,13 +193,13 @@ public class TableroIkusi extends Observable{
 				}
 			}
 		}else{
-			if(OntzienPanela.getOntzienPanela().getMota().equals("Fragata")){
+			if(pMota.equals("Fragata")){
 				barruan = true;
-			}else if(OntzienPanela.getOntzienPanela().getMota().equals("Suntsitzaile")){
+			}else if(pMota.equals("Suntsitzaile")){
 				if(pErrenkada <= 8){
 					barruan = true;
 				}
-			}else if(OntzienPanela.getOntzienPanela().getMota().equals("Itsaspeko")){
+			}else if(pMota.equals("Itsaspeko")){
 				if(pErrenkada <= 7){
 					barruan = true;
 				}
@@ -211,4 +211,5 @@ public class TableroIkusi extends Observable{
 		}
 		return barruan;
 	}
+	
 }	

@@ -17,18 +17,18 @@ public class Ezkutua extends Arma{
 		if(kopurua>0){
 		Jokalaria jok=ListaJokalariak.getNireListaJokalariak().getJokalariak().get(ListaJokalariak.getNireListaJokalariak().txandaKalkulatu());
 		jok.getIkusi().getGelaxka(pZutabe, pErrenkada).ezkutuaJarri(new Ezkutua(1));
-		kopurua--;}
-		else{
+		kopurua--;
+		}else{
 			if(ListaJokalariak.getNireListaJokalariak().txandaKalkulatu()==0){
 				Leihoa2.getLeihoa2().idatzi("Ez daukazu ezkuturik");
 			}
 		}
 	}
+	
 	public int kolpeaJaso(Arma pArma){
 		if(pArma instanceof Bonba){
 			kolpeak--;
-		}
-		else{
+		}else{
 			kolpeak = 0;
 		}
 		return kolpeak;

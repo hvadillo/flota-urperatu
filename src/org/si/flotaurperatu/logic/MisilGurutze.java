@@ -1,6 +1,7 @@
 package org.si.flotaurperatu.logic;
 
 public class MisilGurutze extends MisilGidatua {
+	
 	private TiroPortaera portaera2;
 
 	public MisilGurutze(int pKop){
@@ -15,8 +16,7 @@ public class MisilGurutze extends MisilGidatua {
 			portaera.tiroEgin(this, pZutabe ,pErrenkada);
 			portaera2.tiroEgin(this,pZutabe ,pErrenkada);
 			kopurua--;
-		}
-		else{
+		}else{
 			if(ListaJokalariak.getNireListaJokalariak().txandaKalkulatu()==1){
 				ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).txandaBurutu();
 			}

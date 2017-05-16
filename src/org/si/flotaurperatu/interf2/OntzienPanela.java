@@ -158,6 +158,7 @@ public class OntzienPanela extends JPanel implements ActionListener{
 	public void actionListenerKendu(String pMota){
 		
 	}
+	
 	public int getKopOsoa(){
 		return kopOsoa;
 	}
@@ -167,4 +168,5 @@ public class OntzienPanela extends JPanel implements ActionListener{
 		// TODO Auto-generated method stub
 		
 	}
+	
 }

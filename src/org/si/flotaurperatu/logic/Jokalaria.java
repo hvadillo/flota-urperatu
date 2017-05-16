@@ -25,26 +25,27 @@ public abstract class Jokalaria {
 			armak.armaErosi(pMota);
 		}
 	}
-
-	//public TableroEraso getEraso(){
-		//return tableroEraso;
-	//}
 	
 	public TableroIkusi getIkusi(){
 		return tableroIkusi;
 	}
+	
 	public ListaOntziak getFlota(){
 		return this.flota;
 	}
+	
 	public Biltegia getArmak(){
 		return this.armak;
 	}
+	
 	public void diruaKendu(int pKostua){
 		dirua=dirua-pKostua;
 	}
+	
 	public int getDirua(){
 		return dirua;
 	}
+	
 	public abstract void radarraErabili(int pZutabe,int pErrenkada);
 	
 	public void misilErabili(int zutabe, int errenkada) {
@@ -72,4 +73,5 @@ public abstract class Jokalaria {
 	}
 
 	public abstract void txandaBurutu();
+	
 }

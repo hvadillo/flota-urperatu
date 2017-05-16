@@ -2,8 +2,8 @@ package org.si.flotaurperatu.logic;
 
 public class Fragata extends Ontzia {
 	
-public Fragata(){
-	super(1);
-}
+	public Fragata(){
+		super(1);
+	}
 
 }

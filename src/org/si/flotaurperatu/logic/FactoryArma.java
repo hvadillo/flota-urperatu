@@ -29,8 +29,6 @@ public class FactoryArma {
 		denda.add(new MisilGurutze(10));
 		
 		return denda;
-		
-		
 	}
 	
 	public ArrayList<Arma> biltegiaSortu(){

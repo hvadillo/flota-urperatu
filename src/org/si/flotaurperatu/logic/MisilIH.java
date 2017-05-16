@@ -6,16 +6,17 @@ public class MisilIH extends MisilGidatua {
 		super("MisilIH",150,pKop);
 		portaera=new TiroBertikal();
 	}
+	
 	public void erabili(int pZutabe ,int pErrenkada) {	
 		// TODO Auto-generated method stub
 		if(this.kopurua>0){
 			portaera.tiroEgin(this, pZutabe ,pErrenkada);
 			kopurua--;
-		}
-		else{
+		}else{
 			if(ListaJokalariak.getNireListaJokalariak().txandaKalkulatu()==1){
 				ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).txandaBurutu();
 			}
 		}	
 	}
+	
 }

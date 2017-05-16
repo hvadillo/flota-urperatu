@@ -1,8 +1,12 @@
 package org.si.flotaurperatu.logic;
 
+import java.util.Observable;
+import java.util.Observer;
+
+import org.si.flotaurperatu.interf2.KasilenPanela2;
 import org.si.flotaurperatu.interf2.Leihoa2;
 
-public class Gelaxka {
+public class Gelaxka extends Observable{
 
 	private int x;
 	private int y;
@@ -10,15 +14,18 @@ public class Gelaxka {
 	private Ontzia o;
 	
 	public Gelaxka(int pX, int pY){
+		addObserver(Leihoa2.getLeihoa2().);
 		x = pX;
 		y = pY;	
 		e = Egoera.URA;
 		o=null;
 		
 	}
+	
 	public void eguneratu(Egoera pEgo){
 		e=pEgo;
 	}
+	
 	public Ontzia getOntzia(){
 		return o;
 	}
@@ -26,41 +33,41 @@ public class Gelaxka {
 	public Egoera getEgoera(){
 		return e;
 	}
+	
 	public void ontziaEguneratu(Ontzia pOntzia){
 		this.o=pOntzia;
 	}
+	
 	public void eraso(Arma pArma){
 		if(o==null && e.equals(Egoera.URA)){
 			if(ListaJokalariak.getNireListaJokalariak().txandaKalkulatu()==0){
-				Leihoa2.getLeihoa2().getMatrize1().iconoAldatu("miss", this.x, this.y);
-			}
-			else{
-				Leihoa2.getLeihoa2().getMatrize2().iconoAldatu("miss", this.x, this.y);
+				eguneratuIrudia("miss", this.x, this.y);
+			}else{
+				eguneratuIrudia("miss", this.x, this.y);
 			}
 			this.eguneratu(Egoera.MISS);
-		}
-		else if(e.equals(Egoera.EMANDA) || e.equals(Egoera.MISS)){
+		}else if(e.equals(Egoera.EMANDA) || e.equals(Egoera.MISS)){
 		
-		}
-		else{
-				o.tiroaJaso(pArma, this);
+		}else{
+			o.tiroaJaso(pArma, this);
 		}
 	}
+	
 	public void ezkutuaJarri(Ezkutua pEzkutua){
 		if(o!=null){
 			o.ezkutuaJarri(pEzkutua);
-		}
-		else{
+		}else{
 			System.out.println(" Ez dago ontzirik posizio horretan. ");
 		}
 	}
+	
 	public boolean ontziaKonpondu(){
 		boolean konpondu = false;
 		if(ListaJokalariak.getNireListaJokalariak().txandaKalkulatu()==0){
 			if(o!=null && !o.urperatutaDago()){
 				if(e.equals(Egoera.EMANDA)){
 					eguneratu(Egoera.ONTZIA);
-					Leihoa2.getLeihoa2().getMatrize2().iconoAldatu("ontzia", this.x, this.y);
+					eguneratuIrudia("ontzia", this.x, this.y);
 					konpondu = true;
 				}else{
 					Leihoa2.getLeihoa2().idatzi("Posizio hori ez dago emanda.");
@@ -73,17 +80,26 @@ public class Gelaxka {
 			if(o!=null && !o.urperatutaDago()){
 				if(e.equals(Egoera.EMANDA)){
 					eguneratu(Egoera.ONTZIA);
-					Leihoa2.getLeihoa2().getMatrize1().iconoAldatu("ura", this.x, this.y);
+					eguneratuIrudia("ura", this.x, this.y);
 					konpondu = true;
 				}
 			}
 		}
 		return konpondu;
 	}
+	
 	public int getX(){
 		return x;
 	}
+	
 	public int getY(){
 		return y;
 	}
+	
+	private void eguneratuIrudia(String egoera, int pX,int pY){
+		Object[] n = {egoera, pX, pY};
+		setChanged();
+		notifyObservers(n);
+	}
+	
 }

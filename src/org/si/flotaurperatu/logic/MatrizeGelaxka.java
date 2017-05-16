@@ -7,6 +7,7 @@ public class MatrizeGelaxka {
 	public MatrizeGelaxka(){
 		matrizea = new Gelaxka[10][10];
 	}
+	
 	public void matrizeaHasieratu(){
 		int kont1 = 0;
 		int kont2;
@@ -23,6 +24,7 @@ public class MatrizeGelaxka {
 	public void set(int pZutabe,int pErrenkada){	
 		matrizea[pZutabe][pErrenkada].eguneratu(Egoera.ONTZIA);
 	}
+	
 	public Gelaxka getGelaxka(int pZutabe,int pErrenkada){
 		Gelaxka gelaxka1 = null;
 		if((pZutabe >= 0 && pZutabe <= 9) && (pErrenkada >= 0 && pErrenkada <= 9 )){

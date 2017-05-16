@@ -18,10 +18,11 @@ public abstract class Ontzia {
 	}
 	
 	public void tiroaJaso(Arma pArma, Gelaxka pGelaxka){
+		int txanda = ListaJokalariak.getNireListaJokalariak().txandaKalkulatu();
 		if(ezkutua != null){
 			if(ezkutua.kolpeaJaso(pArma)==0){
 				ezkutua = null;
-				if(ListaJokalariak.getNireListaJokalariak().txandaKalkulatu()==1){
+				if(txanda==1){
 					for(int i = 0; i <= (posizioak.size()-1); i++){
 						if(posizioak.get(i).getEgoera()!=Egoera.EMANDA){
 							posizioak.get(i).eguneratu(Egoera.ONTZIA);
@@ -37,7 +38,7 @@ public abstract class Ontzia {
 					}
 				}
 			}else{
-				if(ListaJokalariak.getNireListaJokalariak().txandaKalkulatu()==1){
+				if(txanda==1){
 					for(int j = 0; j <= (posizioak.size()-1); j++){
 						Leihoa2.getLeihoa2().getMatrize2().iconoAldatu("ezkutuaErdiEmanda", posizioak.get(j).getX(), posizioak.get(j).getY());
 					}
@@ -50,20 +51,19 @@ public abstract class Ontzia {
 			if(pArma instanceof Misil){
 				for(int i = 0; i <= (posizioak.size()-1); i++){
 					posizioak.get(i).eguneratu(Egoera.EMANDA);
-					if(ListaJokalariak.getNireListaJokalariak().txandaKalkulatu()==0){
+					if(txanda==0){
 						Leihoa2.getLeihoa2().getMatrize1().iconoAldatu("emanda", posizioak.get(i).getX(), posizioak.get(i).getY());
 					}
 					else{
 						Leihoa2.getLeihoa2().getMatrize2().iconoAldatu("emanda", posizioak.get(i).getX(), posizioak.get(i).getY());
 					}
-					}
+				}
 				this.urperatu();
 			}else{
 				pGelaxka.eguneratu(Egoera.EMANDA);
-				if(ListaJokalariak.getNireListaJokalariak().txandaKalkulatu()==0){
+				if(txanda==0){
 					Leihoa2.getLeihoa2().getMatrize1().iconoAldatu("emanda", pGelaxka.getX(), pGelaxka.getY());
-				}
-				else{
+				}else{
 					Leihoa2.getLeihoa2().getMatrize2().iconoAldatu("emanda", pGelaxka.getX(), pGelaxka.getY());
 				}
 				int i = 0;
@@ -76,14 +76,10 @@ public abstract class Ontzia {
 			}
 			if(urperatu == true){
 				this.urperatu();
-				int txanda;
 				Jokalaria etsaia;
-					
-				txanda=ListaJokalariak.getNireListaJokalariak().txandaKalkulatu();
 				if(txanda==0){
 					etsaia=ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1);
-				}
-				else{
+				}else{
 					etsaia=ListaJokalariak.getNireListaJokalariak().getJokalariak().get(0);
 				}
 				for(int j = 0; j <= (posizioak.size()-1); j++){
@@ -97,42 +93,34 @@ public abstract class Ontzia {
 						if (k==0){
 							x1=x;
 							y1=y-1;
-						}
-						else if(k==1){
+						}else if(k==1){
 							x1=x+1;
 							y1=y-1;
-						}
-						else if(k==2){
+						}else if(k==2){
 							x1=x+1;
 							y1=y;
-						}
-						else if(k==3){
+						}else if(k==3){
 							x1=x+1;
 							y1=y+1;
-						}
-						else if(k==4){
+						}else if(k==4){
 							x1=x;
 							y1=y+1;
-						}
-						else if(k==5){
+						}else if(k==5){
 							x1=x-1;
 							y1=y+1;
-						}
-						else if(k==6){
+						}else if(k==6){
 							x1=x-1;
 							y1=y;
-						}
-						else {
+						}else {
 							x1=x-1;
 							y1=y-1;
 						}
-						if (etsaia.getIkusi().konprobatuKasila(x1, y1)){
+						if(etsaia.getIkusi().konprobatuKasila(x1, y1)){
 							if(etsaia.getIkusi().getGelaxka(x1, y1).getEgoera().equals(Egoera.URA)){
 								etsaia.getIkusi().getGelaxka(x1, y1).eguneratu(Egoera.MISS);
-								if(ListaJokalariak.getNireListaJokalariak().txandaKalkulatu()==0){
+								if(txanda==0){
 									Leihoa2.getLeihoa2().getMatrize1().iconoAldatu("miss", x1, y1);
-								}
-								else{
+								}else{
 									Leihoa2.getLeihoa2().getMatrize2().iconoAldatu("miss", x1, y1);
 								}
 							}	
@@ -155,6 +143,7 @@ public abstract class Ontzia {
 	public void kokatu(){
 		//TODO
 	}
+	
 	public void ezkutuaJarri(Ezkutua pEzkutua){
 		this.ezkutua = pEzkutua;
 		for(int i = 0; i < posizioak.size(); i++){
@@ -167,6 +156,7 @@ public abstract class Ontzia {
 			}	
 		}
 	}
+	
 	public void posizioakEguneratu(int pPos, Gelaxka pGelaxka){
 		this.posizioak.add(pPos, pGelaxka);
 	}
@@ -174,6 +164,7 @@ public abstract class Ontzia {
 	public ArrayList<Gelaxka> getPosizioak(){
 		return posizioak;
 	}
+	
 	public boolean ezkutuaDauka(){
 		boolean dauka = false;
 		if(ezkutua!=null){
@@ -181,4 +172,5 @@ public abstract class Ontzia {
 		}
 		return dauka;
 	}
+	
 }

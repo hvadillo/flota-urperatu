@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import org.si.flotaurperatu.interf2.Leihoa2;
 
 public class ListaJokalariak {
+	
 	private ArrayList<Jokalaria> listaJok;
 	private int txanda;
 	private boolean bukatu=false;
@@ -55,5 +56,4 @@ public class ListaJokalariak {
 		return listaJok;
 	}
 	
-
 }

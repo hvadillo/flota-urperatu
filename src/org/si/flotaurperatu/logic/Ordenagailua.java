@@ -66,14 +66,14 @@ public class Ordenagailua extends Jokalaria{
 			}else if(zeregin == 3){
 				int i=0;
 				boolean aurkitua = false;
-				Ontzia ontzi = flota.getOntzia(i);
-				while(!aurkitua){
+				Ontzia ontzi;
+				while(!aurkitua && i<10){
+					ontzi = flota.getOntzia(i);
 					if(!ontzi.urperatutaDago()&&!ontzi.ezkutuaDauka()){
 						aurkitua=true;
 						armak.armaErabili("Ezkutua", ontzi.getPosizioak().get(0).getX(), ontzi.getPosizioak().get(0).getY());
 					}else{
 						i++;
-						ontzi = flota.getOntzia(i);
 					}
 				}
 			}else{
@@ -92,9 +92,11 @@ public class Ordenagailua extends Jokalaria{
 		double norabidea;
 		Ontzia ontz;
 		boolean barruan;
-		OntzienPanela.getOntzienPanela().setMota("Fragata");
-		OntzienPanela.getOntzienPanela().setNorabide("Horizontal");
-		for(int i=0; i <= 3; i++){
+		String norabide;
+		String mota;
+		norabide="Horizontal";
+		mota = "Fragata";
+		for(int i=0; i <= 3; i++){//Fragatak kokatzeko
 			barruan=false;
 			if (i==0){
 				ontz=flota.getOntzia(6);
@@ -109,7 +111,7 @@ public class Ordenagailua extends Jokalaria{
 			while(!barruan){
 				zutabe = (int) (Math.random() * 9);
 				errenkada = (int) (Math.random() * 9);
-				if(tableroIkusi.konprobatu(zutabe, errenkada)){
+				if(tableroIkusi.konprobatu(zutabe, errenkada, mota, norabide)){
 					barruan = true;
 					//Ontzia logikan sartu
 					tableroIkusi.kokatu(zutabe,errenkada);
@@ -118,8 +120,8 @@ public class Ordenagailua extends Jokalaria{
 				}
 			}
 		}
-		OntzienPanela.getOntzienPanela().setMota("Suntsitzaile");
-		for(int i=0; i <= 2; i++){
+		mota = "Suntsitzaile";
+		for(int i=0; i <= 2; i++){//Suntsitzaileak kokatzeko
 			barruan = false;
 			if (i==0){
 				ontz=flota.getOntzia(3);
@@ -132,16 +134,16 @@ public class Ordenagailua extends Jokalaria{
 			while(!barruan){
 				norabidea = Math.random()*1;
 				if(norabidea<=0.5){
-					OntzienPanela.getOntzienPanela().setNorabide("Horizontal");
+					norabide="Horizontal";
 				}else{
-					OntzienPanela.getOntzienPanela().setNorabide("Bertikal");
+					norabide="Bertikal";
 				}
 				zutabe = (int) (Math.random() * 9);
 				errenkada = (int) (Math.random() * 9);
-				if(tableroIkusi.konprobatu(zutabe, errenkada)){
+				if(tableroIkusi.konprobatu(zutabe, errenkada, mota, norabide)){
 					barruan = true;
 					//Ontzia logikan sartu
-					if(OntzienPanela.getOntzienPanela().getNorabide().equals("Horizontal")){
+					if(norabide.equals("Horizontal")){
 						
 						tableroIkusi.kokatu(zutabe,errenkada);
 						ontz.posizioakEguneratu(0,tableroIkusi.getGelaxka(zutabe, errenkada));
@@ -167,7 +169,7 @@ public class Ordenagailua extends Jokalaria{
 				}
 			}
 		}
-		OntzienPanela.getOntzienPanela().setMota("Itsaspeko");
+		mota = "Itsaspeko";
 		for(int i=0; i <= 1; i++){
 			barruan = false;
 			if (i==0){
@@ -178,16 +180,16 @@ public class Ordenagailua extends Jokalaria{
 			while(!barruan){
 				norabidea =Math.random() * 1;
 				if(norabidea<=0.5){
-					OntzienPanela.getOntzienPanela().setNorabide("Horizontal");
+					norabide="Horizontal";
 				}else{
-					OntzienPanela.getOntzienPanela().setNorabide("Bertikal");
+					norabide="Bertikal";
 				}
 				zutabe = (int) (Math.random() * 9);
 				errenkada = (int) (Math.random() * 9);
-				if(tableroIkusi.konprobatu(zutabe, errenkada)){
+				if(tableroIkusi.konprobatu(zutabe, errenkada, mota, norabide)){
 					barruan = true;
 					//Ontzia logikan sartu
-					if(OntzienPanela.getOntzienPanela().getNorabide().equals("Horizontal")){
+					if(norabide.equals("Horizontal")){
 						
 						
 						tableroIkusi.kokatu(zutabe,errenkada);
@@ -226,24 +228,22 @@ public class Ordenagailua extends Jokalaria{
 				}
 			}
 		}
-		
-		OntzienPanela.getOntzienPanela().setMota("HegazkinOntzi");
-		
+		mota = "HegazkinOntzi";
 		ontz=flota.getOntzia(0);
 		barruan=false;
 		while(!barruan){
 			norabidea =Math.random() * 1;
 			if(norabidea<=0.5){
-				OntzienPanela.getOntzienPanela().setNorabide("Horizontal");
+				norabide="Horizontal";
 			}else{
-				OntzienPanela.getOntzienPanela().setNorabide("Bertikal");
+				norabide="Bertikal";
 			}
 			zutabe = (int) (Math.random() * 9);
 			errenkada = (int) (Math.random() * 9);
-			if(tableroIkusi.konprobatu(zutabe, errenkada)){
+			if(tableroIkusi.konprobatu(zutabe, errenkada, mota, norabide)){
 				barruan = true;
 				//Ontzia logikan sartu
-				if(OntzienPanela.getOntzienPanela().getNorabide().equals("Horizontal")){
+				if(norabide.equals("Horizontal")){
 					
 					tableroIkusi.kokatu(zutabe,errenkada);
 					flota.getOntzia(0).posizioakEguneratu(0,tableroIkusi.getGelaxka(zutabe, errenkada));
@@ -289,7 +289,6 @@ public class Ordenagailua extends Jokalaria{
 				}
 			}
 		}
-		OntzienPanela.getOntzienPanela().setMota(null);
 	}
 	
 	public void setRadarXY(int x, int y){
