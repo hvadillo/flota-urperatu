@@ -10,7 +10,6 @@ import javax.swing.JButton;
 import javax.swing.JPanel;
 
 import org.si.flotaurperatu.logic.Denda;
-import org.si.flotaurperatu.logic.ListaJokalariak;
 
 public class DendaPanela extends JPanel implements ActionListener, Observer{
 	
@@ -160,10 +159,12 @@ public class DendaPanela extends JPanel implements ActionListener, Observer{
 
 	@Override
 	public void update(Observable o, Object arg) {
-		Object[] obj =  (Object[]) arg;
-		String e = (String) obj[0];
-		int x = (int) obj[1];
-		armenPrezioa(e);
+		if(arg instanceof Object[]){
+			Object[] obj =  (Object[]) arg;
+			String e = (String) obj[0];
+			int x = (int) obj[1];
+			armenPrezioa(e);
+		}
 	}
 
 }

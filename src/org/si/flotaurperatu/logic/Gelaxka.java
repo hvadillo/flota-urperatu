@@ -103,7 +103,7 @@ public class Gelaxka extends Observable{
 	}
 	
 	private void idatzi(String textua){
-		Object[] n = {textua};
+		String n = textua;
 		setChanged();
 		notifyObservers(n);
 	}

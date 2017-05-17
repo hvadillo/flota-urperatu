@@ -36,7 +36,9 @@ public class Denda extends Observable{
 					if(dirua >= armak.get(0).getKostua()){
 						jok.getArmak().armaErosi(pMota);
 						armak.get(0).kopuruaKendu();
-						armakEguneratu("radarra", 1);
+						armakEguneratu("radarra");
+					}else{
+						idatzi("Ez duzu diru nahikorik radarra erosteko.");
 					}
 				}else{
 					Jokalaria jok = ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1);
@@ -44,7 +46,7 @@ public class Denda extends Observable{
 					if(dirua >= armak.get(0).getKostua()){
 						jok.getArmak().armaErosi(pMota);
 						armak.get(0).kopuruaKendu();
-						armakEguneratu("radarra", 1);
+						armakEguneratu("radarra");
 					}
 				}
 			}
@@ -56,7 +58,9 @@ public class Denda extends Observable{
 					if(dirua >= armak.get(1).getKostua()){
 						jok.getArmak().armaErosi(pMota);
 						armak.get(1).kopuruaKendu();
-						armakEguneratu("bonba", 1);
+						armakEguneratu("bonba");
+					}else{
+						idatzi("Ez duzu diru nahikorik bonba erosteko.");
 					}
 				}else{
 					Jokalaria jok = ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1);
@@ -64,7 +68,7 @@ public class Denda extends Observable{
 					if(dirua >= armak.get(1).getKostua()){
 						jok.getArmak().armaErosi(pMota);
 						armak.get(1).kopuruaKendu();
-						armakEguneratu("bonba", 1);
+						armakEguneratu("bonba");
 					}
 				}
 			}
@@ -76,7 +80,9 @@ public class Denda extends Observable{
 					if(dirua >= armak.get(2).getKostua()){
 						jok.getArmak().armaErosi(pMota);
 						armak.get(2).kopuruaKendu();
-						armakEguneratu("misil", 1);
+						armakEguneratu("misil");
+					}else{
+						idatzi("Ez duzu diru nahikorik misila erosteko.");
 					}
 				}else{
 					Jokalaria jok = ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1);
@@ -84,7 +90,7 @@ public class Denda extends Observable{
 					if(dirua >= armak.get(2).getKostua()){
 						jok.getArmak().armaErosi(pMota);
 						armak.get(2).kopuruaKendu();
-						armakEguneratu("misil", 1);
+						armakEguneratu("misil");
 					}
 				}
 			}
@@ -96,7 +102,10 @@ public class Denda extends Observable{
 					if(dirua >= armak.get(3).getKostua()){
 						jok.getArmak().armaErosi(pMota);
 						armak.get(3).kopuruaKendu();
-						armakEguneratu("ezkutua", 1);
+						armakEguneratu("ezkutua");
+					}
+					else{
+						idatzi("Ez duzu diru nahikorik ezkutua erosteko.");
 					}
 				}else{
 					Jokalaria jok = ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1);
@@ -104,7 +113,7 @@ public class Denda extends Observable{
 					if(dirua >= armak.get(3).getKostua()){
 						jok.getArmak().armaErosi(pMota);
 						armak.get(3).kopuruaKendu();
-						armakEguneratu("ezkutua", 1);
+						armakEguneratu("ezkutua");
 					}
 				}
 			}
@@ -116,7 +125,9 @@ public class Denda extends Observable{
 					if(dirua >= armak.get(4).getKostua()){
 						jok.getArmak().armaErosi(pMota);
 						armak.get(4).kopuruaKendu();
-						armakEguneratu("misilIH", 1);
+						armakEguneratu("misilIH");
+					}else{
+						idatzi("Ez duzu diru nahikorik misilIHa erosteko.");
 					}
 				}else{
 					Jokalaria jok = ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1);
@@ -124,7 +135,7 @@ public class Denda extends Observable{
 					if(dirua >= armak.get(4).getKostua()){
 						jok.getArmak().armaErosi(pMota);
 						armak.get(4).kopuruaKendu();
-						armakEguneratu("misilIH", 1);
+						armakEguneratu("misilIH");
 					}
 				}
 			}
@@ -136,7 +147,9 @@ public class Denda extends Observable{
 					if(dirua >= armak.get(5).getKostua()){
 						jok.getArmak().armaErosi(pMota);
 						armak.get(5).kopuruaKendu();
-						armakEguneratu("misilEM", 1);
+						armakEguneratu("misilEM");
+					}else{
+						idatzi("Ez duzu diru nahikorik misilEMa erosteko.");
 					}
 				}else{
 					Jokalaria jok = ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1);
@@ -144,7 +157,7 @@ public class Denda extends Observable{
 					if(dirua >= armak.get(5).getKostua()){
 						jok.getArmak().armaErosi(pMota);
 						armak.get(5).kopuruaKendu();
-						armakEguneratu("misilEM", 1);
+						armakEguneratu("misilEM");
 					}
 				}
 			}
@@ -156,7 +169,9 @@ public class Denda extends Observable{
 					if(dirua >= armak.get(6).getKostua()){
 						jok.getArmak().armaErosi(pMota);
 						armak.get(6).kopuruaKendu();
-						armakEguneratu("misilGurtzatu", 1);
+						armakEguneratu("misilGurtzatu");
+					}else{
+						idatzi("Ez duzu diru nahikorik misil gurutzatua erosteko.");
 					}
 				}else{
 					Jokalaria jok = ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1);
@@ -164,7 +179,7 @@ public class Denda extends Observable{
 					if(dirua >= armak.get(6).getKostua()){
 						jok.getArmak().armaErosi(pMota);
 						armak.get(6).kopuruaKendu();
-						armakEguneratu("misilGurutzatu", 1);
+						armakEguneratu("misilGurutzatu");
 					}
 				}
 			}
@@ -217,13 +232,13 @@ public class Denda extends Observable{
 	}
 	
 	private void idatzi(String textua){
-		Object[] n = {textua};
+		String n = textua;
 		setChanged();
 		notifyObservers(n);
 	}
 	
-	private void armakEguneratu(String textua, int x){
-		Object[] n = {textua, x};
+	private void armakEguneratu(String textua){
+		Object[] n = {textua, 1};
 		setChanged();
 		notifyObservers(n);
 	}

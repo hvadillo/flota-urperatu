@@ -12,6 +12,7 @@ public class Biltegia extends Observable{
 	
 	public Biltegia(){
 		addObserver(Leihoa2.getLeihoa2());
+		addObserver(ArmenPanela.getArmenPanela());
 		armak = FactoryArma.getFactoryArma().biltegiaSortu();
 	}
 	
@@ -27,7 +28,7 @@ public class Biltegia extends Observable{
 			if(txanda==0){
 				lista.get(0).diruaKendu(armak.get(0).getKostua());
 				idatzi("Radar bat erosi duzu.");
-				ArmenPanela.getArmenPanela().armenKopurua(pMota);
+				armenKopurua(pMota);
 			}else{
 				lista.get(1).diruaKendu(armak.get(0).getKostua());
 			}
@@ -36,7 +37,7 @@ public class Biltegia extends Observable{
 			if(txanda==0){
 				lista.get(0).diruaKendu(armak.get(1).getKostua());
 				idatzi("Bonba bat erosi duzu.");
-				ArmenPanela.getArmenPanela().armenKopurua(pMota);
+				armenKopurua(pMota);
 			}else{
 				lista.get(1).diruaKendu(armak.get(1).getKostua());
 			}
@@ -45,7 +46,7 @@ public class Biltegia extends Observable{
 			if(txanda==0){
 				lista.get(0).diruaKendu(armak.get(2).getKostua());
 				idatzi("Misil bat erosi duzu.");
-				ArmenPanela.getArmenPanela().armenKopurua(pMota);
+				armenKopurua(pMota);
 			}else{
 				lista.get(1).diruaKendu(armak.get(2).getKostua());
 			}
@@ -54,7 +55,7 @@ public class Biltegia extends Observable{
 			if(txanda==0){
 				lista.get(0).diruaKendu(armak.get(3).getKostua());
 				idatzi("Ezkutu bat erosi duzu.");
-				ArmenPanela.getArmenPanela().armenKopurua(pMota);
+				armenKopurua(pMota);
 			}else{
 				lista.get(1).diruaKendu(armak.get(3).getKostua());
 			}
@@ -63,7 +64,7 @@ public class Biltegia extends Observable{
 			if(txanda==0){
 				lista.get(0).diruaKendu(armak.get(4).getKostua());
 				idatzi("MisilIH bat erosi duzu.");
-				ArmenPanela.getArmenPanela().armenKopurua(pMota);
+				armenKopurua(pMota);
 			}else{
 				lista.get(1).diruaKendu(armak.get(4).getKostua());
 			}
@@ -72,7 +73,7 @@ public class Biltegia extends Observable{
 			if(txanda==0){
 				lista.get(0).diruaKendu(armak.get(5).getKostua());
 				idatzi("MisilEM bat erosi duzu.");
-				ArmenPanela.getArmenPanela().armenKopurua(pMota);
+				armenKopurua(pMota);
 			}else{
 				lista.get(1).diruaKendu(armak.get(5).getKostua());
 			}
@@ -81,7 +82,7 @@ public class Biltegia extends Observable{
 			if(txanda==0){
 				lista.get(0).diruaKendu(armak.get(6).getKostua());
 				idatzi("Misil gurutzatu bat erosi duzu.");
-				ArmenPanela.getArmenPanela().armenKopurua(pMota);
+				armenKopurua(pMota);
 			}else{
 				lista.get(1).diruaKendu(armak.get(6).getKostua());
 			}
@@ -108,6 +109,12 @@ public class Biltegia extends Observable{
 	
 	private void idatzi(String textua){
 		String n = textua;
+		setChanged();
+		notifyObservers(n);
+	}
+	
+	private void armenKopurua(String arma){
+		Object[] n = {arma, 1};
 		setChanged();
 		notifyObservers(n);
 	}

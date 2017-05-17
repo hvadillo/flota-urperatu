@@ -3,6 +3,8 @@ package org.si.flotaurperatu.interf2;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Observable;
+import java.util.Observer;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -17,7 +19,7 @@ import org.si.flotaurperatu.actionListener.MisilIpini;
 import org.si.flotaurperatu.actionListener.RadarraIpini;
 import org.si.flotaurperatu.logic.ListaJokalariak;
 
-public class ArmenPanela extends JPanel implements ActionListener{
+public class ArmenPanela extends JPanel implements ActionListener, Observer{
 	
 	private static final long serialVersionUID = 1L;
 	private static ArmenPanela nPanela;
@@ -116,6 +118,16 @@ public class ArmenPanela extends JPanel implements ActionListener{
 	public void actionPerformed(ActionEvent arg0) {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public void update(Observable o, Object arg) {
+		if(arg instanceof Object[]){
+			Object[] obj =  (Object[]) arg;
+			String e = (String) obj[0];
+			int x = (int) obj[1];
+			armenKopurua(e);
+		}
 	}
 
 }

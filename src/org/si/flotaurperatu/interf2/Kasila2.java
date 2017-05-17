@@ -74,6 +74,7 @@ public class Kasila2 extends JButton implements MouseListener{
 					ArmenPanela.getArmenPanela().armenKopurua("ezkutua");
 				}else if(DendaPanela.getDendaPanela().konponketa()){
 					Denda.getNDenda().ontziakKonpondu(zutabe,errenkada);
+					ArmenPanela.getArmenPanela().ipiniDirua();
 					DendaPanela.getDendaPanela().setKonponketa();
 				}else if(ArmenPanela.getArmenPanela().getArmaMota().equals("radarra")){
 					radarraErabili();
