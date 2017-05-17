@@ -44,6 +44,8 @@ public class Leihoa2 extends JFrame implements Observer{
 		Irudiak.getNIrudiak();
 		this.setIconImage(Irudiak.ikonoa);
 		
+		setJMenuBar(new Menua());
+		
 		matrize1.setBorder(new LineBorder(new Color(0, 0, 0), 3));
 		matrize2.setBorder(new LineBorder(new Color(0, 0, 0), 3));
 		
