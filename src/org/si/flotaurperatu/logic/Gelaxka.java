@@ -14,7 +14,7 @@ public class Gelaxka extends Observable{
 	private Ontzia o;
 	
 	public Gelaxka(int pX, int pY){
-		addObserver(Leihoa2.getLeihoa2().);
+		addObserver(Leihoa2.getLeihoa2());
 		x = pX;
 		y = pY;	
 		e = Egoera.URA;
@@ -41,9 +41,9 @@ public class Gelaxka extends Observable{
 	public void eraso(Arma pArma){
 		if(o==null && e.equals(Egoera.URA)){
 			if(ListaJokalariak.getNireListaJokalariak().txandaKalkulatu()==0){
-				eguneratuIrudia("miss", this.x, this.y);
+				eguneratuIrudia("miss", this.x, this.y, 1);
 			}else{
-				eguneratuIrudia("miss", this.x, this.y);
+				eguneratuIrudia("miss", this.x, this.y, 2);
 			}
 			this.eguneratu(Egoera.MISS);
 		}else if(e.equals(Egoera.EMANDA) || e.equals(Egoera.MISS)){
@@ -57,7 +57,7 @@ public class Gelaxka extends Observable{
 		if(o!=null){
 			o.ezkutuaJarri(pEzkutua);
 		}else{
-			System.out.println(" Ez dago ontzirik posizio horretan. ");
+			idatzi("Ez dago ontzirik posizio horretan.");
 		}
 	}
 	
@@ -67,20 +67,20 @@ public class Gelaxka extends Observable{
 			if(o!=null && !o.urperatutaDago()){
 				if(e.equals(Egoera.EMANDA)){
 					eguneratu(Egoera.ONTZIA);
-					eguneratuIrudia("ontzia", this.x, this.y);
+					eguneratuIrudia("ontzia", this.x, this.y, 2);
 					konpondu = true;
 				}else{
-					Leihoa2.getLeihoa2().idatzi("Posizio hori ez dago emanda.");
+					idatzi("Posizio hori ez dago emanda.");
 				}
 			}else{
-				Leihoa2.getLeihoa2().idatzi("Ontzia urperatuta dago jada");
-				Leihoa2.getLeihoa2().idatzi("edo ez dago ontzirik.");
+				idatzi("Ontzia urperatuta dago jada");
+				idatzi("edo ez dago ontzirik.");
 			}
 		}else{
 			if(o!=null && !o.urperatutaDago()){
 				if(e.equals(Egoera.EMANDA)){
 					eguneratu(Egoera.ONTZIA);
-					eguneratuIrudia("ura", this.x, this.y);
+					eguneratuIrudia("ura", this.x, this.y, 1);
 					konpondu = true;
 				}
 			}
@@ -96,8 +96,14 @@ public class Gelaxka extends Observable{
 		return y;
 	}
 	
-	private void eguneratuIrudia(String egoera, int pX,int pY){
-		Object[] n = {egoera, pX, pY};
+	private void eguneratuIrudia(String egoera, int pX,int pY, int matrizea){
+		Object[] n = {egoera, pX, pY, matrizea};
+		setChanged();
+		notifyObservers(n);
+	}
+	
+	private void idatzi(String textua){
+		Object[] n = {textua};
 		setChanged();
 		notifyObservers(n);
 	}

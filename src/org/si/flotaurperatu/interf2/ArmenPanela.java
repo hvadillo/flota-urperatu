@@ -36,42 +36,42 @@ public class ArmenPanela extends JPanel implements ActionListener{
 		setLayout(new GridLayout(8, 1, 0, 0));
 		
 		bomba = new JButton("Bomba");
-		armenKopurua("bonba");
+		//armenKopurua("bonba");
 		add(bomba);
 		bomba.addActionListener(new BonbaIpini());
 		
 		misil = new JButton("Misil");
-		armenKopurua("misil");
+		//armenKopurua("misil");
 		add(misil);
 		misil.addActionListener(new MisilIpini());
 		
 		misilIH = new JButton("MisilIH");
-		armenKopurua("misilIH");
+		//armenKopurua("misilIH");
 		add(misilIH);
 		misilIH.addActionListener(new MisilIHIpini());
 		
 		misilEM = new JButton("MisilEM");
-		armenKopurua("misilEM");
+		//armenKopurua("misilEM");
 		add(misilEM);
 		misilEM.addActionListener(new MisilEMIpini());
 		
 		misilGurutzatu = new JButton("MisilGurutzatu");
-		armenKopurua("misilGurutzatu");
+		//armenKopurua("misilGurutzatu");
 		add(misilGurutzatu);
 		misilGurutzatu.addActionListener(new MisilGurutzeIpini());
 		
 		radarra = new JButton("Radarra");
-		armenKopurua("radarra");
+		//armenKopurua("radarra");
 		add(radarra);
 		radarra.addActionListener(new RadarraIpini());
 		
 		ezkutua = new JButton("Ezkutua");
-		armenKopurua("ezkutua");
+		//armenKopurua("ezkutua");
 		add(ezkutua);
 		ezkutua.addActionListener(new EzkutuaIpini());
 		
 		dirua = new JLabel("Dirua");
-		ipiniDirua();
+		//ipiniDirua();
 		add(dirua);
 	}
 	

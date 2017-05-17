@@ -6,18 +6,10 @@ import java.util.Observer;
 
 import javax.swing.JPanel;
 
-public class KasilenPanela2 extends JPanel implements Observer {
+public class KasilenPanela2 extends JPanel{
 	
 	private static final long serialVersionUID = 1L;
 	private Kasila2[][] botoiak;
-	//private static KasilenPanela2 nKasilenPanela = null;
-	
-	/*public static KasilenPanela2 getKasilenPanela2(){
-		if(nKasilenPanela==null){
-			nKasilenPanela = new KasilenPanela2();
-		}
-		return nKasilenPanela;
-	}*/
 	
 	public KasilenPanela2(){
 		removeAll();
@@ -65,15 +57,6 @@ public class KasilenPanela2 extends JPanel implements Observer {
 		}else{
 			botoiak[pX][pY].iconoAldatu("miss");
 		}
-	}
-	
-	@Override
-	public void update(Observable o, Object arg) {
-		Object[] obj = (Object[]) arg;
-		String e = (String) obj[0];
-		int x = (Integer) obj[1];
-		int y = (Integer)obj[2];
-		iconoAldatu(e, x, y);
 	}
 	
 }

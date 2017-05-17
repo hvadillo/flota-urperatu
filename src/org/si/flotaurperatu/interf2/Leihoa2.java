@@ -132,8 +132,23 @@ public class Leihoa2 extends JFrame implements Observer{
 
 	@Override
 	public void update(Observable arg0, Object arg1) {
-		// TODO Auto-generated method stub
-		
+		if(arg1 instanceof String){
+			String e = (String) arg1;
+			idatzi(e);
+		}else{
+			Object[] obj = (Object[]) arg1;
+			if(obj.length==4){
+				String e = (String) obj[0];
+				int x = (int) obj[1];
+				int y = (int) obj[2];
+				int matrizea = (int) obj[3];
+				if(matrizea == 1){
+					matrize1.iconoAldatu(e, x, y);
+				}else{
+					matrize2.iconoAldatu(e, x, y);
+				}	
+			}
+		}
 	}
 
 }

@@ -1,16 +1,20 @@
 package org.si.flotaurperatu.logic;
 
 import java.util.ArrayList;
+import java.util.Observable;
 
 import org.si.flotaurperatu.interf2.ArmenPanela;
+import org.si.flotaurperatu.interf2.DendaPanela;
 import org.si.flotaurperatu.interf2.Leihoa2;
 
-public class Denda {
+public class Denda extends Observable{
 	
 	private ArrayList<Arma> armak;
 	private static Denda nDenda = null;
 	
 	private Denda(){
+		addObserver(Leihoa2.getLeihoa2());
+		addObserver(DendaPanela.getDendaPanela());
 		armak = FactoryArma.getFactoryArma().dendaSortu();
 	}
 	
@@ -32,6 +36,7 @@ public class Denda {
 					if(dirua >= armak.get(0).getKostua()){
 						jok.getArmak().armaErosi(pMota);
 						armak.get(0).kopuruaKendu();
+						armakEguneratu("radarra", 1);
 					}
 				}else{
 					Jokalaria jok = ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1);
@@ -39,6 +44,7 @@ public class Denda {
 					if(dirua >= armak.get(0).getKostua()){
 						jok.getArmak().armaErosi(pMota);
 						armak.get(0).kopuruaKendu();
+						armakEguneratu("radarra", 1);
 					}
 				}
 			}
@@ -50,6 +56,7 @@ public class Denda {
 					if(dirua >= armak.get(1).getKostua()){
 						jok.getArmak().armaErosi(pMota);
 						armak.get(1).kopuruaKendu();
+						armakEguneratu("bonba", 1);
 					}
 				}else{
 					Jokalaria jok = ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1);
@@ -57,6 +64,7 @@ public class Denda {
 					if(dirua >= armak.get(1).getKostua()){
 						jok.getArmak().armaErosi(pMota);
 						armak.get(1).kopuruaKendu();
+						armakEguneratu("bonba", 1);
 					}
 				}
 			}
@@ -68,6 +76,7 @@ public class Denda {
 					if(dirua >= armak.get(2).getKostua()){
 						jok.getArmak().armaErosi(pMota);
 						armak.get(2).kopuruaKendu();
+						armakEguneratu("misil", 1);
 					}
 				}else{
 					Jokalaria jok = ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1);
@@ -75,6 +84,7 @@ public class Denda {
 					if(dirua >= armak.get(2).getKostua()){
 						jok.getArmak().armaErosi(pMota);
 						armak.get(2).kopuruaKendu();
+						armakEguneratu("misil", 1);
 					}
 				}
 			}
@@ -86,6 +96,7 @@ public class Denda {
 					if(dirua >= armak.get(3).getKostua()){
 						jok.getArmak().armaErosi(pMota);
 						armak.get(3).kopuruaKendu();
+						armakEguneratu("ezkutua", 1);
 					}
 				}else{
 					Jokalaria jok = ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1);
@@ -93,6 +104,7 @@ public class Denda {
 					if(dirua >= armak.get(3).getKostua()){
 						jok.getArmak().armaErosi(pMota);
 						armak.get(3).kopuruaKendu();
+						armakEguneratu("ezkutua", 1);
 					}
 				}
 			}
@@ -104,6 +116,7 @@ public class Denda {
 					if(dirua >= armak.get(4).getKostua()){
 						jok.getArmak().armaErosi(pMota);
 						armak.get(4).kopuruaKendu();
+						armakEguneratu("misilIH", 1);
 					}
 				}else{
 					Jokalaria jok = ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1);
@@ -111,6 +124,7 @@ public class Denda {
 					if(dirua >= armak.get(4).getKostua()){
 						jok.getArmak().armaErosi(pMota);
 						armak.get(4).kopuruaKendu();
+						armakEguneratu("misilIH", 1);
 					}
 				}
 			}
@@ -122,6 +136,7 @@ public class Denda {
 					if(dirua >= armak.get(5).getKostua()){
 						jok.getArmak().armaErosi(pMota);
 						armak.get(5).kopuruaKendu();
+						armakEguneratu("misilEM", 1);
 					}
 				}else{
 					Jokalaria jok = ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1);
@@ -129,6 +144,7 @@ public class Denda {
 					if(dirua >= armak.get(5).getKostua()){
 						jok.getArmak().armaErosi(pMota);
 						armak.get(5).kopuruaKendu();
+						armakEguneratu("misilEM", 1);
 					}
 				}
 			}
@@ -140,6 +156,7 @@ public class Denda {
 					if(dirua >= armak.get(6).getKostua()){
 						jok.getArmak().armaErosi(pMota);
 						armak.get(6).kopuruaKendu();
+						armakEguneratu("misilGurtzatu", 1);
 					}
 				}else{
 					Jokalaria jok = ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1);
@@ -147,11 +164,11 @@ public class Denda {
 					if(dirua >= armak.get(6).getKostua()){
 						jok.getArmak().armaErosi(pMota);
 						armak.get(6).kopuruaKendu();
+						armakEguneratu("misilGurutzatu", 1);
 					}
 				}
 			}
 		}
-		ArmenPanela.getArmenPanela().ipiniDirua();
 	}
 	
 	public void ontziakKonpondu(int x , int y){
@@ -164,7 +181,7 @@ public class Denda {
 					lista.get(0).diruaKendu(350);
 				}
 			}else{
-				Leihoa2.getLeihoa2().idatzi("Ez duzu diru nahikorik ontzia konpontzeko");
+				idatzi("Ez duzu diru nahikorik ontzia konpontzeko");
 			}
 		}else{
 			int dirua1 = lista.get(1).getDirua();
@@ -197,6 +214,18 @@ public class Denda {
 	
 	public ArrayList<Arma> getArmak(){
 		return armak;
+	}
+	
+	private void idatzi(String textua){
+		Object[] n = {textua};
+		setChanged();
+		notifyObservers(n);
+	}
+	
+	private void armakEguneratu(String textua, int x){
+		Object[] n = {textua, x};
+		setChanged();
+		notifyObservers(n);
 	}
 
 }

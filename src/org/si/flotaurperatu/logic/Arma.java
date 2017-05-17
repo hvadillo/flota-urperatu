@@ -1,12 +1,17 @@
 package org.si.flotaurperatu.logic;
 
-public abstract class Arma {
+import java.util.Observable;
+
+import org.si.flotaurperatu.interf2.Leihoa2;
+
+public abstract class Arma extends Observable{
 
 	private String izena;
 	private int kostua;
 	protected int kopurua;
 	
 	public Arma(String pIzena, int pKostua, int pKop){
+		addObserver(Leihoa2.getLeihoa2());
 		izena = pIzena;
 		kostua = pKostua;
 		kopurua = pKop;
@@ -32,6 +37,12 @@ public abstract class Arma {
 	
 	public void kopuruaGehitu(){
 		kopurua++;
+	}
+	
+	protected void idatzi(String textua){
+		String n = textua;
+		setChanged();
+		notifyObservers(n);
 	}
 
 }

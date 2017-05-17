@@ -1,9 +1,11 @@
 package org.si.flotaurperatu.logic;
 
 import java.util.ArrayList;
+import java.util.Observable;
+
 import org.si.flotaurperatu.interf2.Leihoa2;
 
-public abstract class Ontzia {
+public abstract class Ontzia extends Observable{
 
 	private ArrayList<Gelaxka> posizioak;
 	private int luzeera;
@@ -11,6 +13,7 @@ public abstract class Ontzia {
 	private Boolean urperatuta;
 	
 	public Ontzia(int pLuzeera){
+		addObserver(Leihoa2.getLeihoa2());
 		luzeera = pLuzeera;
 		posizioak = new ArrayList<Gelaxka>();
 		ezkutua = null;
@@ -26,11 +29,11 @@ public abstract class Ontzia {
 					for(int i = 0; i <= (posizioak.size()-1); i++){
 						if(posizioak.get(i).getEgoera()!=Egoera.EMANDA){
 							posizioak.get(i).eguneratu(Egoera.ONTZIA);
-							Leihoa2.getLeihoa2().getMatrize2().iconoAldatu("ezkutuaEmanda", posizioak.get(i).getX(), posizioak.get(i).getY());
+							iconoAldatu("ezkutuaEmanda", posizioak.get(i).getX(), posizioak.get(i).getY(), 2);
 						}
 					}				
 				}else{
-					Leihoa2.getLeihoa2().getMatrize1().iconoAldatu("ezkutuaEmanda", pGelaxka.getX(), pGelaxka.getY());
+					iconoAldatu("ezkutuaEmanda", pGelaxka.getX(), pGelaxka.getY(), 1);
 					for(int j = 0; j <= (posizioak.size()-1); j++){
 						if(posizioak.get(j).getEgoera()!=Egoera.EMANDA){
 							posizioak.get(j).eguneratu(Egoera.ONTZIA);
@@ -40,10 +43,10 @@ public abstract class Ontzia {
 			}else{
 				if(txanda==1){
 					for(int j = 0; j <= (posizioak.size()-1); j++){
-						Leihoa2.getLeihoa2().getMatrize2().iconoAldatu("ezkutuaErdiEmanda", posizioak.get(j).getX(), posizioak.get(j).getY());
+						iconoAldatu("ezkutuaErdiEmanda", posizioak.get(j).getX(), posizioak.get(j).getY(), 2);
 					}
 				}else{
-					Leihoa2.getLeihoa2().getMatrize1().iconoAldatu("ezkutuaErdiEmanda", pGelaxka.getX(), pGelaxka.getY());
+					iconoAldatu("ezkutuaErdiEmanda", pGelaxka.getX(), pGelaxka.getY(), 1);
 				}
 			}
 		}else{
@@ -52,19 +55,19 @@ public abstract class Ontzia {
 				for(int i = 0; i <= (posizioak.size()-1); i++){
 					posizioak.get(i).eguneratu(Egoera.EMANDA);
 					if(txanda==0){
-						Leihoa2.getLeihoa2().getMatrize1().iconoAldatu("emanda", posizioak.get(i).getX(), posizioak.get(i).getY());
+						iconoAldatu("emanda", posizioak.get(i).getX(), posizioak.get(i).getY(), 1);
 					}
 					else{
-						Leihoa2.getLeihoa2().getMatrize2().iconoAldatu("emanda", posizioak.get(i).getX(), posizioak.get(i).getY());
+						iconoAldatu("emanda", posizioak.get(i).getX(), posizioak.get(i).getY(), 2);
 					}
 				}
 				this.urperatu();
 			}else{
 				pGelaxka.eguneratu(Egoera.EMANDA);
 				if(txanda==0){
-					Leihoa2.getLeihoa2().getMatrize1().iconoAldatu("emanda", pGelaxka.getX(), pGelaxka.getY());
+					iconoAldatu("emanda", pGelaxka.getX(), pGelaxka.getY(), 1);
 				}else{
-					Leihoa2.getLeihoa2().getMatrize2().iconoAldatu("emanda", pGelaxka.getX(), pGelaxka.getY());
+					iconoAldatu("emanda", pGelaxka.getX(), pGelaxka.getY(), 2);
 				}
 				int i = 0;
 				while(i <= (posizioak.size()-1) && urperatu == true){
@@ -119,9 +122,9 @@ public abstract class Ontzia {
 							if(etsaia.getIkusi().getGelaxka(x1, y1).getEgoera().equals(Egoera.URA)){
 								etsaia.getIkusi().getGelaxka(x1, y1).eguneratu(Egoera.MISS);
 								if(txanda==0){
-									Leihoa2.getLeihoa2().getMatrize1().iconoAldatu("miss", x1, y1);
+									iconoAldatu("miss", x1, y1, 1);
 								}else{
-									Leihoa2.getLeihoa2().getMatrize2().iconoAldatu("miss", x1, y1);
+									iconoAldatu("miss", x1, y1, 2);
 								}
 							}	
 						}
@@ -151,7 +154,7 @@ public abstract class Ontzia {
 				posizioak.get(i).eguneratu(Egoera.EZKUTUA);
 				int txanda=ListaJokalariak.getNireListaJokalariak().txandaKalkulatu();
 				if(txanda==0){
-					Leihoa2.getLeihoa2().getMatrize2().iconoAldatu("ezkutua", posizioak.get(i).getX(), posizioak.get(i).getY());
+					iconoAldatu("ezkutua", posizioak.get(i).getX(), posizioak.get(i).getY(), 2);
 				}
 			}	
 		}
@@ -171,6 +174,12 @@ public abstract class Ontzia {
 			dauka = true;
 		}
 		return dauka;
+	}
+	
+	private void iconoAldatu(String egoera, int pX,int pY, int matrizea){
+		Object[] n = {egoera, pX, pY, matrizea};
+		setChanged();
+		notifyObservers(n);
 	}
 	
 }
