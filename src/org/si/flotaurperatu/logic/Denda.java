@@ -190,7 +190,7 @@ public class Denda extends Observable{
 		ArrayList<Jokalaria> lista = ListaJokalariak.getNireListaJokalariak().getJokalariak();
 		if (ListaJokalariak.getNireListaJokalariak().txandaKalkulatu() == 0){
 			int dirua = lista.get(0).getDirua();
-			if(dirua > 350){
+			if(dirua >= 350){
 				Gelaxka gelaxka = lista.get(0).getIkusi().getGelaxka(x, y);
 				if(gelaxka.ontziaKonpondu()){
 					lista.get(0).diruaKendu(350);
@@ -200,7 +200,7 @@ public class Denda extends Observable{
 			}
 		}else{
 			int dirua1 = lista.get(1).getDirua();
-			if(dirua1 > 350){
+			if(dirua1 >= 350){
 				Gelaxka gelaxka1 = lista.get(1).getIkusi().getGelaxka(x, y);
 				if(gelaxka1.ontziaKonpondu()){
 					lista.get(1).diruaKendu(350);

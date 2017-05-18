@@ -24,7 +24,7 @@ public class Bonba extends Arma {
 				etsaia.getIkusi().getGelaxka(pZutabe, pErrenkada).eraso(this);
 				kopurua--;
 			}else{
-				ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).txandaBurutu();
+				((Ordenagailua) ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1)).txandaBurutu();
 			}
 		}
 	}

@@ -18,7 +18,7 @@ public class MisilGurutze extends MisilGidatua {
 			kopurua--;
 		}else{
 			if(ListaJokalariak.getNireListaJokalariak().txandaKalkulatu()==1){
-				ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).txandaBurutu();
+				((Ordenagailua) ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1)).txandaBurutu();
 			}
 		}
 	}

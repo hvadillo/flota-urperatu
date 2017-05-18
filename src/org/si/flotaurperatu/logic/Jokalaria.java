@@ -4,14 +4,12 @@ public abstract class Jokalaria {
 
 	protected int dirua;
 	protected Biltegia armak;
-	protected TableroEraso tableroEraso;
 	protected TableroIkusi tableroIkusi;
 	protected ListaOntziak flota;
 	
 	public Jokalaria(){
 		dirua = 1000;
 		armak = new Biltegia();
-		tableroEraso = new TableroEraso();
 		tableroIkusi = new TableroIkusi();
 		flota = new ListaOntziak();
 	}
@@ -72,6 +70,6 @@ public abstract class Jokalaria {
 		armak.armaErabili("Ezkutua",zutabe,errenkada);
 	}
 
-	public abstract void txandaBurutu();
+	
 	
 }

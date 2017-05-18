@@ -11,6 +11,7 @@ import org.si.flotaurperatu.logic.Denda;
 import org.si.flotaurperatu.logic.Jokalaria;
 import org.si.flotaurperatu.logic.ListaJokalariak;
 import org.si.flotaurperatu.logic.Ontzia;
+import org.si.flotaurperatu.logic.Ordenagailua;
 
 public class Kasila2 extends JButton implements MouseListener{
 	
@@ -84,7 +85,7 @@ public class Kasila2 extends JButton implements MouseListener{
 						bonbaErabili();
 						ArmenPanela.getArmenPanela().armenKopurua("bonba");
 						ListaJokalariak.getNireListaJokalariak().bukatu();
-						ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).txandaBurutu();
+						((Ordenagailua) ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1)).txandaBurutu();
 						ListaJokalariak.getNireListaJokalariak().bukatu();
 					}else{
 						Leihoa2.getLeihoa2().idatzi("Ez daukazu bonbarik");
@@ -94,7 +95,7 @@ public class Kasila2 extends JButton implements MouseListener{
 						misilErabili();
 						ArmenPanela.getArmenPanela().armenKopurua("misil");
 						ListaJokalariak.getNireListaJokalariak().bukatu();
-						ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).txandaBurutu();
+						((Ordenagailua) ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1)).txandaBurutu();
 						ListaJokalariak.getNireListaJokalariak().bukatu();
 					}else{
 						Leihoa2.getLeihoa2().idatzi("Ez daukazu misilik");
@@ -104,7 +105,7 @@ public class Kasila2 extends JButton implements MouseListener{
 						misilIHErabili();
 						ArmenPanela.getArmenPanela().armenKopurua("misilIH");
 						ListaJokalariak.getNireListaJokalariak().bukatu();
-						ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).txandaBurutu();
+						((Ordenagailua) ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1)).txandaBurutu();
 						ListaJokalariak.getNireListaJokalariak().bukatu();
 					}else{
 						Leihoa2.getLeihoa2().idatzi("Ez daukazu misilIH-rik");
@@ -114,7 +115,7 @@ public class Kasila2 extends JButton implements MouseListener{
 						misilEMErabili();
 						ArmenPanela.getArmenPanela().armenKopurua("misilEM");
 						ListaJokalariak.getNireListaJokalariak().bukatu();
-						ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).txandaBurutu();
+						((Ordenagailua) ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1)).txandaBurutu();
 						ListaJokalariak.getNireListaJokalariak().bukatu();
 					}else{
 						Leihoa2.getLeihoa2().idatzi("Ez daukazu misilEM-rik");
@@ -124,7 +125,7 @@ public class Kasila2 extends JButton implements MouseListener{
 						misilGurutzeErabili();
 						ArmenPanela.getArmenPanela().armenKopurua("misilGurutzatu");
 						ListaJokalariak.getNireListaJokalariak().bukatu();
-						ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1).txandaBurutu();
+						((Ordenagailua) ListaJokalariak.getNireListaJokalariak().getJokalariak().get(1)).txandaBurutu();
 						ListaJokalariak.getNireListaJokalariak().bukatu();
 					}else{
 						Leihoa2.getLeihoa2().idatzi("Ez daukazu misil gurutzaturik-rik");

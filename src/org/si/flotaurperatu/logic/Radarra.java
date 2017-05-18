@@ -290,7 +290,6 @@ public class Radarra extends Arma {
 				if(txanda==0){
 					idatzi("Ez da ontzirik aurkitu.");
 				}
-				
 			}
 			kontsultaKop--;
 			if(kontsultaKop==0){
